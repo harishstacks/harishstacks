@@ -16,7 +16,7 @@
       background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px;
       margin: 0;
       padding: 0;
-      width: 1000px;
+      width: 1280px;
       height: 400px;
       overflow: hidden;
       font-family: 'JetBrains Mono', monospace;
@@ -102,7 +102,7 @@
       position: absolute;
       top: 0;
       left: 0;
-      width: 1000px;
+      width: 1280px;
       height: 400px;
       pointer-events: none;
       z-index: 3;
@@ -111,12 +111,14 @@
     /* Main Container layout */
     .container {
       position: absolute;
-      top: 65px;
-      left: 60px;
-      width: 880px;
-      height: 280px;
+      top: 80px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 1120px;
+      height: 240px;
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
+      gap: 28px;
       z-index: 10;
     }
 
@@ -162,8 +164,8 @@
 
     /* Terminal Panel specifics */
     .terminal-panel {
-      width: 540px;
-      height: 280px;
+      width: 500px;
+      height: 240px;
     }
     
     .terminal-panel .panel-header {
@@ -208,9 +210,9 @@
     .equalizer .bar.b5 { background: #00f0ff; }
 
     .terminal-body {
-      padding: 15px 20px;
-      font-size: 13px;
-      line-height: 1.8;
+      padding: 12px 18px;
+      font-size: 12px;
+      line-height: 1.7;
       box-sizing: border-box;
     }
 
@@ -235,8 +237,8 @@
 
     /* Dashboard Panel specifics */
     .dashboard-panel {
-      width: 320px;
-      height: 280px;
+      width: 280px;
+      height: 240px;
     }
 
     .dashboard-panel .panel-header {
@@ -244,7 +246,7 @@
     }
 
     .dashboard-body {
-      padding: 15px 20px;
+      padding: 12px 16px;
       box-sizing: border-box;
     }
 
@@ -253,7 +255,7 @@
       display: flex;
       align-items: center;
       gap: 8px;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
     .status-dot {
       width: 8px;
@@ -269,9 +271,9 @@
     }
 
     .stats-list {
-      font-size: 11px;
-      line-height: 1.8;
-      margin-bottom: 15px;
+      font-size: 10px;
+      line-height: 1.65;
+      margin-bottom: 10px;
     }
     .stat-label { color: #718096; }
     .stat-val { font-weight: bold; }
@@ -281,16 +283,16 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-top: 15px;
+      margin-top: 10px;
     }
 
     .cpu-widget {
       text-align: center;
-      width: 60px;
+      width: 54px;
     }
     .circular-chart {
-      width: 50px;
-      height: 50px;
+      width: 44px;
+      height: 44px;
     }
     .circle-bg {
       fill: none;
@@ -304,32 +306,32 @@
       stroke-linecap: round;
     }
     .cpu-label {
-      font-size: 9px;
+      font-size: 8px;
       color: #00f0ff;
-      margin-top: 4px;
+      margin-top: 3px;
       font-weight: bold;
       letter-spacing: 0.5px;
     }
     .cpu-percent-label {
-      font-size: 9px;
+      font-size: 8px;
       color: #718096;
       display: block;
     }
 
     .latency-widget {
-      width: 180px;
+      width: 152px;
     }
     .latency-header {
       display: flex;
       justify-content: space-between;
-      font-size: 9px;
+      font-size: 8px;
       color: #718096;
       margin-bottom: 5px;
       font-weight: bold;
     }
     .oscilloscope-chart {
-      width: 180px;
-      height: 35px;
+      width: 152px;
+      height: 32px;
       display: block;
     }
     .wave-base {
@@ -365,26 +367,26 @@
   <div class="hud-line-r"></div>
 
   <!-- Background Twinkling Stars -->
-  <div class="star s1" style="width:1.5px; height:1.5px; left:90px; top:50px;"></div>
-  <div class="star s2" style="width:1px; height:1px; left:320px; top:40px;"></div>
-  <div class="star s3" style="width:3px; height:3px; left:920px; top:50px; background:#00f0ff; box-shadow:0 0 5px #00f0ff;"></div>
-  <div class="star s4" style="width:1px; height:1px; left:850px; top:40px;"></div>
-  <div class="star s5" style="width:1.5px; height:1.5px; left:70px; top:370px;"></div>
-  <div class="star s6" style="width:1px; height:1px; left:910px; top:370px;"></div>
-  <div class="star s7" style="width:3px; height:3px; left:140px; top:330px; background:#ff00ff; box-shadow:0 0 5px #ff00ff;"></div>
-  <div class="star s8" style="width:1.5px; height:1.5px; left:870px; top:330px;"></div>
+  <div class="star s1" style="width:1.5px; height:1.5px; left:130px; top:70px;"></div>
+  <div class="star s2" style="width:1px; height:1px; left:420px; top:60px;"></div>
+  <div class="star s3" style="width:3px; height:3px; left:1090px; top:70px; background:#00f0ff; box-shadow:0 0 5px #00f0ff;"></div>
+  <div class="star s4" style="width:1px; height:1px; left:1180px; top:58px;"></div>
+  <div class="star s5" style="width:1.5px; height:1.5px; left:140px; top:320px;"></div>
+  <div class="star s6" style="width:1px; height:1px; left:1120px; top:320px;"></div>
+  <div class="star s7" style="width:3px; height:3px; left:240px; top:300px; background:#ff00ff; box-shadow:0 0 5px #ff00ff;"></div>
+  <div class="star s8" style="width:1.5px; height:1.5px; left:1040px; top:300px;"></div>
 
   <!-- Background Circuits (SVG) -->
   <svg class="circuits-svg">
     <!-- Left circuit paths -->
-    <path d="M 0,100 L 40,100 L 55,115 L 55,270 L 25,300 L 0,300" fill="none" stroke="#241442" stroke-width="1.5" opacity="0.75" />
-    <path class="circuit-pulse-l" d="M 0,100 L 40,100 L 55,115 L 55,270 L 25,300 L 0,300" fill="none" stroke="none" />
-    <circle cx="55" cy="115" r="2.5" fill="#00f0ff" style="box-shadow: 0 0 5px #00f0ff;" />
+    <path d="M 0,100 L 50,100 L 70,120 L 70,260 L 40,290 L 0,290" fill="none" stroke="#241442" stroke-width="1.5" opacity="0.75" />
+    <path class="circuit-pulse-l" d="M 0,100 L 50,100 L 70,120 L 70,260 L 40,290 L 0,290" fill="none" stroke="none" />
+    <circle cx="70" cy="120" r="2.5" fill="#00f0ff" style="box-shadow: 0 0 5px #00f0ff;" />
 
     <!-- Right circuit paths -->
-    <path d="M 1000,100 L 960,100 L 945,115 L 945,270 L 975,300 L 1000,300" fill="none" stroke="#241442" stroke-width="1.5" opacity="0.75" />
-    <path class="circuit-pulse-r" d="M 1000,100 L 960,100 L 945,115 L 945,270 L 975,300 L 1000,300" fill="none" stroke="none" />
-    <circle cx="945" cy="115" r="2.5" fill="#ff00ff" style="box-shadow: 0 0 5px #ff00ff;" />
+    <path d="M 1280,100 L 1230,100 L 1210,120 L 1210,260 L 1240,290 L 1280,290" fill="none" stroke="#241442" stroke-width="1.5" opacity="0.75" />
+    <path class="circuit-pulse-r" d="M 1280,100 L 1230,100 L 1210,120 L 1210,260 L 1240,290 L 1280,290" fill="none" stroke="none" />
+    <circle cx="1210" cy="120" r="2.5" fill="#ff00ff" style="box-shadow: 0 0 5px #ff00ff;" />
   </svg>
 
   <!-- Floating Particles -->
@@ -475,11 +477,11 @@
     function setFrame(t) {
       const lines = [
         { id: "line-1", prefix: '<span class="cyan">harishstacks</span><span class="pink">@</span><span class="purple">github</span><span class="gray">:~$ </span>', text: "whoami", start: 200, end: 800 },
-        { id: "line-2", prefix: '<span class="gray">> </span>', text: "Harish M | Full Stack Engineer & Designer", start: 1000, end: 1800 },
+        { id: "line-2", prefix: '<span class="gray">> </span>', text: "Harish M | Full Stack Engineer & Designer", start: 900, end: 1700 },
         { id: "line-3", prefix: '<span class="gray">> Tech Stack: </span>', text: "React, Node.js, Python, AWS", start: 2000, end: 2800 },
-        { id: "line-4", prefix: '<span class="gray">> Focus: </span>', text: "High-perf web apps & interactive UIs", start: 3000, end: 3800 },
-        { id: "line-5", prefix: '<span class="gray">> Status: </span>', text: "Actively building open-source tools", start: 4000, end: 4600 },
-        { id: "line-6", prefix: '<span class="cyan">harishstacks</span><span class="pink">@</span><span class="purple">github</span><span class="gray">:~$ </span>', text: "", start: 4800, end: 5000 }
+        { id: "line-4", prefix: '<span class="gray">> Focus: </span>', text: "High-perf web apps & interactive UIs", start: 2900, end: 3700 },
+        { id: "line-5", prefix: '<span class="gray">> Status: </span>', text: "Actively building open-source tools", start: 3900, end: 4500 },
+        { id: "line-6", prefix: '<span class="cyan">harishstacks</span><span class="pink">@</span><span class="purple">github</span><span class="gray">:~$ </span>', text: "", start: 4700, end: 5000 }
       ];
 
       lines.forEach((line, index) => {
@@ -553,12 +555,12 @@
 
       // 4. Particles floating
       const particles = [
-        { el: document.querySelector('.p1'), startX: 120, startY: 350, speed: 7000, maxTravelY: -70, travelX: 15, delay: 0 },
-        { el: document.querySelector('.p2'), startX: 210, startY: 370, speed: 9000, maxTravelY: -90, travelX: -25, delay: 1200 },
-        { el: document.querySelector('.p3'), startX: 780, startY: 360, speed: 8000, maxTravelY: -70, travelX: 15, delay: 2500 },
-        { el: document.querySelector('.p4'), startX: 890, startY: 350, speed: 6000, maxTravelY: -80, travelX: -20, delay: 1500 },
-        { el: document.querySelector('.p5'), startX: 170, startY: 110, speed: 10000, maxTravelY: -60, travelX: 10, delay: 4000 },
-        { el: document.querySelector('.p6'), startX: 830, startY: 110, speed: 8000, maxTravelY: -60, travelX: -10, delay: 500 }
+        { el: document.querySelector('.p1'), startX: 220, startY: 340, speed: 7000, maxTravelY: -70, travelX: 20, delay: 0 },
+        { el: document.querySelector('.p2'), startX: 320, startY: 350, speed: 9000, maxTravelY: -85, travelX: -25, delay: 1200 },
+        { el: document.querySelector('.p3'), startX: 960, startY: 340, speed: 8000, maxTravelY: -70, travelX: 18, delay: 2500 },
+        { el: document.querySelector('.p4'), startX: 1040, startY: 340, speed: 6000, maxTravelY: -75, travelX: -20, delay: 1500 },
+        { el: document.querySelector('.p5'), startX: 260, startY: 150, speed: 10000, maxTravelY: -55, travelX: 12, delay: 4000 },
+        { el: document.querySelector('.p6'), startX: 1020, startY: 150, speed: 8000, maxTravelY: -55, travelX: -12, delay: 500 }
       ];
       particles.forEach(p => {
         if (p.el) {

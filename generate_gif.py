@@ -19,14 +19,14 @@ def generate_gif():
     options.add_argument("--disable-gpu")
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
-    options.add_argument("--window-size=1000,400")
+    options.add_argument("--window-size=1280,400")
     
     # Locate Chrome binary on Windows
     options.binary_location = r"C:\Program Files\Google\Chrome\Application\chrome.exe"
 
     # Start WebDriver
     driver = webdriver.Chrome(options=options)
-    driver.set_window_size(1000, 400)
+    driver.set_window_size(1280, 400)
     
     try:
         # Load the page
@@ -35,8 +35,8 @@ def generate_gif():
         time.sleep(3)
 
         frames = []
-        total_duration = 5000  # 5.0 seconds
-        frame_interval = 100   # 100ms per frame (10 fps)
+        total_duration = 4000  # 4.0 seconds
+        frame_interval = 120   # ~8.3 fps
 
         print("Capturing frames...")
         for t in range(0, total_duration, frame_interval):
