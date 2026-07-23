@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HARISH OS Banner</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+
+    body {
+      background-color: #040509;
+      background-image:
+        radial-gradient(circle at 20% 50%, rgba(0, 240, 255, 0.14) 0%, transparent 50%),
+        radial-gradient(circle at 80% 50%, rgba(157, 78, 221, 0.16) 0%, transparent 50%),
+        linear-gradient(rgba(0, 240, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 240, 255, 0.03) 1px, transparent 1px);
+      background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px;
+      margin: 0;
+      padding: 0;
+      width: 1000px;
+      height: 400px;
+      overflow: hidden;
+      font-family: 'JetBrains Mono', monospace;
+      color: #e2e8f0;
+      position: relative;
+      box-sizing: border-box;
+    }
+
+    /* Perspective Grid at the bottom */
+    .perspective-grid {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 140px;
+      background-image:
+        linear-gradient(rgba(0, 240, 255, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 240, 255, 0.08) 1px, transparent 1px);
+      background-size: 40px 40px;
+      transform: perspective(220px) rotateX(60deg);
+      transform-origin: bottom;
+      opacity: 0.15;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* HUD corner decorations */
+    .hud-corner {
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      border: 1.5px solid transparent;
+      z-index: 5;
+      pointer-events: none;
+    }
+    .hud-corner.tl { top: 20px; left: 20px; border-top-color: #00f0ff; border-left-color: #00f0ff; opacity: 0.45; }
+    .hud-corner.tr { top: 20px; right: 20px; border-top-color: #ff00ff; border-right-color: #ff00ff; opacity: 0.45; }
+    .hud-corner.bl { bottom: 20px; left: 20px; border-bottom-color: #ff00ff; border-left-color: #ff00ff; opacity: 0.45; }
+    .hud-corner.br { bottom: 20px; right: 20px; border-bottom-color: #00f0ff; border-right-color: #00f0ff; opacity: 0.45; }
+
+    .hud-label-l, .hud-label-r {
+      position: absolute;
+      top: 24px;
+      font-size: 9px;
+      opacity: 0.45;
+      letter-spacing: 1.2px;
+      font-weight: bold;
+      z-index: 5;
+    }
+    .hud-label-l { left: 40px; color: #00f0ff; }
+    .hud-label-r { right: 40px; color: #ff00ff; }
+
+    .hud-line-l, .hud-line-r {
+      position: absolute;
+      top: 48px;
+      width: 85px;
+      height: 1px;
+      opacity: 0.18;
+      z-index: 5;
+    }
+    .hud-line-l { left: 20px; background: #00f0ff; }
+    .hud-line-r { right: 20px; background: #ff00ff; }
+
+    /* Particles & Stars */
+    .particle {
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 2;
+      opacity: 0;
+    }
+
+    .star {
+      position: absolute;
+      background: #ffffff;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    /* Circuit Lines Overlay */
+    .circuits-svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1000px;
+      height: 400px;
+      pointer-events: none;
+      z-index: 3;
+    }
+
+    /* Main Container layout */
+    .container {
+      position: absolute;
+      top: 65px;
+      left: 60px;
+      width: 880px;
+      height: 280px;
+      display: flex;
+      justify-content: space-between;
+      z-index: 10;
+    }
+
+    /* Floating Panel Styling (with glassmorphism & gradients) */
+    .panel {
+      position: relative;
+      background: rgba(7, 9, 19, 0.92);
+      border-radius: 8px;
+      box-sizing: border-box;
+      box-shadow: 
+        0 8px 32px rgba(157, 78, 221, 0.2), 
+        0 2px 8px rgba(0, 240, 255, 0.1);
+    }
+    /* Gradient Border technique */
+    .panel::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      border-radius: 8px;
+      padding: 1.5px;
+      background: linear-gradient(135deg, #00f0ff, #9d4edd, #ff00ff);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+    }
+
+    .panel-header {
+      height: 35px;
+      border-bottom: 1px solid rgba(0, 240, 255, 0.15);
+      display: flex;
+      align-items: center;
+      padding: 0 15px;
+      box-sizing: border-box;
+    }
+
+    .panel-title {
+      font-size: 10px;
+      font-weight: bold;
+      color: #718096;
+      letter-spacing: 1px;
+    }
+
+    /* Terminal Panel specifics */
+    .terminal-panel {
+      width: 540px;
+      height: 280px;
+    }
+    
+    .terminal-panel .panel-header {
+      justify-content: space-between;
+    }
+
+    .window-buttons {
+      display: flex;
+      gap: 6px;
+    }
+    .window-buttons .btn {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+    }
+    .window-buttons .btn.red { background: #ff5f56; }
+    .window-buttons .btn.yellow { background: #ffbd2e; }
+    .window-buttons .btn.green { background: #27c93f; }
+
+    .terminal-panel .panel-title {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    /* Equalizer in terminal header */
+    .equalizer {
+      display: flex;
+      align-items: flex-end;
+      gap: 3px;
+      height: 14px;
+    }
+    .equalizer .bar {
+      width: 2.8px;
+      height: 4px;
+      border-radius: 0.5px;
+    }
+    .equalizer .bar.b1 { background: #00f0ff; }
+    .equalizer .bar.b2 { background: #00f0ff; }
+    .equalizer .bar.b3 { background: #ff00ff; }
+    .equalizer .bar.b4 { background: #ff00ff; }
+    .equalizer .bar.b5 { background: #00f0ff; }
+
+    .terminal-body {
+      padding: 15px 20px;
+      font-size: 13px;
+      line-height: 1.8;
+      box-sizing: border-box;
+    }
+
+    .line {
+      opacity: 0;
+      margin: 0;
+      white-space: pre;
+    }
+
+    .cyan { color: #00f0ff; }
+    .pink { color: #ff00ff; }
+    .purple { color: #9d4edd; }
+    .green { color: #39ff14; }
+    .orange { color: #ffb703; }
+    .gray { color: #718096; }
+    .white { color: #ffffff; }
+
+    .cursor {
+      color: #00f0ff;
+      font-weight: bold;
+    }
+
+    /* Dashboard Panel specifics */
+    .dashboard-panel {
+      width: 320px;
+      height: 280px;
+    }
+
+    .dashboard-panel .panel-header {
+      justify-content: center;
+    }
+
+    .dashboard-body {
+      padding: 15px 20px;
+      box-sizing: border-box;
+    }
+
+    /* Online indicator */
+    .status-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      background: #39ff14;
+      border-radius: 50%;
+      box-shadow: 0 0 10px #39ff14;
+    }
+    .status-text {
+      color: #39ff14;
+      font-size: 11px;
+      font-weight: bold;
+    }
+
+    .stats-list {
+      font-size: 11px;
+      line-height: 1.8;
+      margin-bottom: 15px;
+    }
+    .stat-label { color: #718096; }
+    .stat-val { font-weight: bold; }
+
+    /* Dashboard widgets layout */
+    .widgets-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 15px;
+    }
+
+    .cpu-widget {
+      text-align: center;
+      width: 60px;
+    }
+    .circular-chart {
+      width: 50px;
+      height: 50px;
+    }
+    .circle-bg {
+      fill: none;
+      stroke: #171825;
+      stroke-width: 3;
+    }
+    .circle {
+      fill: none;
+      stroke: #00f0ff;
+      stroke-width: 3;
+      stroke-linecap: round;
+    }
+    .cpu-label {
+      font-size: 9px;
+      color: #00f0ff;
+      margin-top: 4px;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+    }
+    .cpu-percent-label {
+      font-size: 9px;
+      color: #718096;
+      display: block;
+    }
+
+    .latency-widget {
+      width: 180px;
+    }
+    .latency-header {
+      display: flex;
+      justify-content: space-between;
+      font-size: 9px;
+      color: #718096;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    .oscilloscope-chart {
+      width: 180px;
+      height: 35px;
+      display: block;
+    }
+    .wave-base {
+      fill: none;
+      stroke: #171825;
+      stroke-width: 1.5;
+    }
+    .wave {
+      fill: none;
+      stroke: #ff00ff;
+      stroke-width: 1.5;
+      stroke-opacity: 0.85;
+      stroke-linecap: round;
+      stroke-dasharray: 20 80;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Ambient Perspective Grid -->
+  <div class="perspective-grid"></div>
+
+  <!-- HUD Design corner brackets & lines -->
+  <div class="hud-corner tl"></div>
+  <div class="hud-corner tr"></div>
+  <div class="hud-corner bl"></div>
+  <div class="hud-corner br"></div>
+  
+  <div class="hud-label-l">SYS.LOC // PROFILE.ROOT</div>
+  <div class="hud-label-r">SEC_STATUS // SECURE_SSL</div>
+  
+  <div class="hud-line-l"></div>
+  <div class="hud-line-r"></div>
+
+  <!-- Background Twinkling Stars -->
+  <div class="star s1" style="width:1.5px; height:1.5px; left:90px; top:50px;"></div>
+  <div class="star s2" style="width:1px; height:1px; left:320px; top:40px;"></div>
+  <div class="star s3" style="width:3px; height:3px; left:920px; top:50px; background:#00f0ff; box-shadow:0 0 5px #00f0ff;"></div>
+  <div class="star s4" style="width:1px; height:1px; left:850px; top:40px;"></div>
+  <div class="star s5" style="width:1.5px; height:1.5px; left:70px; top:370px;"></div>
+  <div class="star s6" style="width:1px; height:1px; left:910px; top:370px;"></div>
+  <div class="star s7" style="width:3px; height:3px; left:140px; top:330px; background:#ff00ff; box-shadow:0 0 5px #ff00ff;"></div>
+  <div class="star s8" style="width:1.5px; height:1.5px; left:870px; top:330px;"></div>
+
+  <!-- Background Circuits (SVG) -->
+  <svg class="circuits-svg">
+    <!-- Left circuit paths -->
+    <path d="M 0,100 L 40,100 L 55,115 L 55,270 L 25,300 L 0,300" fill="none" stroke="#241442" stroke-width="1.5" opacity="0.75" />
+    <path class="circuit-pulse-l" d="M 0,100 L 40,100 L 55,115 L 55,270 L 25,300 L 0,300" fill="none" stroke="none" />
+    <circle cx="55" cy="115" r="2.5" fill="#00f0ff" style="box-shadow: 0 0 5px #00f0ff;" />
+
+    <!-- Right circuit paths -->
+    <path d="M 1000,100 L 960,100 L 945,115 L 945,270 L 975,300 L 1000,300" fill="none" stroke="#241442" stroke-width="1.5" opacity="0.75" />
+    <path class="circuit-pulse-r" d="M 1000,100 L 960,100 L 945,115 L 945,270 L 975,300 L 1000,300" fill="none" stroke="none" />
+    <circle cx="945" cy="115" r="2.5" fill="#ff00ff" style="box-shadow: 0 0 5px #ff00ff;" />
+  </svg>
+
+  <!-- Floating Particles -->
+  <div class="particle p1"></div>
+  <div class="particle p2"></div>
+  <div class="particle p3"></div>
+  <div class="particle p4"></div>
+  <div class="particle p5"></div>
+  <div class="particle p6"></div>
+
+  <!-- Main Panels Containers -->
+  <div class="container">
+    
+    <!-- LEFT PANEL: Terminal -->
+    <div class="panel terminal-panel">
+      <div class="panel-header">
+        <div class="window-buttons">
+          <span class="btn red"></span>
+          <span class="btn yellow"></span>
+          <span class="btn green"></span>
+        </div>
+        <div class="panel-title">harishstacks@terminal:~</div>
+        <div class="equalizer">
+          <span class="bar b1"></span>
+          <span class="bar b2"></span>
+          <span class="bar b3"></span>
+          <span class="bar b4"></span>
+          <span class="bar b5"></span>
+        </div>
+      </div>
+      <div class="panel-body terminal-body">
+        <div class="line" id="line-1"><span class="prefix"></span><span class="typed"></span><span class="cursor">█</span></div>
+        <div class="line" id="line-2"><span class="prefix"></span><span class="typed"></span><span class="cursor">█</span></div>
+        <div class="line" id="line-3"><span class="prefix"></span><span class="typed"></span><span class="cursor">█</span></div>
+        <div class="line" id="line-4"><span class="prefix"></span><span class="typed"></span><span class="cursor">█</span></div>
+        <div class="line" id="line-5"><span class="prefix"></span><span class="typed"></span><span class="cursor">█</span></div>
+        <div class="line" id="line-6"><span class="prefix"></span><span class="typed"></span><span class="cursor">█</span></div>
+      </div>
+    </div>
+
+    <!-- RIGHT PANEL: Diagnostics -->
+    <div class="panel dashboard-panel">
+      <div class="panel-header">
+        <div class="panel-title">// SYSTEM DIAGNOSTICS</div>
+      </div>
+      <div class="panel-body dashboard-body">
+        <!-- Active Status -->
+        <div class="status-row">
+          <span class="status-dot"></span>
+          <span class="status-text">SYSTEM STATUS: ONLINE</span>
+        </div>
+        
+        <!-- Stats list -->
+        <div class="stats-list">
+          <div><span class="stat-label">HOST:</span> <span class="stat-val cyan">sh-stacks</span></div>
+          <div><span class="stat-label">LOC: </span> <span class="stat-val cyan">US-EAST // CLOUD</span></div>
+          <div><span class="stat-label">DB:  </span> <span class="stat-val pink">ACTIVE // REDIS</span></div>
+          <div><span class="stat-label">SEC: </span> <span class="stat-val green">SHIELD.SYS // OK</span></div>
+        </div>
+
+        <!-- CPU Gauge & Latency -->
+        <div class="widgets-row">
+          <div class="cpu-widget">
+            <svg class="circular-chart" viewBox="0 0 36 36">
+              <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+              <path class="circle" stroke-dasharray="75, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+            </svg>
+            <div class="cpu-label">CPU <span class="cpu-percent-label">75%</span></div>
+          </div>
+
+          <div class="latency-widget">
+            <div class="latency-header">
+              <span>LATENCY</span>
+              <span class="green">54MS</span>
+            </div>
+            <svg class="oscilloscope-chart" viewBox="0 0 100 30">
+              <path class="wave-base" d="M 0,15 L 20,15 L 25,5 L 30,25 L 35,15 L 50,15 L 55,10 L 60,20 L 65,15 L 80,15 L 85,15 L 100,15" />
+              <path class="wave" d="M 0,15 L 20,15 L 25,5 L 30,25 L 35,15 L 50,15 L 55,10 L 60,20 L 65,15 L 80,15 L 85,15 L 100,15" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Frame step renderer function
+    function setFrame(t) {
+      const lines = [
+        { id: "line-1", prefix: '<span class="cyan">harishstacks</span><span class="pink">@</span><span class="purple">github</span><span class="gray">:~$ </span>', text: "whoami", start: 200, end: 800 },
+        { id: "line-2", prefix: '<span class="gray">> </span>', text: "Harish M | Full Stack Engineer & Designer", start: 1000, end: 1800 },
+        { id: "line-3", prefix: '<span class="gray">> Tech Stack: </span>', text: "React, Node.js, Python, AWS", start: 2000, end: 2800 },
+        { id: "line-4", prefix: '<span class="gray">> Focus: </span>', text: "High-perf web apps & interactive UIs", start: 3000, end: 3800 },
+        { id: "line-5", prefix: '<span class="gray">> Status: </span>', text: "Actively building open-source tools", start: 4000, end: 4600 },
+        { id: "line-6", prefix: '<span class="cyan">harishstacks</span><span class="pink">@</span><span class="purple">github</span><span class="gray">:~$ </span>', text: "", start: 4800, end: 5000 }
+      ];
+
+      lines.forEach((line, index) => {
+        const el = document.getElementById(line.id);
+        const prefixEl = el.querySelector('.prefix');
+        const typedEl = el.querySelector('.typed');
+        const cursorEl = el.querySelector('.cursor');
+
+        // Set prefix once
+        if (prefixEl.innerHTML === "") {
+          prefixEl.innerHTML = line.prefix;
+        }
+
+        if (t < line.start) {
+          el.style.opacity = "0";
+        } else if (t >= line.start && t < line.end) {
+          el.style.opacity = "1";
+          const progress = (t - line.start) / (line.end - line.start);
+          const charCount = Math.floor(progress * line.text.length);
+          typedEl.textContent = line.text.slice(0, charCount);
+          cursorEl.style.display = "inline";
+          // blinking cursor: toggle visibility every 200ms
+          cursorEl.style.opacity = (Math.floor(t / 200) % 2 === 0) ? "1" : "0";
+        } else {
+          el.style.opacity = "1";
+          typedEl.textContent = line.text;
+          if (index === lines.length - 1) {
+            // Last line keeps cursor blinking
+            cursorEl.style.display = "inline";
+            cursorEl.style.opacity = (Math.floor(t / 200) % 2 === 0) ? "1" : "0";
+          } else {
+            cursorEl.style.display = "none";
+          }
+        }
+      });
+
+      // Animate other elements
+      // 1. Oscilloscope wave path shifting
+      const wave = document.querySelector('.wave');
+      if (wave) {
+        const offset = (t / 10) % 100;
+        wave.setAttribute('stroke-dashoffset', offset);
+      }
+
+      // 2. CPU Progress circle
+      const circle = document.querySelector('.circle');
+      if (circle) {
+        // Fluctuate CPU percentage
+        const cpuPercent = 75 + Math.sin(t / 400) * 10;
+        circle.setAttribute('stroke-dasharray', `${cpuPercent}, 100`);
+        const label = document.querySelector('.cpu-percent-label');
+        if (label) {
+          label.textContent = `${Math.floor(cpuPercent)}%`;
+        }
+      }
+
+      // 3. Equalizer heights
+      const bars = [
+        { el: document.querySelector('.b1'), speed: 0.008, phase: 0 },
+        { el: document.querySelector('.b2'), speed: 0.012, phase: 1 },
+        { el: document.querySelector('.b3'), speed: 0.006, phase: 2 },
+        { el: document.querySelector('.b4'), speed: 0.010, phase: 3 },
+        { el: document.querySelector('.b5'), speed: 0.007, phase: 4 }
+      ];
+      bars.forEach(bar => {
+        if (bar.el) {
+          const h = 5 + Math.sin(t * bar.speed + bar.phase) * 4;
+          bar.el.style.height = `${h}px`;
+        }
+      });
+
+      // 4. Particles floating
+      const particles = [
+        { el: document.querySelector('.p1'), startX: 120, startY: 350, speed: 7000, maxTravelY: -70, travelX: 15, delay: 0 },
+        { el: document.querySelector('.p2'), startX: 210, startY: 370, speed: 9000, maxTravelY: -90, travelX: -25, delay: 1200 },
+        { el: document.querySelector('.p3'), startX: 780, startY: 360, speed: 8000, maxTravelY: -70, travelX: 15, delay: 2500 },
+        { el: document.querySelector('.p4'), startX: 890, startY: 350, speed: 6000, maxTravelY: -80, travelX: -20, delay: 1500 },
+        { el: document.querySelector('.p5'), startX: 170, startY: 110, speed: 10000, maxTravelY: -60, travelX: 10, delay: 4000 },
+        { el: document.querySelector('.p6'), startX: 830, startY: 110, speed: 8000, maxTravelY: -60, travelX: -10, delay: 500 }
+      ];
+      particles.forEach(p => {
+        if (p.el) {
+          const elapsed = (t + p.delay) % p.speed;
+          const progress = elapsed / p.speed;
+          const y = progress * p.maxTravelY;
+          const x = progress * p.travelX;
+          let opacity = 0;
+          if (progress < 0.1) {
+            opacity = progress / 0.1 * 0.8;
+          } else if (progress > 0.9) {
+            opacity = (1 - progress) / 0.1 * 0.8;
+          } else {
+            opacity = 0.8;
+          }
+          p.el.style.transform = `translate(${x}px, ${y}px)`;
+          p.el.style.opacity = opacity;
+        }
+      });
+
+      // 5. Twinkling stars
+      const stars = [
+        { el: document.querySelector('.s1'), speed: 3000, delay: 0 },
+        { el: document.querySelector('.s2'), speed: 3000, delay: 700 },
+        { el: document.querySelector('.s3'), speed: 3000, delay: 1400 },
+        { el: document.querySelector('.s4'), speed: 3000, delay: 2100 },
+        { el: document.querySelector('.s5'), speed: 3000, delay: 1000 },
+        { el: document.querySelector('.s6'), speed: 3000, delay: 1800 },
+        { el: document.querySelector('.s7'), speed: 3000, delay: 300 },
+        { el: document.querySelector('.s8'), speed: 3000, delay: 2500 }
+      ];
+      stars.forEach(s => {
+        if (s.el) {
+          const elapsed = (t + s.delay) % s.speed;
+          const progress = elapsed / s.speed;
+          const opacity = 0.2 + Math.abs(Math.sin(progress * Math.PI)) * 0.8;
+          s.el.style.opacity = opacity;
+        }
+      });
+    }
+
+    // Initialize first frame
+    setFrame(0);
+  </script>
+</body>
+</html>
