@@ -241,7 +241,72 @@
 </p>
 
 <!-- ═══════════════════════════════════════════════════════════════
-     BLOCK 5: GITHUB STATS
+     BLOCK 5: AI PERFORMANCE ANALYTICS
+     Futuristic dashboard with GitHub metrics
+     ═══════════════════════════════════════════════════════════════ -->
+
+<br>
+
+<p align="center">
+<h3>📊 AI PERFORMANCE ANALYTICS</h3>
+</p>
+
+<br>
+
+<table width="100%"><tr>
+<td width="50%" valign="top" align="center">
+<img src="https://github-readme-stats.vercel.app/api?username=harishstacks&show_icons=true&theme=dark&bg_color=0D1117&title_color=00D2FF&text_color=E2E8F0&icon_color=00D2FF&hide_border=true&count_private=true" alt="GitHub Stats">
+</td>
+<td width="50%" valign="top" align="center">
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=harishstacks&theme=dark&bg_color=0D1117&title_color=00D2FF&text_color=E2E8F0&hide_border=true&dates=00D2FF" alt="GitHub Streak">
+</td>
+</tr></table>
+
+<table width="100%"><tr>
+<td width="50%" valign="top" align="center">
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=harishstacks&layout=compact&theme=dark&bg_color=0D1117&title_color=00D2FF&text_color=E2E8F0&hide_border=true" alt="Top Languages">
+</td>
+<td width="50%" valign="top" align="center">
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-stats?username=harishstacks&theme=dark" alt="Activity Graph">
+</td>
+</tr></table>
+
+<br>
+
+<table width="100%"><tr><td align="center">
+<h6>
+<code>🧠 Total Repositories</code> &nbsp;•&nbsp;
+<code>🔥 Current Streak</code> &nbsp;•&nbsp;
+<code>📈 Most Used Language</code> &nbsp;•&nbsp;
+<code>⚡ Active Developer Status</code>
+</h6>
+</td></tr></table>
+
+<br>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     BLOCK 6: TECH STACK BADGES
+     Clean, minimal badge row
+     ═══════════════════════════════════════════════════════════════ -->
+
+<p align="center">
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white&labelColor=0D1117)
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white&labelColor=0D1117)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white&labelColor=0D1117)
+
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white&labelColor=0D1117)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white&labelColor=0D1117)
+![Scikit--learn](https://img.shields.io/badge/Scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white&labelColor=0D1117)
+
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white&labelColor=0D1117)
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white&labelColor=0D1117)
+![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white&labelColor=0D1117)
+
+</p>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     BLOCK 7: GITHUB STATS
      Clean stats cards with matching theme colors
      ═══════════════════════════════════════════════════════════════ -->
 
