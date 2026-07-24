@@ -1,0 +1,28 @@
+name: Generate Snake Animation
+
+on:
+  schedule:
+    - cron: "0 0 * * *"  # Run daily at midnight UTC
+  workflow_dispatch:  # Allow manual trigger
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Generate snake animation
+        uses: Platane/snk@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-snake.svg?palette=github-dark&color_snake=#58A6FF&color_dots=#79C0FF
+            dist/github-snake-dark.svg?palette=github-dark&color_snake=#58A6FF&color_dots=#79C0FF
+            dist/ocean.gif?palette=github-dark&color_snake=#58A6FF&color_dots=#79C0FF
+
+      - name: Commit and push changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: update snake animation"
+          file_pattern: dist/*

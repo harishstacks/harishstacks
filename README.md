@@ -93,6 +93,18 @@ AI & Data Science student passionate about building intelligent applications tha
 
 <br>
 
+### 🐍 Contribution Snake
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/harishstacks/harishstacks/main/dist/github-snake.svg" alt="Contribution Snake">
+</p>
+
+<br>
+
+---
+
+<br>
+
 ### 🏆 Achievements
 
 <table width="100%"><tr>
