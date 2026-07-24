@@ -360,6 +360,33 @@
 <br>
 
 <!-- ═══════════════════════════════════════════════════════════════
+     BLOCK 5.6: CONNECT WITH ME
+     Glowing badges with hover effects
+     ═══════════════════════════════════════════════════════════════ -->
+
+<br>
+
+<p align="center">
+<h3>🔗 CONNECT WITH ME</h3>
+</p>
+
+<br>
+
+<p align="center">
+
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white&labelColor=0D1117)](https://github.com/harishstacks)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0D1117)](https://linkedin.com/in/harishstacks)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white&labelColor=0D1117)](mailto:harish@example.com)
+[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white&labelColor=0D1117)](https://instagram.com/harishstacks)
+[![LeetCode](https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=0D1117&labelColor=0D1117)](https://leetcode.com/harishstacks)
+[![HackerRank](https://img.shields.io/badge/HackerRank-2EC866?style=for-the-badge&logo=hackerrank&logoColor=white&labelColor=0D1117)](https://hackerrank.com/harishstacks)
+[![Portfolio](https://img.shields.io/badge/Portfolio-Coming%20Soon-00D2FF?style=for-the-badge&labelColor=0D1117)](#)
+
+</p>
+
+<br>
+
+<!-- ═══════════════════════════════════════════════════════════════
      BLOCK 6: TECH STACK BADGES
      Clean, minimal badge row
      ═══════════════════════════════════════════════════════════════ -->
