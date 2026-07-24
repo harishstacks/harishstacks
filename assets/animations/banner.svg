@@ -1,15 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 1500 400"
+     viewBox="0 0 1500 370"
      width="100%"
      preserveAspectRatio="xMidYMid meet">
 
   <!-- ═══════════════════════════════════════════════════════
        LAYOUT GUIDE
-       Canvas     : 1500 × 400
-       Safe zone  : x=50…1450  y=50…350  (1400 × 300)
-       50 px margin on all four sides — nothing exits this box.
+       Canvas     : 1500 × 370
+       Safe zone  : x=50…1450  y=35…335  (1400 × 300)
+       50 px side margins, 35 px top/bottom margins (zero empty space)
 
-       PANELS (y=60, h=280, bottom edge y=340)
+       PANELS (y=45, h=280, bottom edge y=325)
          Terminal    : x=55,  w=840  → right edge x=895
          Gap         : 20 px
          Diagnostics : x=915, w=530  → right edge x=1445
@@ -72,14 +72,14 @@
                     flood-color="#00f0ff" flood-opacity="0.10"/>
     </filter>
 
-    <!-- Typing clip paths — terminal inner text starts at x=72 -->
-    <clipPath id="cl1"><rect id="rl1" x="72" y="116" width="0" height="22"/></clipPath>
-    <clipPath id="cl2"><rect id="rl2" x="72" y="143" width="0" height="22"/></clipPath>
-    <clipPath id="cl3"><rect id="rl3" x="72" y="170" width="0" height="22"/></clipPath>
-    <clipPath id="cl4"><rect id="rl4" x="72" y="197" width="0" height="22"/></clipPath>
-    <clipPath id="cl5"><rect id="rl5" x="72" y="224" width="0" height="22"/></clipPath>
-    <clipPath id="cl6"><rect id="rl6" x="72" y="251" width="0" height="22"/></clipPath>
-    <clipPath id="cl7"><rect id="rl7" x="72" y="278" width="0" height="22"/></clipPath>
+    <!-- Typing clip paths — terminal inner text starts at x=72, y shifted by -15px -->
+    <clipPath id="cl1"><rect id="rl1" x="72" y="101" width="0" height="22"/></clipPath>
+    <clipPath id="cl2"><rect id="rl2" x="72" y="128" width="0" height="22"/></clipPath>
+    <clipPath id="cl3"><rect id="rl3" x="72" y="155" width="0" height="22"/></clipPath>
+    <clipPath id="cl4"><rect id="rl4" x="72" y="182" width="0" height="22"/></clipPath>
+    <clipPath id="cl5"><rect id="rl5" x="72" y="209" width="0" height="22"/></clipPath>
+    <clipPath id="cl6"><rect id="rl6" x="72" y="236" width="0" height="22"/></clipPath>
+    <clipPath id="cl7"><rect id="rl7" x="72" y="263" width="0" height="22"/></clipPath>
   </defs>
 
   <style>
@@ -118,7 +118,7 @@
 
     /* ── CPU ring ───────────────────────────────────────── */
     @keyframes pf{0%,100%{stroke-dashoffset:60}50%{stroke-dashoffset:25}}
-    .pr{transform-origin:1345px 165px;transform:rotate(-90deg);
+    .pr{transform-origin:1345px 150px;transform:rotate(-90deg);
         animation:pf 3.5s ease-in-out infinite}
 
     /* ── Oscilloscope ───────────────────────────────────── */
@@ -126,7 +126,7 @@
     .osc{stroke-dasharray:90 210;animation:osc 4s linear infinite}
 
     /* ── Equalizer bars ─────────────────────────────────── */
-    @keyframes bg1{0%,100%{height:4px;y:90px}50%{height:13px;y:81px}}
+    @keyframes bg1{0%,100%{height:4px;y:75px}50%{height:13px;y:66px}}
     .b1{animation:bg1 1.2s ease-in-out infinite}
     .b2{animation:bg1 .8s  ease-in-out infinite;animation-delay:.2s}
     .b3{animation:bg1 1.5s ease-in-out infinite;animation-delay:.5s}
@@ -151,189 +151,189 @@
 
     /* ── Moving typing cursor ───────────────────────────── */
     @keyframes mc{
-      0%,1.4%  {x:72px;y:118px;opacity:1}
-      9%       {x:337px;y:118px;opacity:1}  11%{x:337px;y:118px;opacity:1}
-      11.1%    {x:72px;y:145px;opacity:1}  21%{x:532px;y:145px;opacity:1}
-      23%      {x:532px;y:145px;opacity:1} 23.1%{x:72px;y:172px;opacity:1}
-      33%      {x:512px;y:172px;opacity:1} 35%{x:512px;y:172px;opacity:1}
-      35.1%    {x:72px;y:199px;opacity:1}  45%{x:532px;y:199px;opacity:1}
-      47%      {x:532px;y:199px;opacity:1} 47.1%{x:72px;y:226px;opacity:1}
-      57%      {x:532px;y:226px;opacity:1} 59%{x:532px;y:226px;opacity:1}
-      59.1%    {x:72px;y:253px;opacity:1}  65%{x:272px;y:253px;opacity:1}
-      67%      {x:272px;y:253px;opacity:1} 67.1%{x:72px;y:280px;opacity:1}
-      72%      {x:367px;y:280px;opacity:1}
+      0%,1.4%  {x:72px;y:103px;opacity:1}
+      9%       {x:337px;y:103px;opacity:1}  11%{x:337px;y:103px;opacity:1}
+      11.1%    {x:72px;y:130px;opacity:1}  21%{x:532px;y:130px;opacity:1}
+      23%      {x:532px;y:130px;opacity:1} 23.1%{x:72px;y:157px;opacity:1}
+      33%      {x:512px;y:157px;opacity:1} 35%{x:512px;y:157px;opacity:1}
+      35.1%    {x:72px;y:184px;opacity:1}  45%{x:532px;y:184px;opacity:1}
+      47%      {x:532px;y:184px;opacity:1} 47.1%{x:72px;y:211px;opacity:1}
+      57%      {x:532px;y:211px;opacity:1} 59%{x:532px;y:211px;opacity:1}
+      59.1%    {x:72px;y:238px;opacity:1}  65%{x:272px;y:238px;opacity:1}
+      67%      {x:272px;y:238px;opacity:1} 67.1%{x:72px;y:265px;opacity:1}
+      72%      {x:367px;y:265px;opacity:1}
       /* blink on last line */
       74%{opacity:0} 76%{opacity:1} 78%{opacity:0} 80%{opacity:1}
       82%{opacity:0} 84%{opacity:1} 86%{opacity:0} 88%{opacity:1}
       90%{opacity:0} 91%{opacity:1}
-      95%,100%{x:72px;y:118px;opacity:0}
+      95%,100%{x:72px;y:103px;opacity:0}
     }
     .tc{animation:mc 14s linear infinite}
   </style>
 
   <!-- ═══════════════ BACKGROUND ══════════════════════════ -->
-  <rect width="1500" height="400" fill="url(#bg)"/>
-  <rect width="1500" height="400" fill="url(#grid)"/>
-  <circle cx="300"  cy="200" r="400" fill="url(#gc)"/>
-  <circle cx="1200" cy="200" r="400" fill="url(#gp)"/>
+  <rect width="1500" height="370" fill="url(#bg)"/>
+  <rect width="1500" height="370" fill="url(#grid)"/>
+  <circle cx="300"  cy="185" r="400" fill="url(#gc)"/>
+  <circle cx="1200" cy="185" r="400" fill="url(#gp)"/>
 
-  <!-- Perspective grid (vanishing point at 750, 255) -->
+  <!-- Perspective grid (vanishing point at 750, 240) -->
   <g opacity="0.11" stroke="#00f0ff" stroke-width="0.7">
-    <line x1="750" y1="255" x2="-100" y2="400"/>
-    <line x1="750" y1="255" x2="150"  y2="400"/>
-    <line x1="750" y1="255" x2="370"  y2="400"/>
-    <line x1="750" y1="255" x2="520"  y2="400"/>
-    <line x1="750" y1="255" x2="640"  y2="400"/>
-    <line x1="750" y1="255" x2="750"  y2="400"/>
-    <line x1="750" y1="255" x2="860"  y2="400"/>
-    <line x1="750" y1="255" x2="980"  y2="400"/>
-    <line x1="750" y1="255" x2="1130" y2="400"/>
-    <line x1="750" y1="255" x2="1350" y2="400"/>
-    <line x1="750" y1="255" x2="1600" y2="400"/>
-    <line x1="-100" y1="280" x2="1600" y2="280"/>
-    <line x1="-100" y1="310" x2="1600" y2="310"/>
-    <line x1="-100" y1="348" x2="1600" y2="348"/>
-    <line x1="-100" y1="400" x2="1600" y2="400"/>
+    <line x1="750" y1="240" x2="-100" y2="370"/>
+    <line x1="750" y1="240" x2="150"  y2="370"/>
+    <line x1="750" y1="240" x2="370"  y2="370"/>
+    <line x1="750" y1="240" x2="520"  y2="370"/>
+    <line x1="750" y1="240" x2="640"  y2="370"/>
+    <line x1="750" y1="240" x2="750"  y2="370"/>
+    <line x1="750" y1="240" x2="860"  y2="370"/>
+    <line x1="750" y1="240" x2="980"  y2="370"/>
+    <line x1="750" y1="240" x2="1130" y2="370"/>
+    <line x1="750" y1="240" x2="1350" y2="370"/>
+    <line x1="750" y1="240" x2="1600" y2="370"/>
+    <line x1="-100" y1="265" x2="1600" y2="265"/>
+    <line x1="-100" y1="295" x2="1600" y2="295"/>
+    <line x1="-100" y1="333" x2="1600" y2="333"/>
+    <line x1="-100" y1="370" x2="1600" y2="370"/>
   </g>
 
-  <!-- ═══════════════ HUD FRAME (50 px safe zone) ══════════ -->
+  <!-- ═══════════════ HUD FRAME ════════════════════════════ -->
   <g>
     <!-- TL -->
-    <path d="M50,68 L50,50 L68,50"
+    <path d="M50,53 L50,35 L68,35"
           fill="none" stroke="#00f0ff" stroke-width="1.5" stroke-opacity="0.45"/>
     <!-- TR -->
-    <path d="M1450,68 L1450,50 L1432,50"
+    <path d="M1450,53 L1450,35 L1432,35"
           fill="none" stroke="#ff00ff" stroke-width="1.5" stroke-opacity="0.45"/>
     <!-- BL -->
-    <path d="M50,332 L50,350 L68,350"
+    <path d="M50,317 L50,335 L68,335"
           fill="none" stroke="#ff00ff" stroke-width="1.5" stroke-opacity="0.45"/>
     <!-- BR -->
-    <path d="M1450,332 L1450,350 L1432,350"
+    <path d="M1450,317 L1450,335 L1432,335"
           fill="none" stroke="#00f0ff" stroke-width="1.5" stroke-opacity="0.45"/>
 
     <!-- Top HUD labels -->
-    <text x="76" y="44"
+    <text x="76" y="28"
           fill="#00f0ff" font-family="'JetBrains Mono',Monaco,Consolas,monospace"
           font-size="9" opacity="0.42" letter-spacing="1.2">SYS.LOC // PROFILE.ROOT</text>
-    <text x="1424" y="44" text-anchor="end"
+    <text x="1424" y="28" text-anchor="end"
           fill="#ff00ff" font-family="'JetBrains Mono',Monaco,Consolas,monospace"
           font-size="9" opacity="0.42" letter-spacing="1.2">SEC_STATUS // SECURE_SSL</text>
 
     <!-- Accent lines under top labels -->
-    <line x1="50"   y1="56" x2="155"  y2="56" stroke="#00f0ff" stroke-width="1" opacity="0.16"/>
-    <line x1="1345" y1="56" x2="1450" y2="56" stroke="#ff00ff" stroke-width="1" opacity="0.16"/>
+    <line x1="50"   y1="40" x2="155"  y2="40" stroke="#00f0ff" stroke-width="1" opacity="0.16"/>
+    <line x1="1345" y1="40" x2="1450" y2="40" stroke="#ff00ff" stroke-width="1" opacity="0.16"/>
 
     <!-- Bottom HUD micro-labels -->
-    <text x="76" y="362"
+    <text x="76" y="347"
           fill="#9d4edd" font-family="'JetBrains Mono',Monaco,Consolas,monospace"
           font-size="8" opacity="0.32" letter-spacing="1">v2.1.0 // HARISHSTACKS</text>
-    <text x="1424" y="362" text-anchor="end"
+    <text x="1424" y="347" text-anchor="end"
           fill="#9d4edd" font-family="'JetBrains Mono',Monaco,Consolas,monospace"
           font-size="8" opacity="0.32" letter-spacing="1">BUILD // STABLE</text>
   </g>
 
   <!-- ═══════════════ STARS ═════════════════════════════════ -->
   <g>
-    <circle class="s s1" cx="120"  cy="58"  r="1.4" fill="#fff"/>
-    <circle class="s s2" cx="450"  cy="52"  r="1"   fill="#fff"/>
-    <circle class="s s3" cx="1360" cy="58"  r="1.8" fill="#00f0ff" filter="url(#fc)"/>
-    <circle class="s s4" cx="1260" cy="52"  r="1"   fill="#fff"/>
-    <circle class="s s5" cx="100"  cy="342" r="1.4" fill="#fff"/>
-    <circle class="s s6" cx="1350" cy="344" r="1"   fill="#fff"/>
-    <circle class="s s7" cx="195"  cy="315" r="1.8" fill="#ff00ff" filter="url(#fp)"/>
-    <circle class="s s8" cx="1300" cy="316" r="1.4" fill="#fff"/>
-    <circle class="s s9" cx="750"  cy="54"  r="1.4" fill="#9d4edd" filter="url(#fp)"/>
+    <circle class="s s1" cx="120"  cy="43"  r="1.4" fill="#fff"/>
+    <circle class="s s2" cx="450"  cy="37"  r="1"   fill="#fff"/>
+    <circle class="s s3" cx="1360" cy="43"  r="1.8" fill="#00f0ff" filter="url(#fc)"/>
+    <circle class="s s4" cx="1260" cy="37"  r="1"   fill="#fff"/>
+    <circle class="s s5" cx="100"  cy="327" r="1.4" fill="#fff"/>
+    <circle class="s s6" cx="1350" cy="329" r="1"   fill="#fff"/>
+    <circle class="s s7" cx="195"  cy="300" r="1.8" fill="#ff00ff" filter="url(#fp)"/>
+    <circle class="s s8" cx="1300" cy="301" r="1.4" fill="#fff"/>
+    <circle class="s s9" cx="750"  cy="39"  r="1.4" fill="#9d4edd" filter="url(#fp)"/>
   </g>
 
   <!-- ═══════════════ CIRCUIT PULSES ════════════════════════ -->
   <!-- Left -->
   <g>
-    <path d="M0,108 L38,108 L52,122 L52,272 L28,296 L0,296"
+    <path d="M0,93 L38,93 L52,107 L52,257 L28,281 L0,281"
           fill="none" stroke="#1a0d33" stroke-width="1.5" opacity="0.7"/>
     <path class="cpl"
-          d="M0,108 L38,108 L52,122 L52,272 L28,296 L0,296"/>
-    <circle cx="52" cy="122" r="2.2" fill="#00f0ff" filter="url(#fc)"/>
+          d="M0,93 L38,93 L52,107 L52,257 L28,281 L0,281"/>
+    <circle cx="52" cy="107" r="2.2" fill="#00f0ff" filter="url(#fc)"/>
   </g>
   <!-- Right -->
   <g>
-    <path d="M1500,108 L1462,108 L1448,122 L1448,272 L1472,296 L1500,296"
+    <path d="M1500,93 L1462,93 L1448,107 L1448,257 L1472,281 L1500,281"
           fill="none" stroke="#1a0d33" stroke-width="1.5" opacity="0.7"/>
     <path class="cpr"
-          d="M1500,108 L1462,108 L1448,122 L1448,272 L1472,296 L1500,296"/>
-    <circle cx="1448" cy="122" r="2.2" fill="#ff00ff" filter="url(#fp)"/>
+          d="M1500,93 L1462,93 L1448,107 L1448,257 L1472,281 L1500,281"/>
+    <circle cx="1448" cy="107" r="2.2" fill="#ff00ff" filter="url(#fp)"/>
   </g>
 
   <!-- ═══════════════ PARTICLES ════════════════════════════ -->
   <g>
-    <g class="p1"><circle cx="160"  cy="340" r="1.8" fill="#00f0ff" filter="url(#fc)"/></g>
-    <g class="p2"><circle cx="330"  cy="355" r="1.4" fill="#ff00ff" filter="url(#fp)"/></g>
-    <g class="p3"><circle cx="1160" cy="348" r="1.8" fill="#00f0ff" filter="url(#fc)"/></g>
-    <g class="p4"><circle cx="1300" cy="340" r="2.2" fill="#ff00ff" filter="url(#fp)"/></g>
-    <g class="p5"><circle cx="220"  cy="112" r="1.4" fill="#00f0ff" filter="url(#fc)"/></g>
-    <g class="p6"><circle cx="1260" cy="112" r="1.8" fill="#ff00ff" filter="url(#fp)"/></g>
+    <g class="p1"><circle cx="160"  cy="325" r="1.8" fill="#00f0ff" filter="url(#fc)"/></g>
+    <g class="p2"><circle cx="330"  cy="340" r="1.4" fill="#ff00ff" filter="url(#fp)"/></g>
+    <g class="p3"><circle cx="1160" cy="333" r="1.8" fill="#00f0ff" filter="url(#fc)"/></g>
+    <g class="p4"><circle cx="1300" cy="325" r="2.2" fill="#ff00ff" filter="url(#fp)"/></g>
+    <g class="p5"><circle cx="220"  cy="97"  r="1.4" fill="#00f0ff" filter="url(#fc)"/></g>
+    <g class="p6"><circle cx="1260" cy="97"  r="1.8" fill="#ff00ff" filter="url(#fp)"/></g>
   </g>
 
   <!-- ═══════════════════════════════════════════════════════
        TERMINAL PANEL
-       x=55  y=60  w=840  h=280   right edge=895  bottom=340
+       x=55  y=45  w=840  h=280   right edge=895  bottom=325
   ══════════════════════════════════════════════════════════ -->
   <g filter="url(#fpl)">
-    <rect x="55"  y="60" width="840" height="280" rx="8"
+    <rect x="55"  y="45" width="840" height="280" rx="8"
           fill="#070913" fill-opacity="0.93"/>
-    <rect x="55"  y="60" width="840" height="280" rx="8"
+    <rect x="55"  y="45" width="840" height="280" rx="8"
           fill="none" stroke="url(#pb)" stroke-width="1.5"/>
   </g>
 
   <!-- Terminal header bar -->
   <g>
-    <line x1="55" y1="97" x2="895" y2="97"
+    <line x1="55" y1="82" x2="895" y2="82"
           stroke="url(#pb)" stroke-width="1.1" opacity="0.22"/>
     <!-- Window dots -->
-    <circle cx="79"  cy="79" r="4.5" fill="#ff5f56"/>
-    <circle cx="94"  cy="79" r="4.5" fill="#ffbd2e"/>
-    <circle cx="109" cy="79" r="4.5" fill="#27c93f"/>
-    <!-- Tab title centred in terminal panel (55 + 420 = 475) -->
-    <text x="475" y="83" text-anchor="middle"
+    <circle cx="79"  cy="64" r="4.5" fill="#ff5f56"/>
+    <circle cx="94"  cy="64" r="4.5" fill="#ffbd2e"/>
+    <circle cx="109" cy="64" r="4.5" fill="#27c93f"/>
+    <!-- Tab title centred in terminal panel -->
+    <text x="475" y="68" text-anchor="middle"
           fill="#718096" font-family="'JetBrains Mono',Monaco,Consolas,monospace"
           font-weight="bold" font-size="9.5" letter-spacing="1">harishstacks@terminal:~</text>
-    <!-- Equalizer (right side of terminal header) -->
+    <!-- Equalizer -->
     <g opacity="0.6">
-      <rect class="b1" x="856" y="90" width="2.5" height="13" fill="#00f0ff" rx="0.5"/>
-      <rect class="b2" x="862" y="90" width="2.5" height="13" fill="#00f0ff" rx="0.5"/>
-      <rect class="b3" x="868" y="90" width="2.5" height="13" fill="#ff00ff" rx="0.5"/>
-      <rect class="b4" x="874" y="90" width="2.5" height="13" fill="#ff00ff" rx="0.5"/>
-      <rect class="b5" x="880" y="90" width="2.5" height="13" fill="#00f0ff" rx="0.5"/>
+      <rect class="b1" x="856" y="75" width="2.5" height="13" fill="#00f0ff" rx="0.5"/>
+      <rect class="b2" x="862" y="75" width="2.5" height="13" fill="#00f0ff" rx="0.5"/>
+      <rect class="b3" x="868" y="75" width="2.5" height="13" fill="#ff00ff" rx="0.5"/>
+      <rect class="b4" x="874" y="75" width="2.5" height="13" fill="#ff00ff" rx="0.5"/>
+      <rect class="b5" x="880" y="75" width="2.5" height="13" fill="#00f0ff" rx="0.5"/>
     </g>
   </g>
 
-  <!-- Typing content — text starts at x=72 -->
+  <!-- Typing content — text starts at x=72, y shifted by -15px -->
   <g font-family="'JetBrains Mono',Monaco,Consolas,monospace" font-size="12.5">
     <!-- L1: harishstacks@github:~$ whoami -->
-    <text x="72" y="130" fill="#e2e8f0" clip-path="url(#cl1)">
+    <text x="72" y="115" fill="#e2e8f0" clip-path="url(#cl1)">
       <tspan fill="#00f0ff">harishstacks</tspan><tspan fill="#ff00ff">@</tspan><tspan fill="#9d4edd">github</tspan><tspan fill="#a0aec0">:~$ </tspan><tspan fill="#ffffff">whoami</tspan>
     </text>
     <!-- L2: > name | role -->
-    <text x="72" y="157" fill="#e2e8f0" clip-path="url(#cl2)">
+    <text x="72" y="142" fill="#e2e8f0" clip-path="url(#cl2)">
       <tspan fill="#a0aec0">&gt; </tspan><tspan fill="#00f0ff">Harish M</tspan><tspan fill="#718096"> | </tspan><tspan fill="#ff00ff">Full Stack Engineer &amp; Designer</tspan>
     </text>
     <!-- L3: tech stack -->
-    <text x="72" y="184" fill="#e2e8f0" clip-path="url(#cl3)">
+    <text x="72" y="169" fill="#e2e8f0" clip-path="url(#cl3)">
       <tspan fill="#a0aec0">&gt; </tspan><tspan fill="#718096">Stack:  </tspan><tspan fill="#00f0ff">React</tspan><tspan fill="#718096">, </tspan><tspan fill="#ff00ff">Node.js</tspan><tspan fill="#718096">, </tspan><tspan fill="#00f0ff">Python</tspan><tspan fill="#718096">, </tspan><tspan fill="#9d4edd">AWS</tspan>
     </text>
     <!-- L4: focus -->
-    <text x="72" y="211" fill="#e2e8f0" clip-path="url(#cl4)">
+    <text x="72" y="196" fill="#e2e8f0" clip-path="url(#cl4)">
       <tspan fill="#a0aec0">&gt; </tspan><tspan fill="#718096">Focus:  </tspan><tspan fill="#39ff14">High-perf web apps &amp; interactive UIs</tspan>
     </text>
     <!-- L5: status -->
-    <text x="72" y="238" fill="#e2e8f0" clip-path="url(#cl5)">
+    <text x="72" y="223" fill="#e2e8f0" clip-path="url(#cl5)">
       <tspan fill="#a0aec0">&gt; </tspan><tspan fill="#718096">Status: </tspan><tspan fill="#ffb703">Actively building open-source tools</tspan>
     </text>
     <!-- L6: blank prompt -->
-    <text x="72" y="265" fill="#e2e8f0" clip-path="url(#cl6)">
+    <text x="72" y="250" fill="#e2e8f0" clip-path="url(#cl6)">
       <tspan fill="#00f0ff">harishstacks</tspan><tspan fill="#ff00ff">@</tspan><tspan fill="#9d4edd">github</tspan><tspan fill="#a0aec0">:~$ </tspan>
     </text>
     <!-- L7: next command -->
-    <text x="72" y="292" fill="#e2e8f0" clip-path="url(#cl7)">
+    <text x="72" y="277" fill="#e2e8f0" clip-path="url(#cl7)">
       <tspan fill="#a0aec0">&gt; </tspan><tspan fill="#718096">pwd: </tspan><tspan fill="#9d4edd">/home/harishstacks/projects</tspan>
     </text>
   </g>
@@ -342,94 +342,93 @@
 
   <!-- ═══════════════════════════════════════════════════════
        DIAGNOSTICS PANEL
-       x=915  y=60  w=530  h=280   right edge=1445  bottom=340
+       x=915  y=45  w=530  h=280   right edge=1445  bottom=325
   ══════════════════════════════════════════════════════════ -->
   <g filter="url(#fpl)">
-    <rect x="915" y="60" width="530" height="280" rx="8"
+    <rect x="915" y="45" width="530" height="280" rx="8"
           fill="#070913" fill-opacity="0.93"/>
-    <rect x="915" y="60" width="530" height="280" rx="8"
+    <rect x="915" y="45" width="530" height="280" rx="8"
           fill="none" stroke="url(#pb)" stroke-width="1.5"/>
   </g>
 
   <!-- Diagnostics header -->
   <g>
-    <line x1="915" y1="97" x2="1445" y2="97"
+    <line x1="915" y1="82" x2="1445" y2="82"
           stroke="url(#pb)" stroke-width="1.1" opacity="0.22"/>
-    <!-- Centre at 915 + 265 = 1180 -->
-    <text x="1180" y="83" text-anchor="middle"
+    <text x="1180" y="68" text-anchor="middle"
           fill="#718096" font-family="'JetBrains Mono',Monaco,Consolas,monospace"
           font-weight="bold" font-size="9.5" letter-spacing="1">// SYSTEM DIAGNOSTICS</text>
   </g>
 
   <!-- Status row -->
-  <circle class="sd" cx="938" cy="118" r="4" fill="#39ff14" filter="url(#fg)"/>
-  <text x="951" y="122"
+  <circle class="sd" cx="938" cy="103" r="4" fill="#39ff14" filter="url(#fg)"/>
+  <text x="951" y="107"
         fill="#39ff14" font-family="'JetBrains Mono',Monaco,Consolas,monospace"
         font-size="10.5" font-weight="bold">SYSTEM STATUS: ONLINE</text>
 
   <!-- Stats list (left column) -->
   <g font-family="'JetBrains Mono',Monaco,Consolas,monospace" font-size="10.5">
-    <text x="938" y="148"><tspan fill="#718096">HOST:</tspan>  <tspan fill="#00f0ff">sh-stacks</tspan></text>
-    <text x="938" y="168"><tspan fill="#718096">LOC: </tspan>  <tspan fill="#00f0ff">US-EAST // CLOUD</tspan></text>
-    <text x="938" y="188"><tspan fill="#718096">DB:  </tspan>  <tspan fill="#ff00ff">ACTIVE // REDIS</tspan></text>
-    <text x="938" y="208"><tspan fill="#718096">SEC: </tspan>  <tspan fill="#39ff14">SHIELD.SYS // OK</tspan></text>
+    <text x="938" y="133"><tspan fill="#718096">HOST:</tspan>  <tspan fill="#00f0ff">sh-stacks</tspan></text>
+    <text x="938" y="153"><tspan fill="#718096">LOC: </tspan>  <tspan fill="#00f0ff">US-EAST // CLOUD</tspan></text>
+    <text x="938" y="173"><tspan fill="#718096">DB:  </tspan>  <tspan fill="#ff00ff">ACTIVE // REDIS</tspan></text>
+    <text x="938" y="193"><tspan fill="#718096">SEC: </tspan>  <tspan fill="#39ff14">SHIELD.SYS // OK</tspan></text>
   </g>
 
-  <!-- CPU Gauge (right column, cx=1345 keeps ring inside x=1445) -->
+  <!-- CPU Gauge (right column, cx=1345) -->
   <g>
-    <circle cx="1345" cy="165" r="30"
+    <circle cx="1345" cy="150" r="30"
             fill="none" stroke="#171825" stroke-width="4.5"/>
-    <circle class="pr" cx="1345" cy="165" r="30"
+    <circle class="pr" cx="1345" cy="150" r="30"
             fill="none" stroke="#00f0ff" stroke-width="4.5"
             stroke-dasharray="188.5" stroke-dashoffset="188.5"
             filter="url(#fc)"/>
-    <text x="1345" y="163" text-anchor="middle"
+    <text x="1345" y="148" text-anchor="middle"
           fill="#00f0ff" font-family="'JetBrains Mono',Monaco,Consolas,monospace"
           font-size="8.5" font-weight="bold">CPU</text>
-    <text x="1345" y="174" text-anchor="middle"
+    <text x="1345" y="159" text-anchor="middle"
           fill="#718096" font-family="'JetBrains Mono',Monaco,Consolas,monospace"
           font-size="7.5">75%</text>
   </g>
 
   <!-- Oscilloscope (x=938..1435) -->
   <g>
-    <text x="938"  y="232"
+    <text x="938"  y="217"
           fill="#718096" font-family="'JetBrains Mono',Monaco,Consolas,monospace"
           font-size="8.5" font-weight="bold">LATENCY</text>
-    <text x="1435" y="232" text-anchor="end"
+    <text x="1435" y="217" text-anchor="end"
           fill="#39ff14" font-family="'JetBrains Mono',Monaco,Consolas,monospace"
           font-size="8.5" font-weight="bold">54MS</text>
     <!-- Base -->
-    <path d="M938,260 L960,260 L971,241 L982,279 L993,260
-             L1013,260 L1024,249 L1035,271 L1046,260
-             L1083,260 L1095,232 L1107,288 L1119,260
-             L1153,260 L1165,249 L1177,271 L1189,260 L1435,260"
+    <path d="M938,245 L960,245 L971,226 L982,264 L993,245
+             L1013,245 L1024,234 L1035,256 L1046,245
+             L1083,245 L1095,217 L1107,273 L1119,245
+             L1153,245 L1165,234 L1177,256 L1189,245 L1435,245"
           fill="none" stroke="#171825" stroke-width="1.5"/>
     <!-- Animated wave -->
     <path class="osc"
-          d="M938,260 L960,260 L971,241 L982,279 L993,260
-             L1013,260 L1024,249 L1035,271 L1046,260
-             L1083,260 L1095,232 L1107,288 L1119,260
-             L1153,260 L1165,249 L1177,271 L1189,260 L1435,260"
+          d="M938,245 L960,245 L971,226 L982,264 L993,245
+             L1013,245 L1024,234 L1035,256 L1046,245
+             L1083,245 L1095,217 L1107,273 L1119,245
+             L1153,245 L1165,234 L1177,256 L1189,245 L1435,245"
           fill="none" stroke="#ff00ff" stroke-width="1.5"
           stroke-opacity="0.85" filter="url(#fp)"/>
   </g>
 
   <!-- Memory bar (x=938..1435, track width=465) -->
   <g>
-    <text x="938" y="302"
+    <text x="938" y="287"
           fill="#718096" font-family="'JetBrains Mono',Monaco,Consolas,monospace"
           font-size="8.5" font-weight="bold">MEM</text>
-    <rect x="970" y="293" width="465" height="5.5" rx="2.5" fill="#171825"/>
-    <rect x="970" y="293" width="321" height="5.5" rx="2.5"
+    <rect x="970" y="278" width="465" height="5.5" rx="2.5" fill="#171825"/>
+    <rect x="970" y="278" width="321" height="5.5" rx="2.5"
           fill="#9d4edd" filter="url(#fp)" opacity="0.88"/>
-    <text x="1435" y="301" text-anchor="end"
+    <text x="1435" y="286" text-anchor="end"
           fill="#9d4edd" font-family="'JetBrains Mono',Monaco,Consolas,monospace"
           font-size="8.5" font-weight="bold">69%</text>
   </g>
 
   <!-- Uptime -->
-  <text x="938" y="328"
+  <text x="938" y="313"
         fill="#718096" font-family="'JetBrains Mono',Monaco,Consolas,monospace"
         font-size="8.5">UPTIME: <tspan fill="#ffb703">247d 18h 32m</tspan></text>
 
