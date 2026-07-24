@@ -78,16 +78,21 @@ AI & Data Science student passionate about building intelligent applications tha
 
 ## 📊 GitHub Analytics
 
-<table width="100%"><tr>
-<td width="49%" valign="top" align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=harishstacks&show_icons=true&theme=dark&bg_color=0D1117&title_color=58A6FF&text_color=F0F6FC&icon_color=58A6FF&hide_border=true&count_private=true" alt="GitHub Stats" width="100%">
-</td>
-<td width="49%" valign="top" align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=harishstacks&layout=compact&theme=dark&bg_color=0D1117&title_color=58A6FF&text_color=F0F6FC&hide_border=true" alt="Top Languages" width="100%">
-</td>
-</tr></table>
+<table width="100%">
+<tr>
+<td width="50%" align="center">
 
-<br><br>
+<img height="180em" src="https://github-readme-stats.vercel.app/api?username=harishstacks&show_icons=true&theme=github_dark&hide_border=true&include_all_commits=true&count_private=true"/>
+
+</td>
+
+<td width="50%" align="center">
+
+<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=harishstacks&layout=compact&langs_count=8&theme=github_dark&hide_border=true"/>
+
+</td>
+</tr>
+</table>
 
 ---
 
