@@ -25,6 +25,53 @@
 <br>
 
 <!-- ═══════════════════════════════════════════════════════════════
+     BLOCK 2.5: ABOUT ME - AI COMMAND CENTER STYLE
+     Modern glassmorphism cards with clean typography
+     ═══════════════════════════════════════════════════════════════ -->
+
+<table width="100%">
+  <tr>
+    <td align="center">
+
+### 👋 Hello, I'm **Harish M**
+
+#### 🎓 AI & Data Science Student
+
+###### 💻 Passionate about `Python` • `AI` • `Machine Learning` • `UI/UX`
+
+    </td>
+  </tr>
+</table>
+
+<table width="100%">
+  <tr>
+    <td width="50%" valign="top">
+
+> ### 🌱 Currently Learning
+>
+> | Focus Area | Status |
+> |------------|--------|
+> | **Deep Learning** | `In Progress` |
+> | **Generative AI** | `In Progress` |
+> | **MLOps** | `In Progress` |
+> | **Full Stack Development** | `In Progress` |
+
+    </td>
+    <td width="50%" valign="top">
+
+> ### 🎯 Goal
+>
+> **Build AI products that solve real-world problems.**
+>
+> Focused on creating impactful solutions that bridge the gap between cutting-edge AI research and practical applications.
+
+    </td>
+  </tr>
+</table>
+
+<br>
+
+<!-- ═══════════════════════════════════════════════════════════════
      BLOCK 3: SKILLS MATRIX
      Glassmorphism cards with skill categories
      ═══════════════════════════════════════════════════════════════ -->
