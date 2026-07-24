@@ -5,69 +5,66 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from PIL import Image
 
+# ── Configuration ──────────────────────────────────────────────────────────────
+CANVAS_WIDTH  = 1500
+CANVAS_HEIGHT = 370
+
+CAPTURE_DURATION_S  = 14       # Full 14s typing cycle
+FRAME_INTERVAL_MS   = 100      # 100ms -> 10 fps
+INITIAL_WAIT_S      = 3        # Wait for fonts/CSS to load
+
 def generate_gif():
-    # Paths
-    html_path = "file:///" + os.path.abspath("assets/animations/banner.html").replace("\\", "/")
+    html_path       = "file:///" + os.path.abspath("assets/animations/banner.html").replace("\\", "/")
     output_gif_path = os.path.abspath("assets/banner.gif")
     
-    print(f"Loading HTML from: {html_path}")
-    print(f"Generating GIF to: {output_gif_path}")
+    print(f"Loading HTML : {html_path}")
+    print(f"Output GIF   : {output_gif_path}")
+    print(f"Canvas       : {CANVAS_WIDTH}x{CANVAS_HEIGHT}")
 
-    # Set up headless Chrome
     options = Options()
     options.add_argument("--headless=new")
     options.add_argument("--disable-gpu")
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
-    options.add_argument("--window-size=1500,400")
-    
-    # Locate Chrome binary on Windows
+    options.add_argument("--hide-scrollbars")
+    options.add_argument(f"--window-size={CANVAS_WIDTH},{CANVAS_HEIGHT}")
     options.binary_location = r"C:\Program Files\Google\Chrome\Application\chrome.exe"
 
-    # Start WebDriver
     driver = webdriver.Chrome(options=options)
-    driver.set_window_size(1500, 400)
+    driver.set_window_size(CANVAS_WIDTH, CANVAS_HEIGHT)
     
     try:
-        # Load the page
         driver.get(html_path)
-        # Wait for Google Fonts to load
-        time.sleep(3)
+        print(f"Waiting {INITIAL_WAIT_S}s for fonts & animations...")
+        time.sleep(INITIAL_WAIT_S)
 
-        frames = []
-        total_duration = 3000  # 3.0 seconds
-        frame_interval = 150   # 6.7 fps
+        total_frames = (CAPTURE_DURATION_S * 1000) // FRAME_INTERVAL_MS
+        frames       = []
 
-        print("Capturing frames...")
-        for t in range(0, total_duration, frame_interval):
-            # Render the frame for time t (in ms)
-            driver.execute_script(f"setFrame({t})")
-            
-            # Take screenshot as PNG bytes
-            png_data = driver.get_screenshot_as_png()
-            
-            # Open as PIL Image and convert to RGB
-            img = Image.open(io.BytesIO(png_data))
-            img_rgb = img.convert("RGB")
-            frames.append(img_rgb)
-            
-            if (t + frame_interval) % 1000 == 0:
-                print(f"  Captured {t + frame_interval}ms / {total_duration}ms")
+        print(f"Capturing {total_frames} frames...")
+        for i in range(total_frames):
+            png_data    = driver.get_screenshot_as_png()
+            img         = Image.open(io.BytesIO(png_data))
+            img_cropped = img.crop((0, 0, CANVAS_WIDTH, CANVAS_HEIGHT))
+            frames.append(img_cropped.convert("P", palette=Image.ADAPTIVE, colors=256))
 
-        # Save as looping GIF
+            if i < total_frames - 1:
+                time.sleep(FRAME_INTERVAL_MS / 1000.0)
+
         print("Saving looping GIF...")
         frames[0].save(
             output_gif_path,
             save_all=True,
             append_images=frames[1:],
-            duration=frame_interval,
+            duration=FRAME_INTERVAL_MS,
             loop=0,
             optimize=True
         )
-        print("GIF generated successfully!")
+        print(f"✓ GIF generated successfully -> {output_gif_path}")
 
     except Exception as e:
-        print(f"Error during GIF generation: {e}")
+        print(f"✗ Error during GIF generation: {e}")
+        raise
     finally:
         driver.quit()
 
