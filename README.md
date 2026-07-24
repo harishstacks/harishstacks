@@ -156,7 +156,94 @@
 </td></tr></table>
 
 <!-- ═══════════════════════════════════════════════════════════════
-     BLOCK 3.5: AI TECH ARSENAL
+     BLOCK 3.5: AI TOOLKIT
+     Futuristic equipment inventory with glowing headers
+     ═══════════════════════════════════════════════════════════════ -->
+
+<br>
+
+<p align="center">
+<h3>🧰 AI TOOLKIT</h3>
+</p>
+
+<br>
+
+<table width="100%"><tr>
+<td width="33%" valign="top" align="center">
+
+<h4>🤖 AI Frameworks</h4>
+<p>
+<img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white&labelColor=0D1117" alt="TensorFlow">
+<img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white&labelColor=0D1117" alt="PyTorch">
+<img src="https://img.shields.io/badge/Keras-D00000?style=for-the-badge&logo=keras&logoColor=white&labelColor=0D1117" alt="Keras">
+<img src="https://img.shields.io/badge/Hugging%20Face-FFD21E?style=for-the-badge&logo=huggingface&logoColor=0D1117&labelColor=0D1117" alt="Hugging Face">
+</p>
+
+</td>
+<td width="33%" valign="top" align="center">
+
+<h4>🐍 Programming Languages</h4>
+<p>
+<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white&labelColor=0D1117" alt="Python">
+<img src="https://img.shields.io/badge/C-A8B9CC?style=for-the-badge&logo=c&logoColor=white&labelColor=0D1117" alt="C">
+<img src="https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=java&logoColor=white&labelColor=0D1117" alt="Java">
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=0D1117&labelColor=0D1117" alt="JavaScript">
+</p>
+
+</td>
+<td width="33%" valign="top" align="center">
+
+<h4>🛠️ Development Tools</h4>
+<p>
+<img src="https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white&labelColor=0D1117" alt="VS Code">
+<img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white&labelColor=0D1117" alt="Git">
+<img src="https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white&labelColor=0D1117" alt="Jupyter">
+<img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white&labelColor=0D1117" alt="Postman">
+</p>
+
+</td>
+</tr></table>
+
+<table width="100%"><tr>
+<td width="33%" valign="top" align="center">
+
+<h4>☁️ Cloud & DevOps</h4>
+<p>
+<img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white&labelColor=0D1117" alt="Docker">
+<img src="https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white&labelColor=0D1117" alt="Kubernetes">
+<img src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-web-services&logoColor=white&labelColor=0D1117" alt="AWS">
+<img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white&labelColor=0D1117" alt="GitHub Actions">
+</p>
+
+</td>
+<td width="33%" valign="top" align="center">
+
+<h4>🗄️ Databases</h4>
+<p>
+<img src="https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white&labelColor=0D1117" alt="PostgreSQL">
+<img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white&labelColor=0D1117" alt="MySQL">
+<img src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white&labelColor=0D1117" alt="MongoDB">
+<img src="https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white&labelColor=0D1117" alt="Redis">
+</p>
+
+</td>
+<td width="33%" valign="top" align="center">
+
+<h4>🎨 Design Tools</h4>
+<p>
+<img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white&labelColor=0D1117" alt="Figma">
+<img src="https://img.shields.io/badge/Canva-00C4CC?style=for-the-badge&logo=canva&logoColor=white&labelColor=0D1117" alt="Canva">
+<img src="https://img.shields.io/badge/Adobe_CC-31A8FF?style=for-the-badge&logo=adobe&logoColor=white&labelColor=0D1117" alt="Adobe">
+<img src="https://img.shields.io/badge/Blender-E87D0D?style=for-the-badge&logo=blender&logoColor=white&labelColor=0D1117" alt="Blender">
+</p>
+
+</td>
+</tr></table>
+
+<br>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     BLOCK 3.6: AI TECH ARSENAL
      Premium glassmorphism cards with skill icons
      ═══════════════════════════════════════════════════════════════ -->
 
