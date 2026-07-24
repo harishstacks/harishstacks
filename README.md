@@ -2,48 +2,36 @@
   ╔══════════════════════════════════════════════════════════════╗
   ║  HARISH M — AI & DATA SCIENCE PORTFOLIO                     ║
   ║  Theme: Premium Minimal • Clean Typography • Subtle Accent  ║
-  ║  Style: Professional AI Engineer Portfolio                   ║
   ╚══════════════════════════════════════════════════════════════╝
 -->
 
-<!-- ═══════════════════════════════════════════════════════════════
-     HERO SECTION
-     Clean introduction with name and role
-     ═══════════════════════════════════════════════════════════════ -->
+<br>
 
 <p align="center">
   <h1>Harish M</h1>
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/AI%20%26%20Data%20Science%20Student-Building%20Intelligent%20Solutions-58A6FF?style=for-the-badge&labelColor=0D1117" alt="Role">
+  <img src="https://img.shields.io/badge/AI%20%26%20Data%20Science%20Student-Building%20Intelligent%20Solutions-58A6FF?style=flat-square&labelColor=0D1117" alt="Role">
+  <img src="https://img.shields.io/badge/Focus-Python%20·%20AI%20·%20ML%20·%20UI/UX-79C0FF?style=flat-square&labelColor=0D1117" alt="Focus">
 </p>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Python-AI-Machine_Learning-UI/UX-79C0FF?style=flat-square&labelColor=0D1117" alt="Interests">
-</p>
-
----
-
-<!-- ═══════════════════════════════════════════════════════════════
-     ABOUT SECTION
-     Concise professional introduction
-     ═══════════════════════════════════════════════════════════════ -->
+<br>
 
 ### 👋 About Me
 
 AI & Data Science student passionate about building intelligent applications that solve real-world problems. Focused on creating impactful solutions that bridge the gap between cutting-edge AI research and practical applications.
 
-**Currently Learning:** Deep Learning · Generative AI · MLOps · Full Stack Development
+|  |  |
+|---|---|
+| **Currently Learning** | Deep Learning · Generative AI · MLOps · Full Stack Development |
+| **Goal** | Build AI products that solve real-world problems |
 
-**Goal:** Build AI products that solve real-world problems.
+<br>
 
 ---
 
-<!-- ═══════════════════════════════════════════════════════════════
-     TECH STACK
-     Organized skill categories with clean badges
-     ═══════════════════════════════════════════════════════════════ -->
+<br>
 
 ### 🛠️ Tech Stack
 
@@ -82,12 +70,11 @@ AI & Data Science student passionate about building intelligent applications tha
 </td>
 </tr></table>
 
+<br>
+
 ---
 
-<!-- ═══════════════════════════════════════════════════════════════
-     GITHUB ANALYTICS
-     Clean stats display
-     ═══════════════════════════════════════════════════════════════ -->
+<br>
 
 ### 📊 GitHub Analytics
 
@@ -100,12 +87,11 @@ AI & Data Science student passionate about building intelligent applications tha
 </td>
 </tr></table>
 
+<br>
+
 ---
 
-<!-- ═══════════════════════════════════════════════════════════════
-     ACHIEVEMENTS
-     Clean milestone cards
-     ═══════════════════════════════════════════════════════════════ -->
+<br>
 
 ### 🏆 Achievements
 
@@ -113,13 +99,15 @@ AI & Data Science student passionate about building intelligent applications tha
 <td width="50%" valign="top">
 
 ![Certifications](https://img.shields.io/badge/Certifications-Coming_Soon-58A6FF?style=flat-square&labelColor=0D1117)
-<br><sub>Professional certifications and credentials</sub>
+
+Professional certifications and credentials
 
 </td>
 <td width="50%" valign="top">
 
 ![Hackathons](https://img.shields.io/badge/Hackathons-Coming_Soon-58A6FF?style=flat-square&labelColor=0D1117)
-<br><sub>Competition achievements and awards</sub>
+
+Competition achievements and awards
 
 </td>
 </tr></table>
@@ -127,24 +115,25 @@ AI & Data Science student passionate about building intelligent applications tha
 <table width="100%"><tr>
 <td width="50%" valign="top">
 
-![Open_Source](https://img.shields.io/badge/Open_Source-Coming_Soon-58A6FF?style=flat-square&labelColor=0D1117)
-<br><sub>Community contributions and collaborations</sub>
+![Open Source](https://img.shields.io/badge/Open_Source-Coming_Soon-58A6FF?style=flat-square&labelColor=0D1117)
+
+Community contributions and collaborations
 
 </td>
 <td width="50%" valign="top">
 
 ![Research](https://img.shields.io/badge/Research-Coming_Soon-58A6FF?style=flat-square&labelColor=0D1117)
-<br><sub>Publications and academic work</sub>
+
+Publications and academic work
 
 </td>
 </tr></table>
 
+<br>
+
 ---
 
-<!-- ═══════════════════════════════════════════════════════════════
-     CONNECT
-     Clean contact links
-     ═══════════════════════════════════════════════════════════════ -->
+<br>
 
 ### 🔗 Connect
 
@@ -157,17 +146,16 @@ AI & Data Science student passionate about building intelligent applications tha
 
 </p>
 
+<br>
+
 ---
 
-<!-- ═══════════════════════════════════════════════════════════════
-     FOOTER
-     Minimal closing
-     ═══════════════════════════════════════════════════════════════ -->
+<br>
 
 <p align="center">
+  <img src="https://komarev.com/ghpvc/?username=harishstacks&label=Profile+Views&color=58A6FF&style=flat-square" alt="Profile Views">
+</p>
 
-![Profile Views](https://komarev.com/ghpvc/?username=harishstacks&label=Profile+Views&color=58A6FF&style=flat-square)
-
-<sub>Made with ❤️ by Harish M</sub>
-
+<p align="center">
+  <sub>Made with ❤️ by Harish M</sub>
 </p>
