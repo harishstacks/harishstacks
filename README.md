@@ -33,11 +33,11 @@
   <tr>
     <td align="center">
 
-### 👋 Hello, I'm **Harish M**
+<h3>👋 Hello, I'm <b>Harish M</b></h3>
 
-#### 🎓 AI & Data Science Student
+<h4>🎓 AI & Data Science Student</h4>
 
-###### 💻 Passionate about `Python` • `AI` • `Machine Learning` • `UI/UX`
+<h6>💻 Passionate about <code>Python</code> • <code>AI</code> • <code>Machine Learning</code> • <code>UI/UX</code></h6>
 
     </td>
   </tr>
@@ -47,23 +47,26 @@
   <tr>
     <td width="50%" valign="top">
 
-> ### 🌱 Currently Learning
->
-> | Focus Area | Status |
-> |------------|--------|
-> | **Deep Learning** | `In Progress` |
-> | **Generative AI** | `In Progress` |
-> | **MLOps** | `In Progress` |
-> | **Full Stack Development** | `In Progress` |
+<h4>🌱 Currently Learning</h4>
+
+<table>
+  <thead><tr><th>Focus Area</th><th>Status</th></tr></thead>
+  <tbody>
+    <tr><td><b>Deep Learning</b></td><td><code>In Progress</code></td></tr>
+    <tr><td><b>Generative AI</b></td><td><code>In Progress</code></td></tr>
+    <tr><td><b>MLOps</b></td><td><code>In Progress</code></td></tr>
+    <tr><td><b>Full Stack Development</b></td><td><code>In Progress</code></td></tr>
+  </tbody>
+</table>
 
     </td>
     <td width="50%" valign="top">
 
-> ### 🎯 Goal
->
-> **Build AI products that solve real-world problems.**
->
-> Focused on creating impactful solutions that bridge the gap between cutting-edge AI research and practical applications.
+<h4>🎯 Goal</h4>
+
+<p><b>Build AI products that solve real-world problems.</b></p>
+
+<p>Focused on creating impactful solutions that bridge the gap between cutting-edge AI research and practical applications.</p>
 
     </td>
   </tr>
@@ -80,38 +83,47 @@
   <tr>
     <td width="33%" valign="top">
 
-> #### 🧠 AI Focus
->
-> | Domain | Status |
-> |--------|--------|
-> | Artificial Intelligence | `● Active` |
-> | Machine Learning | `● Active` |
-> | Deep Learning | `● Active` |
-> | Data Science | `● Active` |
+<h4>🧠 AI Focus</h4>
+
+<table>
+  <thead><tr><th>Domain</th><th>Status</th></tr></thead>
+  <tbody>
+    <tr><td>Artificial Intelligence</td><td><code>● Active</code></td></tr>
+    <tr><td>Machine Learning</td><td><code>● Active</code></td></tr>
+    <tr><td>Deep Learning</td><td><code>● Active</code></td></tr>
+    <tr><td>Data Science</td><td><code>● Active</code></td></tr>
+  </tbody>
+</table>
 
     </td>
     <td width="33%" valign="top">
 
-> #### 💻 Development
->
-> | Technology | Level |
-> |------------|-------|
-> | Python | `█████` |
-> | React | `████░` |
-> | Node.js | `████░` |
-> | Docker | `███░░` |
+<h4>💻 Development</h4>
+
+<table>
+  <thead><tr><th>Technology</th><th>Level</th></tr></thead>
+  <tbody>
+    <tr><td>Python</td><td><code>█████</code></td></tr>
+    <tr><td>React</td><td><code>████░</code></td></tr>
+    <tr><td>Node.js</td><td><code>████░</code></td></tr>
+    <tr><td>Docker</td><td><code>███░░</code></td></tr>
+  </tbody>
+</table>
 
     </td>
     <td width="33%" valign="top">
 
-> #### 📊 Current Status
->
-> | Activity | State |
-> |----------|-------|
-> | Building AI Projects | `🟢 Active` |
-> | Learning MLOps | `🟡 In Progress` |
-> | Exploring LLMs | `🟢 Active` |
-> | Open Source Contributor | `🟢 Active` |
+<h4>📊 Current Status</h4>
+
+<table>
+  <thead><tr><th>Activity</th><th>State</th></tr></thead>
+  <tbody>
+    <tr><td>Building AI Projects</td><td><code>🟢 Active</code></td></tr>
+    <tr><td>Learning MLOps</td><td><code>🟡 In Progress</code></td></tr>
+    <tr><td>Exploring LLMs</td><td><code>🟢 Active</code></td></tr>
+    <tr><td>Open Source Contributor</td><td><code>🟢 Active</code></td></tr>
+  </tbody>
+</table>
 
     </td>
   </tr>
@@ -121,35 +133,41 @@
   <tr>
     <td width="33%" valign="top">
 
-> #### ⚡ System Metrics
->
-> | Metric | Value |
-> |--------|-------|
-> | Projects Completed | `12+` |
-> | Repositories | `15+` |
-> | Commits | `500+` |
-> | Stars Earned | `⭐ 25+` |
+<h4>⚡ System Metrics</h4>
+
+<table>
+  <thead><tr><th>Metric</th><th>Value</th></tr></thead>
+  <tbody>
+    <tr><td>Projects Completed</td><td><code>12+</code></td></tr>
+    <tr><td>Repositories</td><td><code>15+</code></td></tr>
+    <tr><td>Commits</td><td><code>500+</code></td></tr>
+    <tr><td>Stars Earned</td><td><code>⭐ 25+</code></td></tr>
+  </tbody>
+</table>
 
     </td>
     <td width="33%" valign="top">
 
-> #### 🎯 Current Mission
->
-> > *"Building intelligent applications that solve real-world problems."*
->
-> Focused on creating AI-powered solutions that make a meaningful impact in healthcare, education, and automation.
+<h4>🎯 Current Mission</h4>
+
+<p><i>"Building intelligent applications that solve real-world problems."</i></p>
+
+<p>Focused on creating AI-powered solutions that make a meaningful impact in healthcare, education, and automation.</p>
 
     </td>
     <td width="33%" valign="top">
 
-> #### 🚀 Next Goals
->
-> | Goal | Priority |
-> |------|----------|
-> | Master Deep Learning | `🔥 High` |
-> | Deploy ML Models | `🔥 High` |
-> | Contribute to Open Source | `● Medium` |
-> | Build SaaS AI Products | `● Medium` |
+<h4>🚀 Next Goals</h4>
+
+<table>
+  <thead><tr><th>Goal</th><th>Priority</th></tr></thead>
+  <tbody>
+    <tr><td>Master Deep Learning</td><td><code>🔥 High</code></td></tr>
+    <tr><td>Deploy ML Models</td><td><code>🔥 High</code></td></tr>
+    <tr><td>Contribute to Open Source</td><td><code>● Medium</code></td></tr>
+    <tr><td>Build SaaS AI Products</td><td><code>● Medium</code></td></tr>
+  </tbody>
+</table>
 
     </td>
   </tr>
@@ -166,28 +184,34 @@
   <tr>
     <td width="50%" valign="top">
 
-### 🧠 **AI / ML Stack**
+<h3>🧠 <b>AI / ML Stack</b></h3>
 
-| Skill | Proficiency |
-|-------|-------------|
-| `Python` | ████████████████████ 95% |
-| `PyTorch` | ███████████████████░ 90% |
-| `TensorFlow` | █████████████████░░░ 85% |
-| `Scikit-learn` | ██████████████████░░ 88% |
-| `Transformers` | ████████████████░░░░ 80% |
+<table>
+  <thead><tr><th>Skill</th><th>Proficiency</th></tr></thead>
+  <tbody>
+    <tr><td><code>Python</code></td><td>████████████████████ 95%</td></tr>
+    <tr><td><code>PyTorch</code></td><td>███████████████████░ 90%</td></tr>
+    <tr><td><code>TensorFlow</code></td><td>██████████████████░░ 85%</td></tr>
+    <tr><td><code>Scikit-learn</code></td><td>███████████████████░ 88%</td></tr>
+    <tr><td><code>Transformers</code></td><td>████████████████░░░░ 80%</td></tr>
+  </tbody>
+</table>
 
     </td>
     <td width="50%" valign="top">
 
-### 📊 **Data & Deployment**
+<h3>📊 <b>Data & Deployment</b></h3>
 
-| Skill | Proficiency |
-|-------|-------------|
-| `SQL / NoSQL` | ██████████████████░░ 88% |
-| `Pandas / NumPy` | ███████████████████░ 92% |
-| `Docker / MLOps` | ███████████████░░░░░ 75% |
-| `FastAPI` | █████████████████░░░ 82% |
-| `Git / CI-CD` | ██████████████████░░ 86% |
+<table>
+  <thead><tr><th>Skill</th><th>Proficiency</th></tr></thead>
+  <tbody>
+    <tr><td><code>SQL / NoSQL</code></td><td>██████████████████░░ 88%</td></tr>
+    <tr><td><code>Pandas / NumPy</code></td><td>███████████████████░ 92%</td></tr>
+    <tr><td><code>Docker / MLOps</code></td><td>███████████████░░░░░ 75%</td></tr>
+    <tr><td><code>FastAPI</code></td><td>█████████████████░░░ 82%</td></tr>
+    <tr><td><code>Git / CI-CD</code></td><td>██████████████████░░ 86%</td></tr>
+  </tbody>
+</table>
 
     </td>
   </tr>
@@ -247,7 +271,7 @@
   <tr>
     <td align="center">
 
-###### `SYS.STATUS` // <span style="color:#00E676">● ONLINE</span> &nbsp;•&nbsp; `MODEL.VER` // v3.4.0-DEEP-LEARNING &nbsp;•&nbsp; `ENV` // PyTorch 2.3 • CUDA 12.2
+<h6><code>SYS.STATUS</code> // <span style="color:#00E676">● ONLINE</span> &nbsp;•&nbsp; <code>MODEL.VER</code> // v3.4.0-DEEP-LEARNING &nbsp;•&nbsp; <code>ENV</code> // PyTorch 2.3 • CUDA 12.2</h6>
 
     </td>
   </tr>
@@ -257,6 +281,6 @@
 
 ![Profile Views](https://komarev.com/ghpvc/?username=harishstacks&label=PROFILE+VIEWS&color=00D2FF&style=flat-square)
 
-**🚀 Building AI-powered applications that matter.**
+<b>🚀 Building AI-powered applications that matter.</b>
 
 </p>
