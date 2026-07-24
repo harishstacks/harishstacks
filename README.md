@@ -105,6 +105,75 @@ AI & Data Science student passionate about building intelligent applications tha
 
 <br>
 
+### 🚀 Featured Projects
+
+<table width="100%"><tr>
+<td width="50%" valign="top">
+
+**AI-Powered Chatbot**
+
+Intelligent conversational AI assistant with natural language understanding and context-aware responses.
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white&labelColor=0D1117)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white&labelColor=0D1117)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white&labelColor=0D1117)
+
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-58A6FF?style=flat-square&logo=github&logoColor=white&labelColor=0D1117)](https://github.com/harishstacks/ai-chatbot)
+[![Demo](https://img.shields.io/badge/Live_Demo-79C0FF?style=flat-square&logoColor=white&labelColor=0D1117)](https://ai-chatbot-demo.vercel.app)
+
+</td>
+<td width="50%" valign="top">
+
+**Computer Vision Platform**
+
+Real-time object detection and image classification system with deployment-ready architecture.
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white&labelColor=0D1117)
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white&labelColor=0D1117)
+![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=flat-square&logo=opencv&logoColor=white&labelColor=0D1117)
+
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-58A6FF?style=flat-square&logo=github&logoColor=white&labelColor=0D1117)](https://github.com/harishstacks/cv-platform)
+
+</td>
+</tr></table>
+
+<table width="100%"><tr>
+<td width="50%" valign="top">
+
+**ML Ops Pipeline**
+
+Automated machine learning workflow with CI/CD, model versioning, and monitoring capabilities.
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white&labelColor=0D1117)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white&labelColor=0D1117)
+![GitHub_Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=github-actions&logoColor=white&labelColor=0D1117)
+
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-58A6FF?style=flat-square&logo=github&logoColor=white&labelColor=0D1117)](https://github.com/harishstacks/mlops-pipeline)
+[![Demo](https://img.shields.io/badge/Live_Demo-79C0FF?style=flat-square&logoColor=white&labelColor=0D1117)](https://mlops-demo.vercel.app)
+
+</td>
+<td width="50%" valign="top">
+
+**Data Visualization Dashboard**
+
+Interactive analytics dashboard with real-time data processing and beautiful chart visualizations.
+
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=0D1117)
+![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=0D1117)
+![D3.js](https://img.shields.io/badge/D3.js-F9A03C?style=flat-square&logo=d3.js&logoColor=white&labelColor=0D1117)
+
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-58A6FF?style=flat-square&logo=github&logoColor=white&labelColor=0D1117)](https://github.com/harishstacks/data-dashboard)
+[![Demo](https://img.shields.io/badge/Live_Demo-79C0FF?style=flat-square&logoColor=white&labelColor=0D1117)](https://data-dashboard-demo.vercel.app)
+
+</td>
+</tr></table>
+
+<br>
+
+---
+
+<br>
+
 ### 🏆 Achievements
 
 <table width="100%"><tr>
