@@ -80,10 +80,19 @@ AI & Data Science student passionate about building intelligent applications tha
 
 <table width="100%"><tr>
 <td width="49%" valign="top" align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=harishstacks&show_icons=true&theme=dark&bg_color=0D1117&title_color=58A6FF&text_color=F0F6FC&icon_color=58A6FF&hide_border=true&count_private=true" alt="GitHub Stats" width="100%">
+  <img src="https://github-readme-stats.vercel.app/api?username=harishstacks&show_icons=true&theme=dark&bg_color=0D1117&title_color=58A6FF&text_color=F0F6FC&icon_color=58A6FF&hide_border=true&count_private=true&cache_seconds=1800" alt="GitHub Stats" width="100%">
 </td>
 <td width="49%" valign="top" align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=harishstacks&layout=compact&theme=dark&bg_color=0D1117&title_color=58A6FF&text_color=F0F6FC&hide_border=true" alt="Top Languages" width="100%">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=harishstacks&layout=compact&theme=dark&bg_color=0D1117&title_color=58A6FF&text_color=F0F6FC&hide_border=true&cache_seconds=1800" alt="Top Languages" width="100%">
+</td>
+</tr></table>
+
+<table width="100%"><tr>
+<td width="49%" valign="top" align="center">
+  <img src="https://streak-stats.demolab.com?user=harishstacks&theme=dark&bg_color=0D1117&title_color=58A6FF&ring_color=79C0FF&sideLabels=F0F6FC&sideNums=F0F6FC&currStreakLabel=58A6FF&currStreakNum=F0F6FC&type=svg" alt="GitHub Streak" width="100%">
+</td>
+<td width="49%" valign="top" align="center">
+  <img src="https://ghchart.rshah.org/58A6FF/harishstacks" alt="Contribution Graph" width="100%">
 </td>
 </tr></table>
 
@@ -118,8 +127,8 @@ Intelligent conversational AI assistant with natural language understanding and 
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white&labelColor=0D1117)
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white&labelColor=0D1117)
 
-[![GitHub](https://img.shields.io/badge/GitHub-Repository-58A6FF?style=for-the-badge&logo=github&logoColor=white&labelColor=0D1117)](https://github.com/harishstacks/ai-chatbot)
-[![Demo](https://img.shields.io/badge/Live_Demo-79C0FF?style=for-the-badge&logoColor=white&labelColor=0D1117)](https://ai-chatbot-demo.vercel.app)
+[![GitHub](https://img.shields.io/badge/View_Project-58A6FF?style=for-the-badge&logo=github&logoColor=white&labelColor=0D1117)](https://github.com/harishstacks)
+[![Demo](https://img.shields.io/badge/Live_Demo-79C0FF?style=for-the-badge&logoColor=white&labelColor=0D1117)](https://github.com/harishstacks)
 
 </td>
 <td width="49%" valign="top">
@@ -132,7 +141,7 @@ Real-time object detection and image classification system with deployment-ready
 ![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white&labelColor=0D1117)
 ![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white&labelColor=0D1117)
 
-[![GitHub](https://img.shields.io/badge/GitHub-Repository-58A6FF?style=for-the-badge&logo=github&logoColor=white&labelColor=0D1117)](https://github.com/harishstacks/cv-platform)
+[![GitHub](https://img.shields.io/badge/View_Project-58A6FF?style=for-the-badge&logo=github&logoColor=white&labelColor=0D1117)](https://github.com/harishstacks)
 
 </td>
 </tr></table>
@@ -148,8 +157,8 @@ Automated machine learning workflow with CI/CD, model versioning, and monitoring
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white&labelColor=0D1117)
 ![GitHub_Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white&labelColor=0D1117)
 
-[![GitHub](https://img.shields.io/badge/GitHub-Repository-58A6FF?style=for-the-badge&logo=github&logoColor=white&labelColor=0D1117)](https://github.com/harishstacks/mlops-pipeline)
-[![Demo](https://img.shields.io/badge/Live_Demo-79C0FF?style=for-the-badge&logoColor=white&labelColor=0D1117)](https://mlops-demo.vercel.app)
+[![GitHub](https://img.shields.io/badge/View_Project-58A6FF?style=for-the-badge&logo=github&logoColor=white&labelColor=0D1117)](https://github.com/harishstacks)
+[![Demo](https://img.shields.io/badge/Live_Demo-79C0FF?style=for-the-badge&logoColor=white&labelColor=0D1117)](https://github.com/harishstacks)
 
 </td>
 <td width="49%" valign="top">
@@ -162,8 +171,8 @@ Interactive analytics dashboard with real-time data processing and beautiful cha
 ![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=0D1117)
 ![D3.js](https://img.shields.io/badge/D3.js-F9A03C?style=for-the-badge&logo=d3.js&logoColor=white&labelColor=0D1117)
 
-[![GitHub](https://img.shields.io/badge/GitHub-Repository-58A6FF?style=for-the-badge&logo=github&logoColor=white&labelColor=0D1117)](https://github.com/harishstacks/data-dashboard)
-[![Demo](https://img.shields.io/badge/Live_Demo-79C0FF?style=for-the-badge&logoColor=white&labelColor=0D1117)](https://data-dashboard-demo.vercel.app)
+[![GitHub](https://img.shields.io/badge/View_Project-58A6FF?style=for-the-badge&logo=github&logoColor=white&labelColor=0D1117)](https://github.com/harishstacks)
+[![Demo](https://img.shields.io/badge/Live_Demo-79C0FF?style=for-the-badge&logoColor=white&labelColor=0D1117)](https://github.com/harishstacks)
 
 </td>
 </tr></table>
