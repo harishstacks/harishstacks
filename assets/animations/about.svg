@@ -1,45 +1,43 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 440" width="100%" preserveAspectRatio="xMidYMid meet">
   <defs>
-    <!-- Backgrounds -->
+    <!-- Background Gradients -->
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%"   stop-color="#040509"/>
-      <stop offset="50%"  stop-color="#0a0b16"/>
-      <stop offset="100%" stop-color="#040509"/>
+      <stop offset="0%"   stop-color="#060812"/>
+      <stop offset="50%"  stop-color="#090d1a"/>
+      <stop offset="100%" stop-color="#050710"/>
     </linearGradient>
 
     <linearGradient id="cyan-grad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#00f0ff"/>
+      <stop offset="0%" stop-color="#00d2ff"/>
       <stop offset="100%" stop-color="#7000ff"/>
     </linearGradient>
 
     <linearGradient id="card-border-cyan" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0.75"/>
-      <stop offset="100%" stop-color="#00f0ff" stop-opacity="0.12"/>
+      <stop offset="0%" stop-color="#00d2ff" stop-opacity="0.65"/>
+      <stop offset="100%" stop-color="#00d2ff" stop-opacity="0.12"/>
     </linearGradient>
 
-    <linearGradient id="card-border-pink" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#ff00ff" stop-opacity="0.75"/>
-      <stop offset="100%" stop-color="#ff00ff" stop-opacity="0.12"/>
+    <linearGradient id="card-border-purple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7000ff" stop-opacity="0.65"/>
+      <stop offset="100%" stop-color="#9d4edd" stop-opacity="0.12"/>
     </linearGradient>
 
     <filter id="glow-cyan" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="3" result="blur" />
-      <feMerge>
-        <feMergeNode in="blur" />
-        <feMergeNode in="SourceGraphic" />
-      </feMerge>
+      <feGaussianBlur stdDeviation="2.5" result="blur" />
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
 
-    <filter id="glow-pink" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="3" result="blur" />
-      <feMerge>
-        <feMergeNode in="blur" />
-        <feMergeNode in="SourceGraphic" />
-      </feMerge>
+    <filter id="glow-purple" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2.5" result="blur" />
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <filter id="card-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#00d2ff" flood-opacity="0.06"/>
     </filter>
 
     <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
-      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#00f0ff" stroke-width="0.5" stroke-opacity="0.04"/>
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#00d2ff" stroke-width="0.5" stroke-opacity="0.025"/>
     </pattern>
   </defs>
 
@@ -47,16 +45,16 @@
   <rect width="1500" height="440" fill="url(#bg)" rx="10"/>
   <rect width="1500" height="440" fill="url(#grid)" rx="10"/>
 
-  <!-- Top Decorative HUD Corner Lines -->
-  <path d="M 50 42 L 50 25 L 67 25" fill="none" stroke="#00f0ff" stroke-width="1.5" stroke-opacity="0.45"/>
-  <path d="M 1450 42 L 1450 25 L 1433 25" fill="none" stroke="#ff00ff" stroke-width="1.5" stroke-opacity="0.45"/>
-  <path d="M 50 398 L 50 415 L 67 415" fill="none" stroke="#ff00ff" stroke-width="1.5" stroke-opacity="0.45"/>
-  <path d="M 1450 398 L 1450 415 L 1433 415" fill="none" stroke="#00f0ff" stroke-width="1.5" stroke-opacity="0.45"/>
+  <!-- Top & Bottom Minimal Corner Lines -->
+  <path d="M 50 42 L 50 25 L 67 25" fill="none" stroke="#00d2ff" stroke-width="1.5" stroke-opacity="0.4"/>
+  <path d="M 1450 42 L 1450 25 L 1433 25" fill="none" stroke="#7000ff" stroke-width="1.5" stroke-opacity="0.4"/>
+  <path d="M 50 398 L 50 415 L 67 415" fill="none" stroke="#7000ff" stroke-width="1.5" stroke-opacity="0.4"/>
+  <path d="M 1450 398 L 1450 415 L 1433 415" fill="none" stroke="#00d2ff" stroke-width="1.5" stroke-opacity="0.4"/>
 
   <!-- Header Banner Section -->
   <g transform="translate(55, 30)">
     <!-- Subtitle Tag -->
-    <text x="0" y="14" fill="#00f0ff" font-family="'JetBrains Mono',Monaco,Consolas,monospace" font-size="10" letter-spacing="2" opacity="0.75">// SYSTEM.PROFILE :: ABOUT_ME</text>
+    <text x="0" y="14" fill="#00d2ff" font-family="'JetBrains Mono',Monaco,Consolas,monospace" font-size="10" letter-spacing="2" opacity="0.75">// SYSTEM.PROFILE :: ABOUT_ME</text>
     
     <!-- Main Title -->
     <text x="0" y="46" fill="#ffffff" font-family="'JetBrains Mono',Monaco,Consolas,monospace" font-size="25" font-weight="bold">👋 Hi, I'm <tspan fill="url(#cyan-grad)">Harish M</tspan></text>
@@ -64,89 +62,89 @@
     <!-- Role Pills Row -->
     <g transform="translate(0, 62)">
       <!-- Pill 1: Student -->
-      <rect x="0" y="0" width="230" height="28" rx="14" fill="#00f0ff" fill-opacity="0.08" stroke="#00f0ff" stroke-opacity="0.3" stroke-width="1"/>
+      <rect x="0" y="0" width="230" height="28" rx="14" fill="#00d2ff" fill-opacity="0.07" stroke="#00d2ff" stroke-opacity="0.3" stroke-width="1"/>
       <text x="14" y="18" fill="#e2e8f0" font-family="'JetBrains Mono',Monaco,Consolas,monospace" font-size="11">🎓 AI &amp; Data Science Student</text>
 
       <!-- Pill 2: Python Dev -->
-      <rect x="242" y="0" width="170" height="28" rx="14" fill="#9d4edd" fill-opacity="0.08" stroke="#9d4edd" stroke-opacity="0.3" stroke-width="1"/>
+      <rect x="242" y="0" width="170" height="28" rx="14" fill="#7000ff" fill-opacity="0.09" stroke="#7000ff" stroke-opacity="0.3" stroke-width="1"/>
       <text x="256" y="18" fill="#e2e8f0" font-family="'JetBrains Mono',Monaco,Consolas,monospace" font-size="11">💻 Python Developer</text>
 
       <!-- Pill 3: ML Enthusiast -->
-      <rect x="424" y="0" width="240" height="28" rx="14" fill="#ff00ff" fill-opacity="0.08" stroke="#ff00ff" stroke-opacity="0.3" stroke-width="1"/>
+      <rect x="424" y="0" width="240" height="28" rx="14" fill="#00f0ff" fill-opacity="0.07" stroke="#00f0ff" stroke-opacity="0.3" stroke-width="1"/>
       <text x="438" y="18" fill="#e2e8f0" font-family="'JetBrains Mono',Monaco,Consolas,monospace" font-size="11">🤖 Machine Learning Enthusiast</text>
 
       <!-- Pill 4: UI/UX Designer -->
-      <rect x="676" y="0" width="160" height="28" rx="14" fill="#39ff14" fill-opacity="0.08" stroke="#39ff14" stroke-opacity="0.3" stroke-width="1"/>
+      <rect x="676" y="0" width="160" height="28" rx="14" fill="#00e676" fill-opacity="0.07" stroke="#00e676" stroke-opacity="0.3" stroke-width="1"/>
       <text x="690" y="18" fill="#e2e8f0" font-family="'JetBrains Mono',Monaco,Consolas,monospace" font-size="11">🎨 UI/UX Designer</text>
     </g>
   </g>
 
   <!-- COLUMN 1: Currently Learning (x=55, y=155, w=680, h=245) -->
-  <g transform="translate(55, 155)">
+  <g transform="translate(55, 155)" filter="url(#card-shadow)">
     <!-- Card Background -->
-    <rect x="0" y="0" width="680" height="245" rx="8" fill="#070913" fill-opacity="0.92" stroke="url(#card-border-cyan)" stroke-width="1.5"/>
+    <rect x="0" y="0" width="680" height="245" rx="10" fill="#080c19" fill-opacity="0.94" stroke="url(#card-border-cyan)" stroke-width="1.2"/>
     
     <!-- Card Header -->
-    <line x1="0" y1="42" x2="680" y2="42" stroke="#00f0ff" stroke-opacity="0.2" stroke-width="1"/>
-    <circle cx="22" cy="22" r="4.5" fill="#00f0ff" filter="url(#glow-cyan)"/>
-    <text x="36" y="26" fill="#00f0ff" font-family="'JetBrains Mono',Monaco,Consolas,monospace" font-size="12.5" font-weight="bold" letter-spacing="1.5">📚 CURRENTLY LEARNING</text>
+    <line x1="0" y1="42" x2="680" y2="42" stroke="#00d2ff" stroke-opacity="0.18" stroke-width="1"/>
+    <circle cx="22" cy="22" r="3.5" fill="#00d2ff" filter="url(#glow-cyan)"/>
+    <text x="36" y="26" fill="#00d2ff" font-family="'JetBrains Mono',Monaco,Consolas,monospace" font-size="12" font-weight="bold" letter-spacing="1.5">📚 CURRENTLY LEARNING</text>
 
     <!-- Content Items -->
-    <g font-family="'JetBrains Mono',Monaco,Consolas,monospace" font-size="12.5" fill="#e2e8f0">
+    <g font-family="'JetBrains Mono',Monaco,Consolas,monospace" font-size="12" fill="#e2e8f0">
       <!-- Item 1 -->
       <g transform="translate(25, 72)">
-        <polygon points="0,0 7,-4 7,4" fill="#00f0ff"/>
-        <text x="18" y="4">AI <tspan fill="#718096" font-size="10.5">// Artificial Intelligence</tspan></text>
+        <polygon points="0,0 6,-3.5 6,3.5" fill="#00d2ff"/>
+        <text x="16" y="4">Deep Learning <tspan fill="#64748b" font-size="10.5">// Neural Networks &amp; PyTorch</tspan></text>
       </g>
       <!-- Item 2 -->
       <g transform="translate(25, 104)">
-        <polygon points="0,0 7,-4 7,4" fill="#00f0ff"/>
-        <text x="18" y="4">Machine Learning <tspan fill="#718096" font-size="10.5">// Supervised &amp; Unsupervised Models</tspan></text>
+        <polygon points="0,0 6,-3.5 6,3.5" fill="#00d2ff"/>
+        <text x="16" y="4">Generative AI <tspan fill="#64748b" font-size="10.5">// LLMs, Transformers &amp; Diffusion</tspan></text>
       </g>
       <!-- Item 3 -->
       <g transform="translate(25, 136)">
-        <polygon points="0,0 7,-4 7,4" fill="#00f0ff"/>
-        <text x="18" y="4">Deep Learning <tspan fill="#718096" font-size="10.5">// Neural Networks &amp; PyTorch</tspan></text>
+        <polygon points="0,0 6,-3.5 6,3.5" fill="#00d2ff"/>
+        <text x="16" y="4">MLOps <tspan fill="#64748b" font-size="10.5">// Model Deployment &amp; Pipelines</tspan></text>
       </g>
       <!-- Item 4 -->
       <g transform="translate(25, 168)">
-        <polygon points="0,0 7,-4 7,4" fill="#00f0ff"/>
-        <text x="18" y="4">Data Science <tspan fill="#718096" font-size="10.5">// Analytics &amp; Visualization</tspan></text>
+        <polygon points="0,0 6,-3.5 6,3.5" fill="#00d2ff"/>
+        <text x="16" y="4">Data Science <tspan fill="#64748b" font-size="10.5">// Analytics &amp; Feature Engineering</tspan></text>
       </g>
       <!-- Item 5 -->
       <g transform="translate(25, 200)">
-        <polygon points="0,0 7,-4 7,4" fill="#00f0ff"/>
-        <text x="18" y="4">Full Stack Development <tspan fill="#718096" font-size="10.5">// Modern Web Systems</tspan></text>
+        <polygon points="0,0 6,-3.5 6,3.5" fill="#00d2ff"/>
+        <text x="16" y="4">Full Stack Development <tspan fill="#64748b" font-size="10.5">// Modern Web Systems</tspan></text>
       </g>
     </g>
   </g>
 
   <!-- COLUMN 2: Goals (x=765, y=155, w=680, h=245) -->
-  <g transform="translate(765, 155)">
+  <g transform="translate(765, 155)" filter="url(#card-shadow)">
     <!-- Card Background -->
-    <rect x="0" y="0" width="680" height="245" rx="8" fill="#070913" fill-opacity="0.92" stroke="url(#card-border-pink)" stroke-width="1.5"/>
+    <rect x="0" y="0" width="680" height="245" rx="10" fill="#080c19" fill-opacity="0.94" stroke="url(#card-border-purple)" stroke-width="1.2"/>
     
     <!-- Card Header -->
-    <line x1="0" y1="42" x2="680" y2="42" stroke="#ff00ff" stroke-opacity="0.2" stroke-width="1"/>
-    <circle cx="22" cy="22" r="4.5" fill="#ff00ff" filter="url(#glow-pink)"/>
-    <text x="36" y="26" fill="#ff00ff" font-family="'JetBrains Mono',Monaco,Consolas,monospace" font-size="12.5" font-weight="bold" letter-spacing="1.5">🎯 GOALS &amp; OBJECTIVES</text>
+    <line x1="0" y1="42" x2="680" y2="42" stroke="#7000ff" stroke-opacity="0.18" stroke-width="1"/>
+    <circle cx="22" cy="22" r="3.5" fill="#9d4edd" filter="url(#glow-purple)"/>
+    <text x="36" y="26" fill="#9d4edd" font-family="'JetBrains Mono',Monaco,Consolas,monospace" font-size="12" font-weight="bold" letter-spacing="1.5">🎯 GOALS &amp; OBJECTIVES</text>
 
     <!-- Content Items -->
-    <g font-family="'JetBrains Mono',Monaco,Consolas,monospace" font-size="12.5" fill="#e2e8f0">
+    <g font-family="'JetBrains Mono',Monaco,Consolas,monospace" font-size="12" fill="#e2e8f0">
       <!-- Item 1 -->
       <g transform="translate(25, 78)">
-        <circle cx="3" cy="0" r="3" fill="#ff00ff" filter="url(#glow-pink)"/>
-        <text x="18" y="4">Become an AI Engineer</text>
+        <circle cx="3" cy="0" r="3" fill="#00d2ff" filter="url(#glow-cyan)"/>
+        <text x="16" y="4">Become an AI Engineer</text>
       </g>
       <!-- Item 2 -->
       <g transform="translate(25, 122)">
-        <circle cx="3" cy="0" r="3" fill="#ff00ff" filter="url(#glow-pink)"/>
-        <text x="18" y="4">Build impactful open-source projects</text>
+        <circle cx="3" cy="0" r="3" fill="#9d4edd" filter="url(#glow-purple)"/>
+        <text x="16" y="4">Build impactful open-source projects</text>
       </g>
       <!-- Item 3 -->
       <g transform="translate(25, 166)">
-        <circle cx="3" cy="0" r="3" fill="#ff00ff" filter="url(#glow-pink)"/>
-        <text x="18" y="4">Contribute to the AI community</text>
+        <circle cx="3" cy="0" r="3" fill="#00d2ff" filter="url(#glow-cyan)"/>
+        <text x="16" y="4">Contribute to the AI community</text>
       </g>
     </g>
   </g>

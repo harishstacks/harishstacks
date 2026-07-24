@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HARISH OS — Banner Preview (1500×370)</title>
+  <title>HARISH OS — AI Command Center Preview (1500×370)</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&display=swap');
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      background: #0c0d18;
+      background: #060812;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -25,12 +25,11 @@
     .label {
       font-size: 9.5px;
       letter-spacing: 2.5px;
-      color: #4a5568;
+      color: #64748b;
       text-transform: uppercase;
     }
-    .label span { color: #00f0ff; }
+    .label span { color: #00d2ff; }
 
-    /* Scales to full width, preserves 1500:370 ratio — never crops */
     .banner {
       width: 100%;
       max-width: 1500px;
@@ -38,13 +37,12 @@
       border-radius: 10px;
       overflow: hidden;
       box-shadow:
-        0 0 0 1px rgba(0,240,255,.06),
-        0 0 50px rgba(0,240,255,.06),
-        0 0 25px rgba(157,78,221,.08),
-        0 28px 80px rgba(0,0,0,.7);
+        0 0 0 1px rgba(0,210,255,.08),
+        0 0 50px rgba(0,210,255,.05),
+        0 0 25px rgba(112,0,255,.06),
+        0 28px 80px rgba(0,0,0,.8);
     }
 
-    /* SVG fills the wrapper exactly */
     .banner svg {
       display: block;
       width: 100%;
@@ -55,7 +53,7 @@
       display: flex;
       gap: 28px;
       font-size: 9px;
-      color: #4a5568;
+      color: #64748b;
       letter-spacing: 1px;
     }
     .meta span { color: #9d4edd; }
@@ -63,10 +61,9 @@
 </head>
 <body>
 
-  <div class="label">// BANNER PREVIEW — <span>1500 × 370</span></div>
+  <div class="label">// AI WORKSTATION — <span>1500 × 370</span></div>
 
   <div class="banner">
-    <!-- Inline SVG — identical to banner.svg, renders with live CSS animations -->
     <svg xmlns="http://www.w3.org/2000/svg"
          viewBox="0 0 1500 370"
          width="100%" height="100%"
@@ -74,288 +71,223 @@
 
       <defs>
         <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%"   stop-color="#040509"/>
-          <stop offset="50%"  stop-color="#0a0b16"/>
-          <stop offset="100%" stop-color="#040509"/>
+          <stop offset="0%"   stop-color="#060812"/>
+          <stop offset="50%"  stop-color="#090d1a"/>
+          <stop offset="100%" stop-color="#050710"/>
         </linearGradient>
-        <linearGradient id="pb" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%"   stop-color="#00f0ff"/>
-          <stop offset="50%"  stop-color="#9d4edd"/>
-          <stop offset="100%" stop-color="#ff00ff"/>
+
+        <linearGradient id="glass-border" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%"   stop-color="#00d2ff" stop-opacity="0.6"/>
+          <stop offset="50%"  stop-color="#7000ff" stop-opacity="0.3"/>
+          <stop offset="100%" stop-color="#00f0ff" stop-opacity="0.15"/>
         </linearGradient>
-        <radialGradient id="gc" cx="20%" cy="50%" r="50%">
-          <stop offset="0%"   stop-color="#00f0ff" stop-opacity="0.13"/>
-          <stop offset="100%" stop-color="#00f0ff" stop-opacity="0"/>
+
+        <linearGradient id="header-line" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%"   stop-color="#00d2ff" stop-opacity="0.8"/>
+          <stop offset="50%"  stop-color="#7000ff" stop-opacity="0.4"/>
+          <stop offset="100%" stop-color="#00d2ff" stop-opacity="0.0"/>
+        </linearGradient>
+
+        <radialGradient id="glow-left" cx="20%" cy="50%" r="50%">
+          <stop offset="0%"   stop-color="#00d2ff" stop-opacity="0.09"/>
+          <stop offset="100%" stop-color="#00d2ff" stop-opacity="0"/>
         </radialGradient>
-        <radialGradient id="gp" cx="80%" cy="50%" r="50%">
-          <stop offset="0%"   stop-color="#9d4edd" stop-opacity="0.15"/>
-          <stop offset="100%" stop-color="#9d4edd" stop-opacity="0"/>
+        <radialGradient id="glow-right" cx="80%" cy="50%" r="50%">
+          <stop offset="0%"   stop-color="#7000ff" stop-opacity="0.10"/>
+          <stop offset="100%" stop-color="#7000ff" stop-opacity="0"/>
         </radialGradient>
-        <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-          <path d="M40 0L0 0 0 40" fill="none" stroke="#00f0ff" stroke-width="0.6" stroke-opacity="0.03"/>
+
+        <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+          <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#00d2ff" stroke-width="0.5" stroke-opacity="0.025"/>
         </pattern>
-        <filter id="fc" x="-40%" y="-40%" width="180%" height="180%">
-          <feGaussianBlur in="SourceGraphic" stdDeviation="3.5" result="b1"/>
-          <feGaussianBlur in="SourceGraphic" stdDeviation="1.2" result="b2"/>
-          <feMerge><feMergeNode in="b1"/><feMergeNode in="b2"/><feMergeNode in="SourceGraphic"/></feMerge>
+
+        <filter id="soft-glow-cyan" x="-30%" y="-30%" width="160%" height="160%">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="2.5" result="blur"/>
+          <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
         </filter>
-        <filter id="fp" x="-40%" y="-40%" width="180%" height="180%">
-          <feGaussianBlur in="SourceGraphic" stdDeviation="3.5" result="b1"/>
-          <feGaussianBlur in="SourceGraphic" stdDeviation="1.2" result="b2"/>
-          <feMerge><feMergeNode in="b1"/><feMergeNode in="b2"/><feMergeNode in="SourceGraphic"/></feMerge>
+        <filter id="soft-glow-purple" x="-30%" y="-30%" width="160%" height="160%">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="2.5" result="blur"/>
+          <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
         </filter>
-        <filter id="fg" x="-50%" y="-50%" width="200%" height="200%">
-          <feGaussianBlur in="SourceGraphic" stdDeviation="3.5" result="b1"/>
-          <feGaussianBlur in="SourceGraphic" stdDeviation="1.2" result="b2"/>
-          <feMerge><feMergeNode in="b1"/><feMergeNode in="b2"/><feMergeNode in="SourceGraphic"/></feMerge>
+        <filter id="card-shadow" x="-10%" y="-10%" width="120%" height="120%">
+          <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#00d2ff" flood-opacity="0.08"/>
         </filter>
-        <filter id="fpl" x="-12%" y="-12%" width="124%" height="124%">
-          <feDropShadow dx="0" dy="6"  stdDeviation="12" flood-color="#9d4edd" flood-opacity="0.20"/>
-          <feDropShadow dx="0" dy="2"  stdDeviation="4"  flood-color="#00f0ff" flood-opacity="0.10"/>
-        </filter>
-        <clipPath id="cl1"><rect id="rl1" x="72" y="101" width="0" height="22"/></clipPath>
-        <clipPath id="cl2"><rect id="rl2" x="72" y="128" width="0" height="22"/></clipPath>
-        <clipPath id="cl3"><rect id="rl3" x="72" y="155" width="0" height="22"/></clipPath>
-        <clipPath id="cl4"><rect id="rl4" x="72" y="182" width="0" height="22"/></clipPath>
-        <clipPath id="cl5"><rect id="rl5" x="72" y="209" width="0" height="22"/></clipPath>
-        <clipPath id="cl6"><rect id="rl6" x="72" y="236" width="0" height="22"/></clipPath>
-        <clipPath id="cl7"><rect id="rl7" x="72" y="263" width="0" height="22"/></clipPath>
+
+        <clipPath id="cl1"><rect id="rl1" x="72" y="93"  width="0" height="22"/></clipPath>
+        <clipPath id="cl2"><rect id="rl2" x="72" y="112" width="0" height="22"/></clipPath>
+        <clipPath id="cl3"><rect id="rl3" x="72" y="134" width="0" height="22"/></clipPath>
+        <clipPath id="cl4"><rect id="rl4" x="72" y="153" width="0" height="22"/></clipPath>
+        <clipPath id="cl5"><rect id="rl5" x="72" y="175" width="0" height="22"/></clipPath>
+        <clipPath id="cl6"><rect id="rl6" x="72" y="194" width="0" height="22"/></clipPath>
+        <clipPath id="cl7"><rect id="rl7" x="72" y="216" width="0" height="22"/></clipPath>
+        <clipPath id="cl8"><rect id="rl8" x="72" y="235" width="0" height="22"/></clipPath>
+        <clipPath id="cl9"><rect id="rl9" x="72" y="257" width="0" height="22"/></clipPath>
+        <clipPath id="cl10"><rect id="rl10" x="72" y="276" width="0" height="22"/></clipPath>
       </defs>
 
       <style>
-        @keyframes twinkle{0%,100%{opacity:.12}50%{opacity:.9}}
-        .s{animation:twinkle 3s ease-in-out infinite}
-        .s1{animation-delay:0s}.s2{animation-delay:.7s}.s3{animation-delay:1.4s}
-        .s4{animation-delay:2.1s}.s5{animation-delay:1s}.s6{animation-delay:1.8s}
-        .s7{animation-delay:.3s}.s8{animation-delay:2.5s}.s9{animation-delay:.9s}
+        @keyframes pulse-slow{0%,100%{opacity:.4}50%{opacity:.95}}
+        .status-pulse{animation:pulse-slow 2.5s ease-in-out infinite}
 
-        @keyframes fp1{0%{transform:translate(0,0);opacity:0}10%{opacity:.7}90%{opacity:.7}100%{transform:translate(12px,-65px);opacity:0}}
-        @keyframes fp2{0%{transform:translate(0,0);opacity:0}12%{opacity:.55}88%{opacity:.55}100%{transform:translate(-20px,-80px);opacity:0}}
-        .p1{animation:fp1 7s  linear infinite}
-        .p2{animation:fp2 9s  linear infinite}
-        .p3{animation:fp1 8s  linear infinite;animation-delay:2.5s}
-        .p4{animation:fp2 6s  linear infinite;animation-delay:1.2s}
-        .p5{animation:fp1 10s linear infinite;animation-delay:4s}
-        .p6{animation:fp2 8s  linear infinite;animation-delay:.5s}
+        @keyframes wave-anim{0%{stroke-dashoffset:320}100%{stroke-dashoffset:0}}
+        .neural-wave{stroke-dasharray:80 240;animation:wave-anim 4.5s linear infinite}
 
-        @keyframes cfl{0%{stroke-dashoffset:380}100%{stroke-dashoffset:-380}}
-        @keyframes cfr{0%{stroke-dashoffset:-380}100%{stroke-dashoffset:380}}
-        .cpl{stroke:#00f0ff;stroke-width:1.5;fill:none;filter:url(#fc);stroke-dasharray:55 325;animation:cfl 5s linear infinite}
-        .cpr{stroke:#ff00ff;stroke-width:1.5;fill:none;filter:url(#fp);stroke-dasharray:55 325;animation:cfr 5s linear infinite}
+        @keyframes gpu-pf{0%,100%{stroke-dashoffset:45}50%{stroke-dashoffset:18}}
+        .gpu-ring{transform-origin:1345px 150px;transform:rotate(-90deg);animation:gpu-pf 4s ease-in-out infinite}
 
-        @keyframes sp{0%,100%{opacity:.4}50%{opacity:1}}
-        .sd{animation:sp 1.8s ease-in-out infinite}
+        @keyframes prog-glow{0%,100%{opacity:.85}50%{opacity:1}}
+        .prog-fill{animation:prog-glow 2s ease-in-out infinite}
 
-        @keyframes pf{0%,100%{stroke-dashoffset:60}50%{stroke-dashoffset:25}}
-        .pr{transform-origin:1345px 150px;transform:rotate(-90deg);animation:pf 3.5s ease-in-out infinite}
+        @keyframes tl1 {0%,1%{width:0} 7%,93%{width:260px} 97%,100%{width:0}}
+        @keyframes tl2 {0%,8%{width:0} 14%,93%{width:180px} 97%,100%{width:0}}
+        @keyframes tl3 {0%,15%{width:0} 21%,93%{width:240px} 97%,100%{width:0}}
+        @keyframes tl4 {0%,22%{width:0} 28%,93%{width:310px} 97%,100%{width:0}}
+        @keyframes tl5 {0%,29%{width:0} 35%,93%{width:260px} 97%,100%{width:0}}
+        @keyframes tl6 {0%,36%{width:0} 42%,93%{width:440px} 97%,100%{width:0}}
+        @keyframes tl7 {0%,43%{width:0} 49%,93%{width:360px} 97%,100%{width:0}}
+        @keyframes tl8 {0%,50%{width:0} 56%,93%{width:350px} 97%,100%{width:0}}
+        @keyframes tl9 {0%,57%{width:0} 63%,93%{width:260px} 97%,100%{width:0}}
+        @keyframes tl10{0%,64%{width:0} 72%,93%{width:420px} 97%,100%{width:0}}
 
-        @keyframes osc{0%{stroke-dashoffset:300}100%{stroke-dashoffset:0}}
-        .osc{stroke-dasharray:90 210;animation:osc 4s linear infinite}
+        #rl1 {animation:tl1 14s linear infinite}
+        #rl2 {animation:tl2 14s linear infinite}
+        #rl3 {animation:tl3 14s linear infinite}
+        #rl4 {animation:tl4 14s linear infinite}
+        #rl5 {animation:tl5 14s linear infinite}
+        #rl6 {animation:tl6 14s linear infinite}
+        #rl7 {animation:tl7 14s linear infinite}
+        #rl8 {animation:tl8 14s linear infinite}
+        #rl9 {animation:tl9 14s linear infinite}
+        #rl10{animation:tl10 14s linear infinite}
 
-        @keyframes bg1{0%,100%{height:4px;y:75px}50%{height:13px;y:66px}}
-        .b1{animation:bg1 1.2s ease-in-out infinite}
-        .b2{animation:bg1 .8s  ease-in-out infinite;animation-delay:.2s}
-        .b3{animation:bg1 1.5s ease-in-out infinite;animation-delay:.5s}
-        .b4{animation:bg1 1.0s ease-in-out infinite;animation-delay:.1s}
-        .b5{animation:bg1 1.3s ease-in-out infinite;animation-delay:.4s}
-
-        @keyframes tl1{0%,1.4%{width:0}9%,91%{width:265px}95%,100%{width:0}}
-        @keyframes tl2{0%,11%{width:0}21%,91%{width:460px}95%,100%{width:0}}
-        @keyframes tl3{0%,23%{width:0}33%,91%{width:440px}95%,100%{width:0}}
-        @keyframes tl4{0%,35%{width:0}45%,91%{width:460px}95%,100%{width:0}}
-        @keyframes tl5{0%,47%{width:0}57%,91%{width:460px}95%,100%{width:0}}
-        @keyframes tl6{0%,59%{width:0}65%,91%{width:200px}95%,100%{width:0}}
-        @keyframes tl7{0%,67%{width:0}72%,91%{width:295px}95%,100%{width:0}}
-        #rl1{animation:tl1 14s linear infinite}
-        #rl2{animation:tl2 14s linear infinite}
-        #rl3{animation:tl3 14s linear infinite}
-        #rl4{animation:tl4 14s linear infinite}
-        #rl5{animation:tl5 14s linear infinite}
-        #rl6{animation:tl6 14s linear infinite}
-        #rl7{animation:tl7 14s linear infinite}
-
-        @keyframes mc{
-          0%,1.4%{x:72px;y:103px;opacity:1}
-          9%{x:337px;y:103px;opacity:1}11%{x:337px;y:103px;opacity:1}
-          11.1%{x:72px;y:130px;opacity:1}21%{x:532px;y:130px;opacity:1}
-          23%{x:532px;y:130px;opacity:1}23.1%{x:72px;y:157px;opacity:1}
-          33%{x:512px;y:157px;opacity:1}35%{x:512px;y:157px;opacity:1}
-          35.1%{x:72px;y:184px;opacity:1}45%{x:532px;y:184px;opacity:1}
-          47%{x:532px;y:184px;opacity:1}47.1%{x:72px;y:211px;opacity:1}
-          57%{x:532px;y:211px;opacity:1}59%{x:532px;y:211px;opacity:1}
-          59.1%{x:72px;y:238px;opacity:1}65%{x:272px;y:238px;opacity:1}
-          67%{x:272px;y:238px;opacity:1}67.1%{x:72px;y:265px;opacity:1}
-          72%{x:367px;y:265px;opacity:1}
-          74%{opacity:0}76%{opacity:1}78%{opacity:0}80%{opacity:1}
-          82%{opacity:0}84%{opacity:1}86%{opacity:0}88%{opacity:1}
-          90%{opacity:0}91%{opacity:1}
-          95%,100%{x:72px;y:103px;opacity:0}
+        @keyframes cursor-move {
+          0%,1%   {x:72px;y:95px;opacity:1}
+          7%      {x:332px;y:95px;opacity:1}  8%  {x:72px;y:114px;opacity:1}
+          14%     {x:252px;y:114px;opacity:1} 15% {x:72px;y:136px;opacity:1}
+          21%     {x:312px;y:136px;opacity:1} 22% {x:72px;y:155px;opacity:1}
+          28%     {x:382px;y:155px;opacity:1} 29% {x:72px;y:177px;opacity:1}
+          35%     {x:332px;y:177px;opacity:1} 36% {x:72px;y:196px;opacity:1}
+          42%     {x:512px;y:196px;opacity:1} 43% {x:72px;y:218px;opacity:1}
+          49%     {x:432px;y:218px;opacity:1} 50% {x:72px;y:237px;opacity:1}
+          56%     {x:422px;y:237px;opacity:1} 57% {x:72px;y:259px;opacity:1}
+          63%     {x:332px;y:259px;opacity:1} 64% {x:72px;y:278px;opacity:1}
+          72%     {x:492px;y:278px;opacity:1}
+          74%,92% {opacity:1} 94%,100%{opacity:0}
         }
-        .tc{animation:mc 14s linear infinite}
+        .term-cursor{animation:cursor-move 14s linear infinite}
       </style>
 
       <!-- Background -->
       <rect width="1500" height="370" fill="url(#bg)"/>
       <rect width="1500" height="370" fill="url(#grid)"/>
-      <circle cx="300"  cy="185" r="400" fill="url(#gc)"/>
-      <circle cx="1200" cy="185" r="400" fill="url(#gp)"/>
-
-      <!-- Perspective grid -->
-      <g opacity="0.11" stroke="#00f0ff" stroke-width="0.7">
-        <line x1="750" y1="240" x2="-100" y2="370"/>
-        <line x1="750" y1="240" x2="150"  y2="370"/>
-        <line x1="750" y1="240" x2="370"  y2="370"/>
-        <line x1="750" y1="240" x2="520"  y2="370"/>
-        <line x1="750" y1="240" x2="640"  y2="370"/>
-        <line x1="750" y1="240" x2="750"  y2="370"/>
-        <line x1="750" y1="240" x2="860"  y2="370"/>
-        <line x1="750" y1="240" x2="980"  y2="370"/>
-        <line x1="750" y1="240" x2="1130" y2="370"/>
-        <line x1="750" y1="240" x2="1350" y2="370"/>
-        <line x1="750" y1="240" x2="1600" y2="370"/>
-        <line x1="-100" y1="265" x2="1600" y2="265"/>
-        <line x1="-100" y1="295" x2="1600" y2="295"/>
-        <line x1="-100" y1="333" x2="1600" y2="333"/>
-        <line x1="-100" y1="370" x2="1600" y2="370"/>
-      </g>
+      <circle cx="300"  cy="185" r="450" fill="url(#glow-left)"/>
+      <circle cx="1200" cy="185" r="450" fill="url(#glow-right)"/>
 
       <!-- HUD Frame -->
       <g>
-        <path d="M50,53 L50,35 L68,35"          fill="none" stroke="#00f0ff" stroke-width="1.5" stroke-opacity="0.45"/>
-        <path d="M1450,53 L1450,35 L1432,35"    fill="none" stroke="#ff00ff" stroke-width="1.5" stroke-opacity="0.45"/>
-        <path d="M50,317 L50,335 L68,335"       fill="none" stroke="#ff00ff" stroke-width="1.5" stroke-opacity="0.45"/>
-        <path d="M1450,317 L1450,335 L1432,335" fill="none" stroke="#00f0ff" stroke-width="1.5" stroke-opacity="0.45"/>
-        <text x="76" y="28" fill="#00f0ff" font-family="'JetBrains Mono',monospace" font-size="9" opacity="0.42" letter-spacing="1.2">SYS.LOC // PROFILE.ROOT</text>
-        <text x="1424" y="28" text-anchor="end" fill="#ff00ff" font-family="'JetBrains Mono',monospace" font-size="9" opacity="0.42" letter-spacing="1.2">SEC_STATUS // SECURE_SSL</text>
-        <line x1="50"   y1="40" x2="155"  y2="40" stroke="#00f0ff" stroke-width="1" opacity="0.16"/>
-        <line x1="1345" y1="40" x2="1450" y2="40" stroke="#ff00ff" stroke-width="1" opacity="0.16"/>
-        <text x="76" y="347" fill="#9d4edd" font-family="'JetBrains Mono',monospace" font-size="8" opacity="0.32" letter-spacing="1">v2.1.0 // HARISHSTACKS</text>
-        <text x="1424" y="347" text-anchor="end" fill="#9d4edd" font-family="'JetBrains Mono',monospace" font-size="8" opacity="0.32" letter-spacing="1">BUILD // STABLE</text>
+        <path d="M 50,50 L 50,35 L 65,35"     fill="none" stroke="#00d2ff" stroke-width="1.5" stroke-opacity="0.4"/>
+        <path d="M 1450,50 L 1450,35 L 1435,35" fill="none" stroke="#7000ff" stroke-width="1.5" stroke-opacity="0.4"/>
+        <path d="M 50,320 L 50,335 L 65,335"   fill="none" stroke="#7000ff" stroke-width="1.5" stroke-opacity="0.4"/>
+        <path d="M 1450,320 L 1450,335 L 1435,335" fill="none" stroke="#00d2ff" stroke-width="1.5" stroke-opacity="0.4"/>
+
+        <text x="76" y="28" fill="#00d2ff" font-family="'JetBrains Mono',monospace" font-size="9" opacity="0.5" letter-spacing="1.5">SYS.ID // AI.RESEARCH.NODE-01</text>
+        <text x="1424" y="28" text-anchor="end" fill="#9d4edd" font-family="'JetBrains Mono',monospace" font-size="9" opacity="0.5" letter-spacing="1.5">ENV // PYTORCH 2.3 • CUDA 12.2</text>
+        <line x1="50" y1="40" x2="160" y2="40" stroke="#00d2ff" stroke-width="1" opacity="0.18"/>
+        <line x1="1340" y1="40" x2="1450" y2="40" stroke="#9d4edd" stroke-width="1" opacity="0.18"/>
+
+        <text x="76" y="347" fill="#7000ff" font-family="'JetBrains Mono',monospace" font-size="8" opacity="0.4" letter-spacing="1.2">MODEL.VER // v3.4.0-DEEP-LEARNING</text>
+        <text x="1424" y="347" text-anchor="end" fill="#00d2ff" font-family="'JetBrains Mono',monospace" font-size="8" opacity="0.4" letter-spacing="1.2">WORKSTATION // READY</text>
       </g>
 
-      <!-- Stars -->
-      <g>
-        <circle class="s s1" cx="120"  cy="43"  r="1.4" fill="#fff"/>
-        <circle class="s s2" cx="450"  cy="37"  r="1"   fill="#fff"/>
-        <circle class="s s3" cx="1360" cy="43"  r="1.8" fill="#00f0ff" filter="url(#fc)"/>
-        <circle class="s s4" cx="1260" cy="37"  r="1"   fill="#fff"/>
-        <circle class="s s5" cx="100"  cy="327" r="1.4" fill="#fff"/>
-        <circle class="s s6" cx="1350" cy="329" r="1"   fill="#fff"/>
-        <circle class="s s7" cx="195"  cy="300" r="1.8" fill="#ff00ff" filter="url(#fp)"/>
-        <circle class="s s8" cx="1300" cy="301" r="1.4" fill="#fff"/>
-        <circle class="s s9" cx="750"  cy="39"  r="1.4" fill="#9d4edd" filter="url(#fp)"/>
+      <!-- Panel 1: Terminal -->
+      <g filter="url(#card-shadow)">
+        <rect x="55" y="45" width="840" height="280" rx="10" fill="#080c19" fill-opacity="0.94"/>
+        <rect x="55" y="45" width="840" height="280" rx="10" fill="none" stroke="url(#glass-border)" stroke-width="1.2"/>
       </g>
 
-      <!-- Circuit left -->
       <g>
-        <path d="M0,93 L38,93 L52,107 L52,257 L28,281 L0,281" fill="none" stroke="#1a0d33" stroke-width="1.5" opacity="0.7"/>
-        <path class="cpl" d="M0,93 L38,93 L52,107 L52,257 L28,281 L0,281"/>
-        <circle cx="52" cy="107" r="2.2" fill="#00f0ff" filter="url(#fc)"/>
-      </g>
-      <!-- Circuit right -->
-      <g>
-        <path d="M1500,93 L1462,93 L1448,107 L1448,257 L1472,281 L1500,281" fill="none" stroke="#1a0d33" stroke-width="1.5" opacity="0.7"/>
-        <path class="cpr" d="M1500,93 L1462,93 L1448,107 L1448,257 L1472,281 L1500,281"/>
-        <circle cx="1448" cy="107" r="2.2" fill="#ff00ff" filter="url(#fp)"/>
+        <line x1="55" y1="78" x2="895" y2="78" stroke="url(#header-line)" stroke-width="1" opacity="0.3"/>
+        <circle cx="78"  cy="62" r="4" fill="#ff5f56" opacity="0.85"/>
+        <circle cx="92"  cy="62" r="4" fill="#ffbd2e" opacity="0.85"/>
+        <circle cx="106" cy="62" r="4" fill="#27c93f" opacity="0.85"/>
+        <text x="475" y="65" text-anchor="middle" fill="#7a8b9e" font-family="'JetBrains Mono',monospace" font-weight="600" font-size="9.5" letter-spacing="1">harish@ai-workstation:~</text>
+        <circle class="status-pulse" cx="875" cy="62" r="3" fill="#00e676" filter="url(#soft-glow-cyan)"/>
       </g>
 
-      <!-- Particles -->
-      <g>
-        <g class="p1"><circle cx="160"  cy="325" r="1.8" fill="#00f0ff" filter="url(#fc)"/></g>
-        <g class="p2"><circle cx="330"  cy="340" r="1.4" fill="#ff00ff" filter="url(#fp)"/></g>
-        <g class="p3"><circle cx="1160" cy="333" r="1.8" fill="#00f0ff" filter="url(#fc)"/></g>
-        <g class="p4"><circle cx="1300" cy="325" r="2.2" fill="#ff00ff" filter="url(#fp)"/></g>
-        <g class="p5"><circle cx="220"  cy="97"  r="1.4" fill="#00f0ff" filter="url(#fc)"/></g>
-        <g class="p6"><circle cx="1260" cy="97"  r="1.8" fill="#ff00ff" filter="url(#fp)"/></g>
+      <g font-family="'JetBrains Mono',monospace" font-size="11.5">
+        <text x="72" y="107" fill="#e2e8f0" clip-path="url(#cl1)"><tspan fill="#00d2ff">harish</tspan><tspan fill="#7000ff">@</tspan><tspan fill="#00f0ff">ai-workstation</tspan><tspan fill="#5f6c7b">:~$ </tspan><tspan fill="#ffffff" font-weight="bold">whoami</tspan></text>
+        <text x="72" y="125" fill="#e2e8f0" clip-path="url(#cl2)"><tspan fill="#00d2ff">&gt; </tspan><tspan fill="#ffffff" font-weight="bold">Harish M</tspan></text>
+
+        <text x="72" y="147" fill="#e2e8f0" clip-path="url(#cl3)"><tspan fill="#00d2ff">harish</tspan><tspan fill="#7000ff">@</tspan><tspan fill="#00f0ff">ai-workstation</tspan><tspan fill="#5f6c7b">:~$ </tspan><tspan fill="#ffffff" font-weight="bold">role</tspan></text>
+        <text x="72" y="165" fill="#e2e8f0" clip-path="url(#cl4)"><tspan fill="#00d2ff">&gt; </tspan><tspan fill="#00f0ff" font-weight="bold">AI &amp; Data Science Student</tspan></text>
+
+        <text x="72" y="187" fill="#e2e8f0" clip-path="url(#cl5)"><tspan fill="#00d2ff">harish</tspan><tspan fill="#7000ff">@</tspan><tspan fill="#00f0ff">ai-workstation</tspan><tspan fill="#5f6c7b">:~$ </tspan><tspan fill="#ffffff" font-weight="bold">skills</tspan></text>
+        <text x="72" y="205" fill="#e2e8f0" clip-path="url(#cl6)"><tspan fill="#00d2ff">&gt; </tspan><tspan fill="#ffffff">Python</tspan><tspan fill="#5f6c7b"> • </tspan><tspan fill="#00d2ff">Machine Learning</tspan><tspan fill="#5f6c7b"> • </tspan><tspan fill="#9d4edd">Data Science</tspan><tspan fill="#5f6c7b"> • </tspan><tspan fill="#00e676">UI/UX</tspan></text>
+
+        <text x="72" y="227" fill="#e2e8f0" clip-path="url(#cl7)"><tspan fill="#00d2ff">harish</tspan><tspan fill="#7000ff">@</tspan><tspan fill="#00f0ff">ai-workstation</tspan><tspan fill="#5f6c7b">:~$ </tspan><tspan fill="#ffffff" font-weight="bold">currently_learning</tspan></text>
+        <text x="72" y="245" fill="#e2e8f0" clip-path="url(#cl8)"><tspan fill="#00d2ff">&gt; </tspan><tspan fill="#00f0ff">Deep Learning</tspan><tspan fill="#5f6c7b"> | </tspan><tspan fill="#9d4edd">Generative AI</tspan><tspan fill="#5f6c7b"> | </tspan><tspan fill="#00d2ff">MLOps</tspan></text>
+
+        <text x="72" y="267" fill="#e2e8f0" clip-path="url(#cl9)"><tspan fill="#00d2ff">harish</tspan><tspan fill="#7000ff">@</tspan><tspan fill="#00f0ff">ai-workstation</tspan><tspan fill="#5f6c7b">:~$ </tspan><tspan fill="#ffffff" font-weight="bold">status</tspan></text>
+        <text x="72" y="285" fill="#e2e8f0" clip-path="url(#cl10)"><tspan fill="#00d2ff">&gt; </tspan><tspan fill="#00e676" font-weight="bold">Building AI-powered applications...</tspan></text>
       </g>
 
-      <!-- ═══ TERMINAL PANEL  x=55, y=45, w=840, h=280 ═══ -->
-      <g filter="url(#fpl)">
-        <rect x="55"  y="45" width="840" height="280" rx="8" fill="#070913" fill-opacity="0.93"/>
-        <rect x="55"  y="45" width="840" height="280" rx="8" fill="none" stroke="url(#pb)" stroke-width="1.5"/>
-      </g>
-      <g>
-        <line x1="55" y1="82" x2="895" y2="82" stroke="url(#pb)" stroke-width="1.1" opacity="0.22"/>
-        <circle cx="79"  cy="64" r="4.5" fill="#ff5f56"/>
-        <circle cx="94"  cy="64" r="4.5" fill="#ffbd2e"/>
-        <circle cx="109" cy="64" r="4.5" fill="#27c93f"/>
-        <text x="475" y="68" text-anchor="middle" fill="#718096" font-family="'JetBrains Mono',monospace" font-weight="bold" font-size="9.5" letter-spacing="1">harishstacks@terminal:~</text>
-        <g opacity="0.6">
-          <rect class="b1" x="856" y="75" width="2.5" height="13" fill="#00f0ff" rx="0.5"/>
-          <rect class="b2" x="862" y="75" width="2.5" height="13" fill="#00f0ff" rx="0.5"/>
-          <rect class="b3" x="868" y="75" width="2.5" height="13" fill="#ff00ff" rx="0.5"/>
-          <rect class="b4" x="874" y="75" width="2.5" height="13" fill="#ff00ff" rx="0.5"/>
-          <rect class="b5" x="880" y="75" width="2.5" height="13" fill="#00f0ff" rx="0.5"/>
-        </g>
-      </g>
-      <g font-family="'JetBrains Mono',monospace" font-size="12.5">
-        <text x="72" y="115" fill="#e2e8f0" clip-path="url(#cl1)">
-          <tspan fill="#00f0ff">harishstacks</tspan><tspan fill="#ff00ff">@</tspan><tspan fill="#9d4edd">github</tspan><tspan fill="#a0aec0">:~$ </tspan><tspan fill="#ffffff">whoami</tspan>
-        </text>
-        <text x="72" y="142" fill="#e2e8f0" clip-path="url(#cl2)">
-          <tspan fill="#a0aec0">&gt; </tspan><tspan fill="#00f0ff">Harish M</tspan><tspan fill="#718096"> | </tspan><tspan fill="#ff00ff">Full Stack Engineer &amp; Designer</tspan>
-        </text>
-        <text x="72" y="169" fill="#e2e8f0" clip-path="url(#cl3)">
-          <tspan fill="#a0aec0">&gt; </tspan><tspan fill="#718096">Stack:  </tspan><tspan fill="#00f0ff">React</tspan><tspan fill="#718096">, </tspan><tspan fill="#ff00ff">Node.js</tspan><tspan fill="#718096">, </tspan><tspan fill="#00f0ff">Python</tspan><tspan fill="#718096">, </tspan><tspan fill="#9d4edd">AWS</tspan>
-        </text>
-        <text x="72" y="196" fill="#e2e8f0" clip-path="url(#cl4)">
-          <tspan fill="#a0aec0">&gt; </tspan><tspan fill="#718096">Focus:  </tspan><tspan fill="#39ff14">High-perf web apps &amp; interactive UIs</tspan>
-        </text>
-        <text x="72" y="223" fill="#e2e8f0" clip-path="url(#cl5)">
-          <tspan fill="#a0aec0">&gt; </tspan><tspan fill="#718096">Status: </tspan><tspan fill="#ffb703">Actively building open-source tools</tspan>
-        </text>
-        <text x="72" y="250" fill="#e2e8f0" clip-path="url(#cl6)">
-          <tspan fill="#00f0ff">harishstacks</tspan><tspan fill="#ff00ff">@</tspan><tspan fill="#9d4edd">github</tspan><tspan fill="#a0aec0">:~$ </tspan>
-        </text>
-        <text x="72" y="277" fill="#e2e8f0" clip-path="url(#cl7)">
-          <tspan fill="#a0aec0">&gt; </tspan><tspan fill="#718096">pwd: </tspan><tspan fill="#9d4edd">/home/harishstacks/projects</tspan>
-        </text>
-      </g>
-      <rect class="tc" width="7" height="13" fill="#00f0ff" rx="1"/>
+      <rect class="term-cursor" width="7" height="13" fill="#00d2ff" rx="1" filter="url(#soft-glow-cyan)"/>
 
-      <!-- ═══ DIAGNOSTICS PANEL  x=915, y=45, w=530, h=280 ═══ -->
-      <g filter="url(#fpl)">
-        <rect x="915" y="45" width="530" height="280" rx="8" fill="#070913" fill-opacity="0.93"/>
-        <rect x="915" y="45" width="530" height="280" rx="8" fill="none" stroke="url(#pb)" stroke-width="1.5"/>
+      <!-- Panel 2: AI Dashboard -->
+      <g filter="url(#card-shadow)">
+        <rect x="915" y="45" width="530" height="280" rx="10" fill="#080c19" fill-opacity="0.94"/>
+        <rect x="915" y="45" width="530" height="280" rx="10" fill="none" stroke="url(#glass-border)" stroke-width="1.2"/>
       </g>
+
       <g>
-        <line x1="915" y1="82" x2="1445" y2="82" stroke="url(#pb)" stroke-width="1.1" opacity="0.22"/>
-        <text x="1180" y="68" text-anchor="middle" fill="#718096" font-family="'JetBrains Mono',monospace" font-weight="bold" font-size="9.5" letter-spacing="1">// SYSTEM DIAGNOSTICS</text>
+        <line x1="915" y1="78" x2="1445" y2="78" stroke="url(#header-line)" stroke-width="1" opacity="0.3"/>
+        <text x="1180" y="65" text-anchor="middle" fill="#00d2ff" font-family="'JetBrains Mono',monospace" font-weight="700" font-size="9.5" letter-spacing="1.5">// AI COMMAND CENTER</text>
+        <circle class="status-pulse" cx="938" cy="62" r="3.5" fill="#00e676" filter="url(#soft-glow-cyan)"/>
       </g>
-      <circle class="sd" cx="938" cy="103" r="4" fill="#39ff14" filter="url(#fg)"/>
-      <text x="951" y="107" fill="#39ff14" font-family="'JetBrains Mono',monospace" font-size="10.5" font-weight="bold">SYSTEM STATUS: ONLINE</text>
-      <g font-family="'JetBrains Mono',monospace" font-size="10.5">
-        <text x="938" y="133"><tspan fill="#718096">HOST:</tspan>  <tspan fill="#00f0ff">sh-stacks</tspan></text>
-        <text x="938" y="153"><tspan fill="#718096">LOC: </tspan>  <tspan fill="#00f0ff">US-EAST // CLOUD</tspan></text>
-        <text x="938" y="173"><tspan fill="#718096">DB:  </tspan>  <tspan fill="#ff00ff">ACTIVE // REDIS</tspan></text>
-        <text x="938" y="193"><tspan fill="#718096">SEC: </tspan>  <tspan fill="#39ff14">SHIELD.SYS // OK</tspan></text>
+
+      <g font-family="'JetBrains Mono',monospace">
+        <text x="938" y="103" fill="#00e676" font-size="10.5" font-weight="bold">MODEL STATUS: ONLINE // READY</text>
+        <text x="938" y="125" font-size="10"><tspan fill="#64748b">ENV:</tspan>  <tspan fill="#00d2ff">PyTorch 2.3 • CUDA 12.2</tspan></text>
+        <text x="938" y="145" font-size="10"><tspan fill="#64748b">PROJECTS:</tspan>  <tspan fill="#9d4edd">LLM AGENTS • MLOPS PIPELINES</tspan></text>
       </g>
-      <!-- CPU ring -->
-      <circle cx="1345" cy="150" r="30" fill="none" stroke="#171825" stroke-width="4.5"/>
-      <circle class="pr" cx="1345" cy="150" r="30" fill="none" stroke="#00f0ff" stroke-width="4.5" stroke-dasharray="188.5" stroke-dashoffset="188.5" filter="url(#fc)"/>
-      <text x="1345" y="148" text-anchor="middle" fill="#00f0ff" font-family="'JetBrains Mono',monospace" font-size="8.5" font-weight="bold">CPU</text>
-      <text x="1345" y="159" text-anchor="middle" fill="#718096" font-family="'JetBrains Mono',monospace" font-size="7.5">75%</text>
-      <!-- Oscilloscope -->
-      <text x="938"  y="217" fill="#718096" font-family="'JetBrains Mono',monospace" font-size="8.5" font-weight="bold">LATENCY</text>
-      <text x="1435" y="217" text-anchor="end" fill="#39ff14" font-family="'JetBrains Mono',monospace" font-size="8.5" font-weight="bold">54MS</text>
-      <path d="M938,245 L960,245 L971,226 L982,264 L993,245 L1013,245 L1024,234 L1035,256 L1046,245 L1083,245 L1095,217 L1107,273 L1119,245 L1153,245 L1165,234 L1177,256 L1189,245 L1435,245" fill="none" stroke="#171825" stroke-width="1.5"/>
-      <path class="osc" d="M938,245 L960,245 L971,226 L982,264 L993,245 L1013,245 L1024,234 L1035,256 L1046,245 L1083,245 L1095,217 L1107,273 L1119,245 L1153,245 L1165,234 L1177,256 L1189,245 L1435,245" fill="none" stroke="#ff00ff" stroke-width="1.5" stroke-opacity="0.85" filter="url(#fp)"/>
-      <!-- Memory bar -->
-      <text x="938" y="287" fill="#718096" font-family="'JetBrains Mono',monospace" font-size="8.5" font-weight="bold">MEM</text>
-      <rect x="970" y="278" width="465" height="5.5" rx="2.5" fill="#171825"/>
-      <rect x="970" y="278" width="321" height="5.5" rx="2.5" fill="#9d4edd" filter="url(#fp)" opacity="0.88"/>
-      <text x="1435" y="286" text-anchor="end" fill="#9d4edd" font-family="'JetBrains Mono',monospace" font-size="8.5" font-weight="bold">69%</text>
-      <!-- Uptime -->
-      <text x="938" y="313" fill="#718096" font-family="'JetBrains Mono',monospace" font-size="8.5">UPTIME: <tspan fill="#ffb703">247d 18h 32m</tspan></text>
+
+      <g transform="translate(1265, 95)">
+        <rect x="0" y="0" width="155" height="42" rx="6" fill="#00d2ff" fill-opacity="0.08" stroke="#00d2ff" stroke-opacity="0.3" stroke-width="1"/>
+        <text x="77" y="17" text-anchor="middle" fill="#64748b" font-family="'JetBrains Mono',monospace" font-size="8" font-weight="bold">ACCURACY</text>
+        <text x="77" y="34" text-anchor="middle" fill="#00d2ff" font-family="'JetBrains Mono',monospace" font-size="13" font-weight="bold" filter="url(#soft-glow-cyan)">98.6%</text>
+      </g>
+
+      <g transform="translate(1345, 178)">
+        <circle cx="0" cy="0" r="26" fill="none" stroke="#12182b" stroke-width="4"/>
+        <circle class="gpu-ring" cx="0" cy="0" r="26" fill="none" stroke="#00d2ff" stroke-width="4" stroke-dasharray="163.3" stroke-dashoffset="163.3" filter="url(#soft-glow-cyan)"/>
+        <text x="0" y="-3" text-anchor="middle" fill="#00d2ff" font-family="'JetBrains Mono',monospace" font-size="8" font-weight="bold">GPU</text>
+        <text x="0" y="9" text-anchor="middle" fill="#94a3b8" font-family="'JetBrains Mono',monospace" font-size="7.5">88%</text>
+      </g>
+
+      <g transform="translate(938, 160)">
+        <text x="0" y="0" fill="#64748b" font-family="'JetBrains Mono',monospace" font-size="8.5" font-weight="bold">NEURAL NETWORK ACTIVITY</text>
+        <path d="M 0,22 L 20,22 L 30,8 L 40,36 L 50,22 L 75,22 L 85,14 L 95,30 L 105,22 L 140,22 L 150,2 L 160,42 L 170,22 L 200,22 L 210,12 L 220,32 L 230,22 L 370,22" fill="none" stroke="#12182b" stroke-width="1.5"/>
+        <path class="neural-wave" d="M 0,22 L 20,22 L 30,8 L 40,36 L 50,22 L 75,22 L 85,14 L 95,30 L 105,22 L 140,22 L 150,2 L 160,42 L 170,22 L 200,22 L 210,12 L 220,32 L 230,22 L 370,22" fill="none" stroke="#00d2ff" stroke-width="1.5" stroke-opacity="0.9" filter="url(#soft-glow-cyan)"/>
+      </g>
+
+      <g transform="translate(938, 225)">
+        <text x="0" y="0" fill="#64748b" font-family="'JetBrains Mono',monospace" font-size="8.5" font-weight="bold">TRAINING PROGRESS</text>
+        <text x="482" y="0" text-anchor="end" fill="#00d2ff" font-family="'JetBrains Mono',monospace" font-size="8.5" font-weight="bold">94.2% <tspan fill="#64748b" font-size="7.5">[Epoch 48/50]</tspan></text>
+        <rect x="0" y="10" width="482" height="6" rx="3" fill="#12182b"/>
+        <rect class="prog-fill" x="0" y="10" width="454" height="6" rx="3" fill="url(#header-line)" filter="url(#soft-glow-cyan)"/>
+      </g>
+
+      <g transform="translate(938, 268)">
+        <text x="0" y="0" fill="#64748b" font-family="'JetBrains Mono',monospace" font-size="8.5">STATUS: <tspan fill="#00e676" font-weight="bold">Building AI-powered applications...</tspan></text>
+      </g>
 
     </svg>
   </div>
 
   <div class="meta">
     <div>CANVAS <span>1500×370</span></div>
-    <div>SAFE ZONE <span>1400×280</span></div>
-    <div>PANELS <span>840px + 530px</span></div>
-    <div>MODE <span>GitHub SVG</span></div>
+    <div>THEME <span>AI Command Center Matte Dark</span></div>
+    <div>PANELS <span>Terminal (840px) + AI Dashboard (530px)</span></div>
   </div>
 
 </body>
