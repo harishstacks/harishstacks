@@ -156,6 +156,70 @@
 </td></tr></table>
 
 <!-- ═══════════════════════════════════════════════════════════════
+     BLOCK 3.5: AI TECH ARSENAL
+     Premium glassmorphism cards with skill icons
+     ═══════════════════════════════════════════════════════════════ -->
+
+<br>
+
+<table width="100%"><tr>
+<td width="50%" valign="top">
+
+<h4>🐍 Languages</h4>
+<p>
+<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white&labelColor=0D1117" alt="Python">
+<img src="https://img.shields.io/badge/C-A8B9CC?style=for-the-badge&logo=c&logoColor=white&labelColor=0D1117" alt="C">
+<img src="https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=java&logoColor=white&labelColor=0D1117" alt="Java">
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=0D1117&labelColor=0D1117" alt="JavaScript">
+</p>
+
+</td>
+<td width="50%" valign="top">
+
+<h4>🧠 AI & Data Science</h4>
+<p>
+<img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white&labelColor=0D1117" alt="TensorFlow">
+<img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white&labelColor=0D1117" alt="PyTorch">
+<img src="https://img.shields.io/badge/Scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white&labelColor=0D1117" alt="Scikit-learn">
+<img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white&labelColor=0D1117" alt="Pandas">
+<img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white&labelColor=0D1117" alt="NumPy">
+<img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white&labelColor=0D1117" alt="OpenCV">
+</p>
+
+</td>
+</tr></table>
+
+<table width="100%"><tr>
+<td width="50%" valign="top">
+
+<h4>🌐 Web Development</h4>
+<p>
+<img src="https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white&labelColor=0D1117" alt="HTML">
+<img src="https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white&labelColor=0D1117" alt="CSS">
+<img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=0D1117&labelColor=0D1117" alt="React">
+<img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white&labelColor=0D1117" alt="Node.js">
+<img src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=0D1117&labelColor=0D1117" alt="Firebase">
+</p>
+
+</td>
+<td width="50%" valign="top">
+
+<h4>⚙️ Tools</h4>
+<p>
+<img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white&labelColor=0D1117" alt="Git">
+<img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white&labelColor=0D1117" alt="GitHub">
+<img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=0D1117&labelColor=0D1117" alt="Linux">
+<img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white&labelColor=0D1117" alt="Docker">
+<img src="https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white&labelColor=0D1117" alt="VS Code">
+<img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white&labelColor=0D1117" alt="Figma">
+</p>
+
+</td>
+</tr></table>
+
+<br>
+
+<!-- ═══════════════════════════════════════════════════════════════
      BLOCK 4: TECH STACK BADGES
      Clean, minimal badge row
      ═══════════════════════════════════════════════════════════════ -->
