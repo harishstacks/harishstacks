@@ -440,3 +440,28 @@
 <b>🚀 Building AI-powered applications that matter.</b>
 
 </p>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     BLOCK 7: PREMIUM FOOTER
+     Futuristic closing section
+     ═══════════════════════════════════════════════════════════════ -->
+
+<br>
+
+<p align="center">
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=00D2FF:0D1117&height=100&section=footer&reversal=false" alt="Wave Divider" width="100%">
+
+</p>
+
+<table width="100%"><tr><td align="center">
+
+<h6>✨ Thank you for visiting my AI Command Center!</h6>
+
+<p><sub><i>Building intelligent AI solutions, one commit at a time.</i></sub></p>
+
+<p><sub>Made with ❤️ by <b>Harish M</b></sub></p>
+
+</td></tr></table>
+
+<br>
