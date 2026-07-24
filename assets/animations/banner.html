@@ -2,608 +2,362 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>HARISH OS Banner</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HARISH OS — Banner Preview (1500×400)</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
 
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
     body {
-      background-color: #040509;
-      background-image:
-        radial-gradient(circle at 20% 50%, rgba(0, 240, 255, 0.14) 0%, transparent 50%),
-        radial-gradient(circle at 80% 50%, rgba(157, 78, 221, 0.16) 0%, transparent 50%),
-        linear-gradient(rgba(0, 240, 255, 0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0, 240, 255, 0.03) 1px, transparent 1px);
-      background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px;
-      margin: 0;
-      padding: 0;
-      width: 1280px;
-      height: 400px;
-      overflow: hidden;
+      background: #0c0d18;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
       font-family: 'JetBrains Mono', monospace;
       color: #e2e8f0;
-      position: relative;
-      box-sizing: border-box;
+      padding: 50px 24px;
+      gap: 20px;
     }
 
-    /* Perspective Grid at the bottom */
-    .perspective-grid {
-      position: absolute;
-      bottom: 0;
-      left: 0;
+    .label {
+      font-size: 9.5px;
+      letter-spacing: 2.5px;
+      color: #4a5568;
+      text-transform: uppercase;
+    }
+    .label span { color: #00f0ff; }
+
+    /* Scales to full width, preserves 1500:400 ratio — never crops */
+    .banner {
       width: 100%;
-      height: 140px;
-      background-image:
-        linear-gradient(rgba(0, 240, 255, 0.08) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0, 240, 255, 0.08) 1px, transparent 1px);
-      background-size: 40px 40px;
-      transform: perspective(220px) rotateX(60deg);
-      transform-origin: bottom;
-      opacity: 0.15;
-      pointer-events: none;
-      z-index: 1;
+      max-width: 1500px;
+      aspect-ratio: 1500 / 400;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow:
+        0 0 0 1px rgba(0,240,255,.06),
+        0 0 50px rgba(0,240,255,.06),
+        0 0 25px rgba(157,78,221,.08),
+        0 28px 80px rgba(0,0,0,.7);
     }
 
-    /* HUD corner decorations */
-    .hud-corner {
-      position: absolute;
-      width: 12px;
-      height: 12px;
-      border: 1.5px solid transparent;
-      z-index: 5;
-      pointer-events: none;
-    }
-    .hud-corner.tl { top: 20px; left: 20px; border-top-color: #00f0ff; border-left-color: #00f0ff; opacity: 0.45; }
-    .hud-corner.tr { top: 20px; right: 20px; border-top-color: #ff00ff; border-right-color: #ff00ff; opacity: 0.45; }
-    .hud-corner.bl { bottom: 20px; left: 20px; border-bottom-color: #ff00ff; border-left-color: #ff00ff; opacity: 0.45; }
-    .hud-corner.br { bottom: 20px; right: 20px; border-bottom-color: #00f0ff; border-right-color: #00f0ff; opacity: 0.45; }
-
-    .hud-label-l, .hud-label-r {
-      position: absolute;
-      top: 24px;
-      font-size: 9px;
-      opacity: 0.45;
-      letter-spacing: 1.2px;
-      font-weight: bold;
-      z-index: 5;
-    }
-    .hud-label-l { left: 40px; color: #00f0ff; }
-    .hud-label-r { right: 40px; color: #ff00ff; }
-
-    .hud-line-l, .hud-line-r {
-      position: absolute;
-      top: 48px;
-      width: 85px;
-      height: 1px;
-      opacity: 0.18;
-      z-index: 5;
-    }
-    .hud-line-l { left: 20px; background: #00f0ff; }
-    .hud-line-r { right: 20px; background: #ff00ff; }
-
-    /* Particles & Stars */
-    .particle {
-      position: absolute;
-      border-radius: 50%;
-      pointer-events: none;
-      z-index: 2;
-      opacity: 0;
+    /* SVG fills the wrapper exactly */
+    .banner svg {
+      display: block;
+      width: 100%;
+      height: 100%;
     }
 
-    .star {
-      position: absolute;
-      background: #ffffff;
-      border-radius: 50%;
-      pointer-events: none;
-      z-index: 2;
-    }
-
-    /* Circuit Lines Overlay */
-    .circuits-svg {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 1280px;
-      height: 400px;
-      pointer-events: none;
-      z-index: 3;
-    }
-
-    /* Main Container layout */
-    .container {
-      position: absolute;
-      top: 80px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 1120px;
-      height: 240px;
+    .meta {
       display: flex;
-      justify-content: center;
       gap: 28px;
-      z-index: 10;
-    }
-
-    /* Floating Panel Styling (with glassmorphism & gradients) */
-    .panel {
-      position: relative;
-      background: rgba(7, 9, 19, 0.92);
-      border-radius: 8px;
-      box-sizing: border-box;
-      box-shadow: 
-        0 8px 32px rgba(157, 78, 221, 0.2), 
-        0 2px 8px rgba(0, 240, 255, 0.1);
-    }
-    /* Gradient Border technique */
-    .panel::after {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      border-radius: 8px;
-      padding: 1.5px;
-      background: linear-gradient(135deg, #00f0ff, #9d4edd, #ff00ff);
-      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-      -webkit-mask-composite: xor;
-      mask-composite: exclude;
-      pointer-events: none;
-    }
-
-    .panel-header {
-      height: 35px;
-      border-bottom: 1px solid rgba(0, 240, 255, 0.15);
-      display: flex;
-      align-items: center;
-      padding: 0 15px;
-      box-sizing: border-box;
-    }
-
-    .panel-title {
-      font-size: 10px;
-      font-weight: bold;
-      color: #718096;
+      font-size: 9px;
+      color: #4a5568;
       letter-spacing: 1px;
     }
-
-    /* Terminal Panel specifics */
-    .terminal-panel {
-      width: 500px;
-      height: 240px;
-    }
-    
-    .terminal-panel .panel-header {
-      justify-content: space-between;
-    }
-
-    .window-buttons {
-      display: flex;
-      gap: 6px;
-    }
-    .window-buttons .btn {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-    }
-    .window-buttons .btn.red { background: #ff5f56; }
-    .window-buttons .btn.yellow { background: #ffbd2e; }
-    .window-buttons .btn.green { background: #27c93f; }
-
-    .terminal-panel .panel-title {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-
-    /* Equalizer in terminal header */
-    .equalizer {
-      display: flex;
-      align-items: flex-end;
-      gap: 3px;
-      height: 14px;
-    }
-    .equalizer .bar {
-      width: 2.8px;
-      height: 4px;
-      border-radius: 0.5px;
-    }
-    .equalizer .bar.b1 { background: #00f0ff; }
-    .equalizer .bar.b2 { background: #00f0ff; }
-    .equalizer .bar.b3 { background: #ff00ff; }
-    .equalizer .bar.b4 { background: #ff00ff; }
-    .equalizer .bar.b5 { background: #00f0ff; }
-
-    .terminal-body {
-      padding: 12px 18px;
-      font-size: 12px;
-      line-height: 1.7;
-      box-sizing: border-box;
-    }
-
-    .line {
-      opacity: 0;
-      margin: 0;
-      white-space: pre;
-    }
-
-    .cyan { color: #00f0ff; }
-    .pink { color: #ff00ff; }
-    .purple { color: #9d4edd; }
-    .green { color: #39ff14; }
-    .orange { color: #ffb703; }
-    .gray { color: #718096; }
-    .white { color: #ffffff; }
-
-    .cursor {
-      color: #00f0ff;
-      font-weight: bold;
-    }
-
-    /* Dashboard Panel specifics */
-    .dashboard-panel {
-      width: 280px;
-      height: 240px;
-    }
-
-    .dashboard-panel .panel-header {
-      justify-content: center;
-    }
-
-    .dashboard-body {
-      padding: 12px 16px;
-      box-sizing: border-box;
-    }
-
-    /* Online indicator */
-    .status-row {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      margin-bottom: 10px;
-    }
-    .status-dot {
-      width: 8px;
-      height: 8px;
-      background: #39ff14;
-      border-radius: 50%;
-      box-shadow: 0 0 10px #39ff14;
-    }
-    .status-text {
-      color: #39ff14;
-      font-size: 11px;
-      font-weight: bold;
-    }
-
-    .stats-list {
-      font-size: 10px;
-      line-height: 1.65;
-      margin-bottom: 10px;
-    }
-    .stat-label { color: #718096; }
-    .stat-val { font-weight: bold; }
-
-    /* Dashboard widgets layout */
-    .widgets-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: 10px;
-    }
-
-    .cpu-widget {
-      text-align: center;
-      width: 54px;
-    }
-    .circular-chart {
-      width: 44px;
-      height: 44px;
-    }
-    .circle-bg {
-      fill: none;
-      stroke: #171825;
-      stroke-width: 3;
-    }
-    .circle {
-      fill: none;
-      stroke: #00f0ff;
-      stroke-width: 3;
-      stroke-linecap: round;
-    }
-    .cpu-label {
-      font-size: 8px;
-      color: #00f0ff;
-      margin-top: 3px;
-      font-weight: bold;
-      letter-spacing: 0.5px;
-    }
-    .cpu-percent-label {
-      font-size: 8px;
-      color: #718096;
-      display: block;
-    }
-
-    .latency-widget {
-      width: 152px;
-    }
-    .latency-header {
-      display: flex;
-      justify-content: space-between;
-      font-size: 8px;
-      color: #718096;
-      margin-bottom: 5px;
-      font-weight: bold;
-    }
-    .oscilloscope-chart {
-      width: 152px;
-      height: 32px;
-      display: block;
-    }
-    .wave-base {
-      fill: none;
-      stroke: #171825;
-      stroke-width: 1.5;
-    }
-    .wave {
-      fill: none;
-      stroke: #ff00ff;
-      stroke-width: 1.5;
-      stroke-opacity: 0.85;
-      stroke-linecap: round;
-      stroke-dasharray: 20 80;
-    }
+    .meta span { color: #9d4edd; }
   </style>
 </head>
 <body>
 
-  <!-- Ambient Perspective Grid -->
-  <div class="perspective-grid"></div>
+  <div class="label">// BANNER PREVIEW — <span>1500 × 400</span></div>
 
-  <!-- HUD Design corner brackets & lines -->
-  <div class="hud-corner tl"></div>
-  <div class="hud-corner tr"></div>
-  <div class="hud-corner bl"></div>
-  <div class="hud-corner br"></div>
-  
-  <div class="hud-label-l">SYS.LOC // PROFILE.ROOT</div>
-  <div class="hud-label-r">SEC_STATUS // SECURE_SSL</div>
-  
-  <div class="hud-line-l"></div>
-  <div class="hud-line-r"></div>
+  <div class="banner">
+    <!-- Inline SVG — identical to banner.svg, renders with live CSS animations -->
+    <svg xmlns="http://www.w3.org/2000/svg"
+         viewBox="0 0 1500 400"
+         width="100%" height="100%"
+         preserveAspectRatio="xMidYMid meet">
 
-  <!-- Background Twinkling Stars -->
-  <div class="star s1" style="width:1.5px; height:1.5px; left:130px; top:70px;"></div>
-  <div class="star s2" style="width:1px; height:1px; left:420px; top:60px;"></div>
-  <div class="star s3" style="width:3px; height:3px; left:1090px; top:70px; background:#00f0ff; box-shadow:0 0 5px #00f0ff;"></div>
-  <div class="star s4" style="width:1px; height:1px; left:1180px; top:58px;"></div>
-  <div class="star s5" style="width:1.5px; height:1.5px; left:140px; top:320px;"></div>
-  <div class="star s6" style="width:1px; height:1px; left:1120px; top:320px;"></div>
-  <div class="star s7" style="width:3px; height:3px; left:240px; top:300px; background:#ff00ff; box-shadow:0 0 5px #ff00ff;"></div>
-  <div class="star s8" style="width:1.5px; height:1.5px; left:1040px; top:300px;"></div>
+      <defs>
+        <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%"   stop-color="#040509"/>
+          <stop offset="50%"  stop-color="#0a0b16"/>
+          <stop offset="100%" stop-color="#040509"/>
+        </linearGradient>
+        <linearGradient id="pb" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%"   stop-color="#00f0ff"/>
+          <stop offset="50%"  stop-color="#9d4edd"/>
+          <stop offset="100%" stop-color="#ff00ff"/>
+        </linearGradient>
+        <radialGradient id="gc" cx="20%" cy="50%" r="50%">
+          <stop offset="0%"   stop-color="#00f0ff" stop-opacity="0.13"/>
+          <stop offset="100%" stop-color="#00f0ff" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="gp" cx="80%" cy="50%" r="50%">
+          <stop offset="0%"   stop-color="#9d4edd" stop-opacity="0.15"/>
+          <stop offset="100%" stop-color="#9d4edd" stop-opacity="0"/>
+        </radialGradient>
+        <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+          <path d="M40 0L0 0 0 40" fill="none" stroke="#00f0ff" stroke-width="0.6" stroke-opacity="0.03"/>
+        </pattern>
+        <filter id="fc" x="-40%" y="-40%" width="180%" height="180%">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="3.5" result="b1"/>
+          <feGaussianBlur in="SourceGraphic" stdDeviation="1.2" result="b2"/>
+          <feMerge><feMergeNode in="b1"/><feMergeNode in="b2"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+        <filter id="fp" x="-40%" y="-40%" width="180%" height="180%">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="3.5" result="b1"/>
+          <feGaussianBlur in="SourceGraphic" stdDeviation="1.2" result="b2"/>
+          <feMerge><feMergeNode in="b1"/><feMergeNode in="b2"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+        <filter id="fg" x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="3.5" result="b1"/>
+          <feGaussianBlur in="SourceGraphic" stdDeviation="1.2" result="b2"/>
+          <feMerge><feMergeNode in="b1"/><feMergeNode in="b2"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+        <filter id="fpl" x="-12%" y="-12%" width="124%" height="124%">
+          <feDropShadow dx="0" dy="6"  stdDeviation="12" flood-color="#9d4edd" flood-opacity="0.20"/>
+          <feDropShadow dx="0" dy="2"  stdDeviation="4"  flood-color="#00f0ff" flood-opacity="0.10"/>
+        </filter>
+        <!-- Terminal clip paths: x=72 (67+5 offset for centering) -->
+        <clipPath id="cl1"><rect id="rl1" x="72" y="116" width="0" height="22"/></clipPath>
+        <clipPath id="cl2"><rect id="rl2" x="72" y="143" width="0" height="22"/></clipPath>
+        <clipPath id="cl3"><rect id="rl3" x="72" y="170" width="0" height="22"/></clipPath>
+        <clipPath id="cl4"><rect id="rl4" x="72" y="197" width="0" height="22"/></clipPath>
+        <clipPath id="cl5"><rect id="rl5" x="72" y="224" width="0" height="22"/></clipPath>
+        <clipPath id="cl6"><rect id="rl6" x="72" y="251" width="0" height="22"/></clipPath>
+        <clipPath id="cl7"><rect id="rl7" x="72" y="278" width="0" height="22"/></clipPath>
+      </defs>
 
-  <!-- Background Circuits (SVG) -->
-  <svg class="circuits-svg">
-    <!-- Left circuit paths -->
-    <path d="M 0,100 L 50,100 L 70,120 L 70,260 L 40,290 L 0,290" fill="none" stroke="#241442" stroke-width="1.5" opacity="0.75" />
-    <path class="circuit-pulse-l" d="M 0,100 L 50,100 L 70,120 L 70,260 L 40,290 L 0,290" fill="none" stroke="none" />
-    <circle cx="70" cy="120" r="2.5" fill="#00f0ff" style="box-shadow: 0 0 5px #00f0ff;" />
+      <style>
+        @keyframes twinkle{0%,100%{opacity:.12}50%{opacity:.9}}
+        .s{animation:twinkle 3s ease-in-out infinite}
+        .s1{animation-delay:0s}.s2{animation-delay:.7s}.s3{animation-delay:1.4s}
+        .s4{animation-delay:2.1s}.s5{animation-delay:1s}.s6{animation-delay:1.8s}
+        .s7{animation-delay:.3s}.s8{animation-delay:2.5s}.s9{animation-delay:.9s}
 
-    <!-- Right circuit paths -->
-    <path d="M 1280,100 L 1230,100 L 1210,120 L 1210,260 L 1240,290 L 1280,290" fill="none" stroke="#241442" stroke-width="1.5" opacity="0.75" />
-    <path class="circuit-pulse-r" d="M 1280,100 L 1230,100 L 1210,120 L 1210,260 L 1240,290 L 1280,290" fill="none" stroke="none" />
-    <circle cx="1210" cy="120" r="2.5" fill="#ff00ff" style="box-shadow: 0 0 5px #ff00ff;" />
-  </svg>
+        @keyframes fp1{0%{transform:translate(0,0);opacity:0}10%{opacity:.7}90%{opacity:.7}100%{transform:translate(12px,-65px);opacity:0}}
+        @keyframes fp2{0%{transform:translate(0,0);opacity:0}12%{opacity:.55}88%{opacity:.55}100%{transform:translate(-20px,-80px);opacity:0}}
+        .p1{animation:fp1 7s  linear infinite}
+        .p2{animation:fp2 9s  linear infinite}
+        .p3{animation:fp1 8s  linear infinite;animation-delay:2.5s}
+        .p4{animation:fp2 6s  linear infinite;animation-delay:1.2s}
+        .p5{animation:fp1 10s linear infinite;animation-delay:4s}
+        .p6{animation:fp2 8s  linear infinite;animation-delay:.5s}
 
-  <!-- Floating Particles -->
-  <div class="particle p1"></div>
-  <div class="particle p2"></div>
-  <div class="particle p3"></div>
-  <div class="particle p4"></div>
-  <div class="particle p5"></div>
-  <div class="particle p6"></div>
+        @keyframes cfl{0%{stroke-dashoffset:380}100%{stroke-dashoffset:-380}}
+        @keyframes cfr{0%{stroke-dashoffset:-380}100%{stroke-dashoffset:380}}
+        .cpl{stroke:#00f0ff;stroke-width:1.5;fill:none;filter:url(#fc);stroke-dasharray:55 325;animation:cfl 5s linear infinite}
+        .cpr{stroke:#ff00ff;stroke-width:1.5;fill:none;filter:url(#fp);stroke-dasharray:55 325;animation:cfr 5s linear infinite}
 
-  <!-- Main Panels Containers -->
-  <div class="container">
-    
-    <!-- LEFT PANEL: Terminal -->
-    <div class="panel terminal-panel">
-      <div class="panel-header">
-        <div class="window-buttons">
-          <span class="btn red"></span>
-          <span class="btn yellow"></span>
-          <span class="btn green"></span>
-        </div>
-        <div class="panel-title">harishstacks@terminal:~</div>
-        <div class="equalizer">
-          <span class="bar b1"></span>
-          <span class="bar b2"></span>
-          <span class="bar b3"></span>
-          <span class="bar b4"></span>
-          <span class="bar b5"></span>
-        </div>
-      </div>
-      <div class="panel-body terminal-body">
-        <div class="line" id="line-1"><span class="prefix"></span><span class="typed"></span><span class="cursor">█</span></div>
-        <div class="line" id="line-2"><span class="prefix"></span><span class="typed"></span><span class="cursor">█</span></div>
-        <div class="line" id="line-3"><span class="prefix"></span><span class="typed"></span><span class="cursor">█</span></div>
-        <div class="line" id="line-4"><span class="prefix"></span><span class="typed"></span><span class="cursor">█</span></div>
-        <div class="line" id="line-5"><span class="prefix"></span><span class="typed"></span><span class="cursor">█</span></div>
-        <div class="line" id="line-6"><span class="prefix"></span><span class="typed"></span><span class="cursor">█</span></div>
-      </div>
-    </div>
+        @keyframes sp{0%,100%{opacity:.4}50%{opacity:1}}
+        .sd{animation:sp 1.8s ease-in-out infinite}
 
-    <!-- RIGHT PANEL: Diagnostics -->
-    <div class="panel dashboard-panel">
-      <div class="panel-header">
-        <div class="panel-title">// SYSTEM DIAGNOSTICS</div>
-      </div>
-      <div class="panel-body dashboard-body">
-        <!-- Active Status -->
-        <div class="status-row">
-          <span class="status-dot"></span>
-          <span class="status-text">SYSTEM STATUS: ONLINE</span>
-        </div>
-        
-        <!-- Stats list -->
-        <div class="stats-list">
-          <div><span class="stat-label">HOST:</span> <span class="stat-val cyan">sh-stacks</span></div>
-          <div><span class="stat-label">LOC: </span> <span class="stat-val cyan">US-EAST // CLOUD</span></div>
-          <div><span class="stat-label">DB:  </span> <span class="stat-val pink">ACTIVE // REDIS</span></div>
-          <div><span class="stat-label">SEC: </span> <span class="stat-val green">SHIELD.SYS // OK</span></div>
-        </div>
+        @keyframes pf{0%,100%{stroke-dashoffset:60}50%{stroke-dashoffset:25}}
+        .pr{transform-origin:1345px 165px;transform:rotate(-90deg);animation:pf 3.5s ease-in-out infinite}
 
-        <!-- CPU Gauge & Latency -->
-        <div class="widgets-row">
-          <div class="cpu-widget">
-            <svg class="circular-chart" viewBox="0 0 36 36">
-              <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
-              <path class="circle" stroke-dasharray="75, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
-            </svg>
-            <div class="cpu-label">CPU <span class="cpu-percent-label">75%</span></div>
-          </div>
+        @keyframes osc{0%{stroke-dashoffset:300}100%{stroke-dashoffset:0}}
+        .osc{stroke-dasharray:90 210;animation:osc 4s linear infinite}
 
-          <div class="latency-widget">
-            <div class="latency-header">
-              <span>LATENCY</span>
-              <span class="green">54MS</span>
-            </div>
-            <svg class="oscilloscope-chart" viewBox="0 0 100 30">
-              <path class="wave-base" d="M 0,15 L 20,15 L 25,5 L 30,25 L 35,15 L 50,15 L 55,10 L 60,20 L 65,15 L 80,15 L 85,15 L 100,15" />
-              <path class="wave" d="M 0,15 L 20,15 L 25,5 L 30,25 L 35,15 L 50,15 L 55,10 L 60,20 L 65,15 L 80,15 L 85,15 L 100,15" />
-            </svg>
-          </div>
-        </div>
-      </div>
-    </div>
+        @keyframes bg1{0%,100%{height:4px;y:90px}50%{height:13px;y:81px}}
+        .b1{animation:bg1 1.2s ease-in-out infinite}
+        .b2{animation:bg1 .8s  ease-in-out infinite;animation-delay:.2s}
+        .b3{animation:bg1 1.5s ease-in-out infinite;animation-delay:.5s}
+        .b4{animation:bg1 1.0s ease-in-out infinite;animation-delay:.1s}
+        .b5{animation:bg1 1.3s ease-in-out infinite;animation-delay:.4s}
+
+        /* Terminal typing animations — max text width ~780px from x=72 */
+        @keyframes tl1{0%,1.4%{width:0}9%,91%{width:265px}95%,100%{width:0}}
+        @keyframes tl2{0%,11%{width:0}21%,91%{width:460px}95%,100%{width:0}}
+        @keyframes tl3{0%,23%{width:0}33%,91%{width:440px}95%,100%{width:0}}
+        @keyframes tl4{0%,35%{width:0}45%,91%{width:460px}95%,100%{width:0}}
+        @keyframes tl5{0%,47%{width:0}57%,91%{width:460px}95%,100%{width:0}}
+        @keyframes tl6{0%,59%{width:0}65%,91%{width:200px}95%,100%{width:0}}
+        @keyframes tl7{0%,67%{width:0}72%,91%{width:295px}95%,100%{width:0}}
+        #rl1{animation:tl1 14s linear infinite}
+        #rl2{animation:tl2 14s linear infinite}
+        #rl3{animation:tl3 14s linear infinite}
+        #rl4{animation:tl4 14s linear infinite}
+        #rl5{animation:tl5 14s linear infinite}
+        #rl6{animation:tl6 14s linear infinite}
+        #rl7{animation:tl7 14s linear infinite}
+
+        @keyframes mc{
+          0%,1.4%{x:72px;y:118px;opacity:1}
+          9%{x:337px;y:118px;opacity:1}11%{x:337px;y:118px;opacity:1}
+          11.1%{x:72px;y:145px;opacity:1}21%{x:532px;y:145px;opacity:1}
+          23%{x:532px;y:145px;opacity:1}23.1%{x:72px;y:172px;opacity:1}
+          33%{x:512px;y:172px;opacity:1}35%{x:512px;y:172px;opacity:1}
+          35.1%{x:72px;y:199px;opacity:1}45%{x:532px;y:199px;opacity:1}
+          47%{x:532px;y:199px;opacity:1}47.1%{x:72px;y:226px;opacity:1}
+          57%{x:532px;y:226px;opacity:1}59%{x:532px;y:226px;opacity:1}
+          59.1%{x:72px;y:253px;opacity:1}65%{x:272px;y:253px;opacity:1}
+          67%{x:272px;y:253px;opacity:1}67.1%{x:72px;y:280px;opacity:1}
+          72%{x:367px;y:280px;opacity:1}
+          74%{opacity:0}76%{opacity:1}78%{opacity:0}80%{opacity:1}
+          82%{opacity:0}84%{opacity:1}86%{opacity:0}88%{opacity:1}
+          90%{opacity:0}91%{opacity:1}
+          95%,100%{x:72px;y:118px;opacity:0}
+        }
+        .tc{animation:mc 14s linear infinite}
+      </style>
+
+      <!-- Background -->
+      <rect width="1500" height="400" fill="url(#bg)"/>
+      <rect width="1500" height="400" fill="url(#grid)"/>
+      <circle cx="300"  cy="200" r="400" fill="url(#gc)"/>
+      <circle cx="1200" cy="200" r="400" fill="url(#gp)"/>
+
+      <!-- Perspective grid (updated vanishing point to 750 center) -->
+      <g opacity="0.11" stroke="#00f0ff" stroke-width="0.7">
+        <line x1="750" y1="255" x2="-100" y2="400"/>
+        <line x1="750" y1="255" x2="150"  y2="400"/>
+        <line x1="750" y1="255" x2="370"  y2="400"/>
+        <line x1="750" y1="255" x2="520"  y2="400"/>
+        <line x1="750" y1="255" x2="640"  y2="400"/>
+        <line x1="750" y1="255" x2="750"  y2="400"/>
+        <line x1="750" y1="255" x2="860"  y2="400"/>
+        <line x1="750" y1="255" x2="980"  y2="400"/>
+        <line x1="750" y1="255" x2="1130" y2="400"/>
+        <line x1="750" y1="255" x2="1350" y2="400"/>
+        <line x1="750" y1="255" x2="1600" y2="400"/>
+        <line x1="-100" y1="280" x2="1600" y2="280"/>
+        <line x1="-100" y1="310" x2="1600" y2="310"/>
+        <line x1="-100" y1="348" x2="1600" y2="348"/>
+      </g>
+
+      <!-- HUD Frame (50px safe zone on 1500w canvas) -->
+      <g>
+        <path d="M50,68 L50,50 L68,50"          fill="none" stroke="#00f0ff" stroke-width="1.5" stroke-opacity="0.45"/>
+        <path d="M1450,68 L1450,50 L1432,50"    fill="none" stroke="#ff00ff" stroke-width="1.5" stroke-opacity="0.45"/>
+        <path d="M50,332 L50,350 L68,350"       fill="none" stroke="#ff00ff" stroke-width="1.5" stroke-opacity="0.45"/>
+        <path d="M1450,332 L1450,350 L1432,350" fill="none" stroke="#00f0ff" stroke-width="1.5" stroke-opacity="0.45"/>
+        <text x="76" y="44" fill="#00f0ff" font-family="'JetBrains Mono',monospace" font-size="9" opacity="0.42" letter-spacing="1.2">SYS.LOC // PROFILE.ROOT</text>
+        <text x="1424" y="44" text-anchor="end" fill="#ff00ff" font-family="'JetBrains Mono',monospace" font-size="9" opacity="0.42" letter-spacing="1.2">SEC_STATUS // SECURE_SSL</text>
+        <line x1="50"   y1="56" x2="155"  y2="56" stroke="#00f0ff" stroke-width="1" opacity="0.16"/>
+        <line x1="1345" y1="56" x2="1450" y2="56" stroke="#ff00ff" stroke-width="1" opacity="0.16"/>
+        <text x="76" y="362" fill="#9d4edd" font-family="'JetBrains Mono',monospace" font-size="8" opacity="0.32" letter-spacing="1">v2.1.0 // HARISHSTACKS</text>
+        <text x="1424" y="362" text-anchor="end" fill="#9d4edd" font-family="'JetBrains Mono',monospace" font-size="8" opacity="0.32" letter-spacing="1">BUILD // STABLE</text>
+      </g>
+
+      <!-- Stars -->
+      <g>
+        <circle class="s s1" cx="120"  cy="58"  r="1.4" fill="#fff"/>
+        <circle class="s s2" cx="450"  cy="52"  r="1"   fill="#fff"/>
+        <circle class="s s3" cx="1360" cy="58"  r="1.8" fill="#00f0ff" filter="url(#fc)"/>
+        <circle class="s s4" cx="1260" cy="52"  r="1"   fill="#fff"/>
+        <circle class="s s5" cx="100"  cy="342" r="1.4" fill="#fff"/>
+        <circle class="s s6" cx="1350" cy="344" r="1"   fill="#fff"/>
+        <circle class="s s7" cx="195"  cy="315" r="1.8" fill="#ff00ff" filter="url(#fp)"/>
+        <circle class="s s8" cx="1300" cy="316" r="1.4" fill="#fff"/>
+        <circle class="s s9" cx="750"  cy="54"  r="1.4" fill="#9d4edd" filter="url(#fp)"/>
+      </g>
+
+      <!-- Circuit left -->
+      <g>
+        <path d="M0,108 L38,108 L52,122 L52,272 L28,296 L0,296" fill="none" stroke="#1a0d33" stroke-width="1.5" opacity="0.7"/>
+        <path class="cpl" d="M0,108 L38,108 L52,122 L52,272 L28,296 L0,296"/>
+        <circle cx="52" cy="122" r="2.2" fill="#00f0ff" filter="url(#fc)"/>
+      </g>
+      <!-- Circuit right -->
+      <g>
+        <path d="M1500,108 L1462,108 L1448,122 L1448,272 L1472,296 L1500,296" fill="none" stroke="#1a0d33" stroke-width="1.5" opacity="0.7"/>
+        <path class="cpr" d="M1500,108 L1462,108 L1448,122 L1448,272 L1472,296 L1500,296"/>
+        <circle cx="1448" cy="122" r="2.2" fill="#ff00ff" filter="url(#fp)"/>
+      </g>
+
+      <!-- Particles -->
+      <g>
+        <g class="p1"><circle cx="160"  cy="340" r="1.8" fill="#00f0ff" filter="url(#fc)"/></g>
+        <g class="p2"><circle cx="330"  cy="355" r="1.4" fill="#ff00ff" filter="url(#fp)"/></g>
+        <g class="p3"><circle cx="1160" cy="348" r="1.8" fill="#00f0ff" filter="url(#fc)"/></g>
+        <g class="p4"><circle cx="1300" cy="340" r="2.2" fill="#ff00ff" filter="url(#fp)"/></g>
+        <g class="p5"><circle cx="220"  cy="112" r="1.4" fill="#00f0ff" filter="url(#fc)"/></g>
+        <g class="p6"><circle cx="1260" cy="112" r="1.8" fill="#ff00ff" filter="url(#fp)"/></g>
+      </g>
+
+      <!-- ═══ TERMINAL PANEL  x=55, y=60, w=840, h=280 ═══ -->
+      <g filter="url(#fpl)">
+        <rect x="55"  y="60" width="840" height="280" rx="8" fill="#070913" fill-opacity="0.93"/>
+        <rect x="55"  y="60" width="840" height="280" rx="8" fill="none" stroke="url(#pb)" stroke-width="1.5"/>
+      </g>
+      <g>
+        <line x1="55" y1="97" x2="895" y2="97" stroke="url(#pb)" stroke-width="1.1" opacity="0.22"/>
+        <circle cx="79"  cy="79" r="4.5" fill="#ff5f56"/>
+        <circle cx="94"  cy="79" r="4.5" fill="#ffbd2e"/>
+        <circle cx="109" cy="79" r="4.5" fill="#27c93f"/>
+        <text x="475" y="83" text-anchor="middle" fill="#718096" font-family="'JetBrains Mono',monospace" font-weight="bold" font-size="9.5" letter-spacing="1">harishstacks@terminal:~</text>
+        <g opacity="0.6">
+          <rect class="b1" x="856" y="90" width="2.5" height="13" fill="#00f0ff" rx="0.5"/>
+          <rect class="b2" x="862" y="90" width="2.5" height="13" fill="#00f0ff" rx="0.5"/>
+          <rect class="b3" x="868" y="90" width="2.5" height="13" fill="#ff00ff" rx="0.5"/>
+          <rect class="b4" x="874" y="90" width="2.5" height="13" fill="#ff00ff" rx="0.5"/>
+          <rect class="b5" x="880" y="90" width="2.5" height="13" fill="#00f0ff" rx="0.5"/>
+        </g>
+      </g>
+      <g font-family="'JetBrains Mono',monospace" font-size="12.5">
+        <text x="72" y="130" fill="#e2e8f0" clip-path="url(#cl1)">
+          <tspan fill="#00f0ff">harishstacks</tspan><tspan fill="#ff00ff">@</tspan><tspan fill="#9d4edd">github</tspan><tspan fill="#a0aec0">:~$ </tspan><tspan fill="#ffffff">whoami</tspan>
+        </text>
+        <text x="72" y="157" fill="#e2e8f0" clip-path="url(#cl2)">
+          <tspan fill="#a0aec0">&gt; </tspan><tspan fill="#00f0ff">Harish M</tspan><tspan fill="#718096"> | </tspan><tspan fill="#ff00ff">Full Stack Engineer &amp; Designer</tspan>
+        </text>
+        <text x="72" y="184" fill="#e2e8f0" clip-path="url(#cl3)">
+          <tspan fill="#a0aec0">&gt; </tspan><tspan fill="#718096">Stack:  </tspan><tspan fill="#00f0ff">React</tspan><tspan fill="#718096">, </tspan><tspan fill="#ff00ff">Node.js</tspan><tspan fill="#718096">, </tspan><tspan fill="#00f0ff">Python</tspan><tspan fill="#718096">, </tspan><tspan fill="#9d4edd">AWS</tspan>
+        </text>
+        <text x="72" y="211" fill="#e2e8f0" clip-path="url(#cl4)">
+          <tspan fill="#a0aec0">&gt; </tspan><tspan fill="#718096">Focus:  </tspan><tspan fill="#39ff14">High-perf web apps &amp; interactive UIs</tspan>
+        </text>
+        <text x="72" y="238" fill="#e2e8f0" clip-path="url(#cl5)">
+          <tspan fill="#a0aec0">&gt; </tspan><tspan fill="#718096">Status: </tspan><tspan fill="#ffb703">Actively building open-source tools</tspan>
+        </text>
+        <text x="72" y="265" fill="#e2e8f0" clip-path="url(#cl6)">
+          <tspan fill="#00f0ff">harishstacks</tspan><tspan fill="#ff00ff">@</tspan><tspan fill="#9d4edd">github</tspan><tspan fill="#a0aec0">:~$ </tspan>
+        </text>
+        <text x="72" y="292" fill="#e2e8f0" clip-path="url(#cl7)">
+          <tspan fill="#a0aec0">&gt; </tspan><tspan fill="#718096">pwd: </tspan><tspan fill="#9d4edd">/home/harishstacks/projects</tspan>
+        </text>
+      </g>
+      <rect class="tc" width="7" height="13" fill="#00f0ff" rx="1"/>
+
+      <!-- ═══ DIAGNOSTICS PANEL  x=915, y=60, w=530, h=280 ═══ -->
+      <g filter="url(#fpl)">
+        <rect x="915" y="60" width="530" height="280" rx="8" fill="#070913" fill-opacity="0.93"/>
+        <rect x="915" y="60" width="530" height="280" rx="8" fill="none" stroke="url(#pb)" stroke-width="1.5"/>
+      </g>
+      <g>
+        <line x1="915" y1="97" x2="1445" y2="97" stroke="url(#pb)" stroke-width="1.1" opacity="0.22"/>
+        <text x="1180" y="83" text-anchor="middle" fill="#718096" font-family="'JetBrains Mono',monospace" font-weight="bold" font-size="9.5" letter-spacing="1">// SYSTEM DIAGNOSTICS</text>
+      </g>
+      <circle class="sd" cx="938" cy="118" r="4" fill="#39ff14" filter="url(#fg)"/>
+      <text x="951" y="122" fill="#39ff14" font-family="'JetBrains Mono',monospace" font-size="10.5" font-weight="bold">SYSTEM STATUS: ONLINE</text>
+      <g font-family="'JetBrains Mono',monospace" font-size="10.5">
+        <text x="938" y="148"><tspan fill="#718096">HOST:</tspan>  <tspan fill="#00f0ff">sh-stacks</tspan></text>
+        <text x="938" y="168"><tspan fill="#718096">LOC: </tspan>  <tspan fill="#00f0ff">US-EAST // CLOUD</tspan></text>
+        <text x="938" y="188"><tspan fill="#718096">DB:  </tspan>  <tspan fill="#ff00ff">ACTIVE // REDIS</tspan></text>
+        <text x="938" y="208"><tspan fill="#718096">SEC: </tspan>  <tspan fill="#39ff14">SHIELD.SYS // OK</tspan></text>
+      </g>
+      <!-- CPU ring — centered in right portion of diagnostics panel -->
+      <circle cx="1345" cy="165" r="30" fill="none" stroke="#171825" stroke-width="4.5"/>
+      <circle class="pr" cx="1345" cy="165" r="30" fill="none" stroke="#00f0ff" stroke-width="4.5" stroke-dasharray="188.5" stroke-dashoffset="188.5" filter="url(#fc)"/>
+      <text x="1345" y="163" text-anchor="middle" fill="#00f0ff" font-family="'JetBrains Mono',monospace" font-size="8.5" font-weight="bold">CPU</text>
+      <text x="1345" y="174" text-anchor="middle" fill="#718096" font-family="'JetBrains Mono',monospace" font-size="7.5">75%</text>
+      <!-- Oscilloscope -->
+      <text x="938"  y="232" fill="#718096" font-family="'JetBrains Mono',monospace" font-size="8.5" font-weight="bold">LATENCY</text>
+      <text x="1435" y="232" text-anchor="end" fill="#39ff14" font-family="'JetBrains Mono',monospace" font-size="8.5" font-weight="bold">54MS</text>
+      <path d="M938,260 L960,260 L971,241 L982,279 L993,260 L1013,260 L1024,249 L1035,271 L1046,260 L1083,260 L1095,232 L1107,288 L1119,260 L1153,260 L1165,249 L1177,271 L1189,260 L1435,260" fill="none" stroke="#171825" stroke-width="1.5"/>
+      <path class="osc" d="M938,260 L960,260 L971,241 L982,279 L993,260 L1013,260 L1024,249 L1035,271 L1046,260 L1083,260 L1095,232 L1107,288 L1119,260 L1153,260 L1165,249 L1177,271 L1189,260 L1435,260" fill="none" stroke="#ff00ff" stroke-width="1.5" stroke-opacity="0.85" filter="url(#fp)"/>
+      <!-- Memory bar -->
+      <text x="938" y="302" fill="#718096" font-family="'JetBrains Mono',monospace" font-size="8.5" font-weight="bold">MEM</text>
+      <rect x="970" y="293" width="465" height="5.5" rx="2.5" fill="#171825"/>
+      <rect x="970" y="293" width="321" height="5.5" rx="2.5" fill="#9d4edd" filter="url(#fp)" opacity="0.88"/>
+      <text x="1435" y="301" text-anchor="end" fill="#9d4edd" font-family="'JetBrains Mono',monospace" font-size="8.5" font-weight="bold">69%</text>
+      <!-- Uptime -->
+      <text x="938" y="328" fill="#718096" font-family="'JetBrains Mono',monospace" font-size="8.5">UPTIME: <tspan fill="#ffb703">247d 18h 32m</tspan></text>
+
+    </svg>
   </div>
 
-  <script>
-    // Frame step renderer function
-    function setFrame(t) {
-      const lines = [
-        { id: "line-1", prefix: '<span class="cyan">harishstacks</span><span class="pink">@</span><span class="purple">github</span><span class="gray">:~$ </span>', text: "whoami", start: 200, end: 800 },
-        { id: "line-2", prefix: '<span class="gray">> </span>', text: "Harish M | Full Stack Engineer & Designer", start: 900, end: 1700 },
-        { id: "line-3", prefix: '<span class="gray">> Tech Stack: </span>', text: "React, Node.js, Python, AWS", start: 2000, end: 2800 },
-        { id: "line-4", prefix: '<span class="gray">> Focus: </span>', text: "High-perf web apps & interactive UIs", start: 2900, end: 3700 },
-        { id: "line-5", prefix: '<span class="gray">> Status: </span>', text: "Actively building open-source tools", start: 3900, end: 4500 },
-        { id: "line-6", prefix: '<span class="cyan">harishstacks</span><span class="pink">@</span><span class="purple">github</span><span class="gray">:~$ </span>', text: "", start: 4700, end: 5000 }
-      ];
+  <div class="meta">
+    <div>CANVAS <span>1500×400</span></div>
+    <div>SAFE ZONE <span>1400×300 (50px margin)</span></div>
+    <div>PANELS <span>840px + 530px</span></div>
+    <div>MODE <span>GitHub SVG</span></div>
+  </div>
 
-      lines.forEach((line, index) => {
-        const el = document.getElementById(line.id);
-        const prefixEl = el.querySelector('.prefix');
-        const typedEl = el.querySelector('.typed');
-        const cursorEl = el.querySelector('.cursor');
-
-        // Set prefix once
-        if (prefixEl.innerHTML === "") {
-          prefixEl.innerHTML = line.prefix;
-        }
-
-        if (t < line.start) {
-          el.style.opacity = "0";
-        } else if (t >= line.start && t < line.end) {
-          el.style.opacity = "1";
-          const progress = (t - line.start) / (line.end - line.start);
-          const charCount = Math.floor(progress * line.text.length);
-          typedEl.textContent = line.text.slice(0, charCount);
-          cursorEl.style.display = "inline";
-          // blinking cursor: toggle visibility every 200ms
-          cursorEl.style.opacity = (Math.floor(t / 200) % 2 === 0) ? "1" : "0";
-        } else {
-          el.style.opacity = "1";
-          typedEl.textContent = line.text;
-          if (index === lines.length - 1) {
-            // Last line keeps cursor blinking
-            cursorEl.style.display = "inline";
-            cursorEl.style.opacity = (Math.floor(t / 200) % 2 === 0) ? "1" : "0";
-          } else {
-            cursorEl.style.display = "none";
-          }
-        }
-      });
-
-      // Animate other elements
-      // 1. Oscilloscope wave path shifting
-      const wave = document.querySelector('.wave');
-      if (wave) {
-        const offset = (t / 10) % 100;
-        wave.setAttribute('stroke-dashoffset', offset);
-      }
-
-      // 2. CPU Progress circle
-      const circle = document.querySelector('.circle');
-      if (circle) {
-        // Fluctuate CPU percentage
-        const cpuPercent = 75 + Math.sin(t / 400) * 10;
-        circle.setAttribute('stroke-dasharray', `${cpuPercent}, 100`);
-        const label = document.querySelector('.cpu-percent-label');
-        if (label) {
-          label.textContent = `${Math.floor(cpuPercent)}%`;
-        }
-      }
-
-      // 3. Equalizer heights
-      const bars = [
-        { el: document.querySelector('.b1'), speed: 0.008, phase: 0 },
-        { el: document.querySelector('.b2'), speed: 0.012, phase: 1 },
-        { el: document.querySelector('.b3'), speed: 0.006, phase: 2 },
-        { el: document.querySelector('.b4'), speed: 0.010, phase: 3 },
-        { el: document.querySelector('.b5'), speed: 0.007, phase: 4 }
-      ];
-      bars.forEach(bar => {
-        if (bar.el) {
-          const h = 5 + Math.sin(t * bar.speed + bar.phase) * 4;
-          bar.el.style.height = `${h}px`;
-        }
-      });
-
-      // 4. Particles floating
-      const particles = [
-        { el: document.querySelector('.p1'), startX: 220, startY: 340, speed: 7000, maxTravelY: -70, travelX: 20, delay: 0 },
-        { el: document.querySelector('.p2'), startX: 320, startY: 350, speed: 9000, maxTravelY: -85, travelX: -25, delay: 1200 },
-        { el: document.querySelector('.p3'), startX: 960, startY: 340, speed: 8000, maxTravelY: -70, travelX: 18, delay: 2500 },
-        { el: document.querySelector('.p4'), startX: 1040, startY: 340, speed: 6000, maxTravelY: -75, travelX: -20, delay: 1500 },
-        { el: document.querySelector('.p5'), startX: 260, startY: 150, speed: 10000, maxTravelY: -55, travelX: 12, delay: 4000 },
-        { el: document.querySelector('.p6'), startX: 1020, startY: 150, speed: 8000, maxTravelY: -55, travelX: -12, delay: 500 }
-      ];
-      particles.forEach(p => {
-        if (p.el) {
-          const elapsed = (t + p.delay) % p.speed;
-          const progress = elapsed / p.speed;
-          const y = progress * p.maxTravelY;
-          const x = progress * p.travelX;
-          let opacity = 0;
-          if (progress < 0.1) {
-            opacity = progress / 0.1 * 0.8;
-          } else if (progress > 0.9) {
-            opacity = (1 - progress) / 0.1 * 0.8;
-          } else {
-            opacity = 0.8;
-          }
-          p.el.style.transform = `translate(${x}px, ${y}px)`;
-          p.el.style.opacity = opacity;
-        }
-      });
-
-      // 5. Twinkling stars
-      const stars = [
-        { el: document.querySelector('.s1'), speed: 3000, delay: 0 },
-        { el: document.querySelector('.s2'), speed: 3000, delay: 700 },
-        { el: document.querySelector('.s3'), speed: 3000, delay: 1400 },
-        { el: document.querySelector('.s4'), speed: 3000, delay: 2100 },
-        { el: document.querySelector('.s5'), speed: 3000, delay: 1000 },
-        { el: document.querySelector('.s6'), speed: 3000, delay: 1800 },
-        { el: document.querySelector('.s7'), speed: 3000, delay: 300 },
-        { el: document.querySelector('.s8'), speed: 3000, delay: 2500 }
-      ];
-      stars.forEach(s => {
-        if (s.el) {
-          const elapsed = (t + s.delay) % s.speed;
-          const progress = elapsed / s.speed;
-          const opacity = 0.2 + Math.abs(Math.sin(progress * Math.PI)) * 0.8;
-          s.el.style.opacity = opacity;
-        }
-      });
-    }
-
-    // Initialize first frame
-    setFrame(0);
-  </script>
 </body>
 </html>
