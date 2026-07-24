@@ -285,6 +285,81 @@
 <br>
 
 <!-- ═══════════════════════════════════════════════════════════════
+     BLOCK 5.5: ACHIEVEMENTS & CERTIFICATIONS
+     Premium glass cards with electric blue and cyan glow
+     ═══════════════════════════════════════════════════════════════ -->
+
+<br>
+
+<p align="center">
+<h3>🏆 ACHIEVEMENTS & CERTIFICATIONS</h3>
+</p>
+
+<br>
+
+<table width="100%"><tr>
+<td width="33%" valign="top" align="center">
+
+<h4>📜 Certifications</h4>
+<p>
+<img src="https://img.shields.io/badge/Certifications-Coming%20Soon-00D2FF?style=for-the-badge&labelColor=0D1117" alt="Certifications">
+</p>
+<p><sub>Professional certifications and credentials</sub></p>
+
+</td>
+<td width="33%" valign="top" align="center">
+
+<h4>🏅 Hackathons</h4>
+<p>
+<img src="https://img.shields.io/badge/Hackathons-Coming%20Soon-00D2FF?style=for-the-badge&labelColor=0D1117" alt="Hackathons">
+</p>
+<p><sub>Competition achievements and awards</sub></p>
+
+</td>
+<td width="33%" valign="top" align="center">
+
+<h4>⭐ GitHub Milestones</h4>
+<p>
+<img src="https://img.shields.io/badge/Milestones-Coming%20Soon-00D2FF?style=for-the-badge&labelColor=0D1117" alt="GitHub Milestones">
+</p>
+<p><sub>Repository achievements and contributions</sub></p>
+
+</td>
+</tr></table>
+
+<table width="100%"><tr>
+<td width="33%" valign="top" align="center">
+
+<h4>💻 Coding Challenges</h4>
+<p>
+<img src="https://img.shields.io/badge/Challenges-Coming%20Soon-00D2FF?style=for-the-badge&labelColor=0D1117" alt="Coding Challenges">
+</p>
+<p><sub>Problem solving and algorithm mastery</sub></p>
+
+</td>
+<td width="33%" valign="top" align="center">
+
+<h4>🤝 Open Source</h4>
+<p>
+<img src="https://img.shields.io/badge/Contributions-Coming%20Soon-00D2FF?style=for-the-badge&labelColor=0D1117" alt="Open Source">
+</p>
+<p><sub>Community contributions and collaborations</sub></p>
+
+</td>
+<td width="33%" valign="top" align="center">
+
+<h4>📚 Research</h4>
+<p>
+<img src="https://img.shields.io/badge/Research-Coming%20Soon-00D2FF?style=for-the-badge&labelColor=0D1117" alt="Research">
+</p>
+<p><sub>Publications and academic work</sub></p>
+
+</td>
+</tr></table>
+
+<br>
+
+<!-- ═══════════════════════════════════════════════════════════════
      BLOCK 6: TECH STACK BADGES
      Clean, minimal badge row
      ═══════════════════════════════════════════════════════════════ -->
