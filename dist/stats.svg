@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="460" height="195" viewBox="0 0 460 195">
+  <rect width="460" height="195" rx="11" fill="#0D1117" stroke="#30363D" stroke-width="1"/>
+  <text x="25" y="38" font-size="18" font-weight="bold" fill="#22D3EE" font-family="Segoe UI, Helvetica, Arial, sans-serif">📊 GitHub Stats</text>
+  <line x1="25" y1="50" x2="435" y2="50" stroke="#30363D" stroke-width="1"/>
+  <text x="30" y="70" font-size="16" fill="#22D3EE" font-family="Segoe UI Emoji, Apple Color Emoji, sans-serif">★</text>
+  <text x="60" y="70" font-size="14" fill="#F0F6FC" font-family="Segoe UI, Helvetica, Arial, sans-serif">Total Stars</text>
+  <text x="430" y="70" font-size="14" font-weight="bold" fill="#F0F6FC" text-anchor="end" font-family="Segoe UI, Helvetica, Arial, sans-serif">0</text>
+  <text x="30" y="94" font-size="16" fill="#22D3EE" font-family="Segoe UI Emoji, Apple Color Emoji, sans-serif">⑂</text>
+  <text x="60" y="94" font-size="14" fill="#F0F6FC" font-family="Segoe UI, Helvetica, Arial, sans-serif">Total Forks</text>
+  <text x="430" y="94" font-size="14" font-weight="bold" fill="#F0F6FC" text-anchor="end" font-family="Segoe UI, Helvetica, Arial, sans-serif">3</text>
+  <text x="30" y="118" font-size="16" fill="#22D3EE" font-family="Segoe UI Emoji, Apple Color Emoji, sans-serif">📦</text>
+  <text x="60" y="118" font-size="14" fill="#F0F6FC" font-family="Segoe UI, Helvetica, Arial, sans-serif">Repositories</text>
+  <text x="430" y="118" font-size="14" font-weight="bold" fill="#F0F6FC" text-anchor="end" font-family="Segoe UI, Helvetica, Arial, sans-serif">14</text>
+  <text x="30" y="142" font-size="16" fill="#22D3EE" font-family="Segoe UI Emoji, Apple Color Emoji, sans-serif">👥</text>
+  <text x="60" y="142" font-size="14" fill="#F0F6FC" font-family="Segoe UI, Helvetica, Arial, sans-serif">Followers</text>
+  <text x="430" y="142" font-size="14" font-weight="bold" fill="#F0F6FC" text-anchor="end" font-family="Segoe UI, Helvetica, Arial, sans-serif">6</text>
+  <text x="30" y="166" font-size="16" fill="#22D3EE" font-family="Segoe UI Emoji, Apple Color Emoji, sans-serif">👁</text>
+  <text x="60" y="166" font-size="14" fill="#F0F6FC" font-family="Segoe UI, Helvetica, Arial, sans-serif">Following</text>
+  <text x="430" y="166" font-size="14" font-weight="bold" fill="#F0F6FC" text-anchor="end" font-family="Segoe UI, Helvetica, Arial, sans-serif">11</text>
+  <text x="435" y="183" font-size="9" fill="#8B949E" text-anchor="end" font-family="Segoe UI, Helvetica, Arial, sans-serif">Updated Aug 2026</text>
+</svg>
