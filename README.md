@@ -14,11 +14,6 @@
      HERO — NEURAL COMMAND CENTER
      ════════════════════════════════════════════════════════════════ -->
 
-<img src="assets/banner.gif" alt="HARISH AI — Neural Command Center" width="100%"/>
-
-<br><br>
-
-<!-- Title -->
 <h1>
   <samp>HARISH&nbsp;AI</samp>
 </h1>
