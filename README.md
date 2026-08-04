@@ -89,7 +89,7 @@ AI & Data Science student specializing in Machine Learning and Deep Learning. Pa
 <table width="100%">
   <tr>
     <td width="50%" align="center">
-      <img src="https://github-readme-stats.vercel.app/api?username=harishstacks&show_icons=true&theme=dark&bg_color=0D1117&title_color=22D3EE&text_color=F0F6FC&icon_color=22D3EE&hide_border=true&count_private=true&cache_seconds=1800" alt="GitHub Stats" width="100%"/>
+      <img src="https://github-readme-stats-ashen-one.vercel.app/api?username=harishstacks&show_icons=true&theme=dark&bg_color=0D1117&title_color=22D3EE&text_color=F0F6FC&icon_color=22D3EE&hide_border=true&count_private=true" alt="GitHub Stats" width="100%"/>
     </td>
     <td width="50%" align="center">
       <img src="https://streak-stats.demolab.com?user=harishstacks&theme=dark&bg_color=0D1117&title_color=22D3EE&ring_color=22D3EE&sideLabels=F0F6FC&sideNums=F0F6FC&currStreakLabel=22D3EE&currStreakNum=F0F6FC&type=svg" alt="GitHub Streak" width="100%"/>
@@ -97,19 +97,13 @@ AI & Data Science student specializing in Machine Learning and Deep Learning. Pa
   </tr>
   <tr>
     <td width="50%" align="center">
-      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=harishstacks&layout=compact&theme=dark&bg_color=0D1117&title_color=22D3EE&text_color=F0F6FC&hide_border=true&cache_seconds=1800" alt="Top Languages" width="100%"/>
+      <img src="https://github-readme-stats-ashen-one.vercel.app/api/top-langs/?username=harishstacks&layout=compact&theme=dark&bg_color=0D1117&title_color=22D3EE&text_color=F0F6FC&hide_border=true" alt="Top Languages" width="100%"/>
     </td>
     <td width="50%" align="center">
-      <img src="https://github-profile-trophy.vercel.app/?username=harishstacks&theme=dark&bg_color=0D1117&title_color=22D3EE&text_color=F0F6FC&no-bg=true&no-frame=true&column=4&row=1" alt="GitHub Trophies" width="100%"/>
+      <img src="https://ghchart.rshah.org/22D3EE/harishstacks" alt="Contribution Graph" width="100%"/>
     </td>
   </tr>
 </table>
-
-<br>
-
-<div align="center">
-  <img src="https://ghchart.rshah.org/22D3EE/harishstacks" alt="Contribution Graph" width="100%"/>
-</div>
 
 <br>
 
