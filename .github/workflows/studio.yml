@@ -31,5 +31,5 @@ jobs:
       - name: Commit mural if it changed
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "chore: install tonight's studio wall"
+          commit_message: "chore: expose tonight's plate"
           file_pattern: studio.svg inspect.svg
