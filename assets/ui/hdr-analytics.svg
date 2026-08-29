@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 42" width="900" height="42">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00d2ff"/>
+      <stop offset="100%" stop-color="#7000ff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="42" fill="#060812"/>
+  <text x="12" y="26" fill="#00d2ff" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" letter-spacing="3">// GITHUB_ANALYTICS</text>
+  <line x1="214" y1="21" x2="888" y2="21" stroke="url(#g)" stroke-width="1"/>
+</svg>

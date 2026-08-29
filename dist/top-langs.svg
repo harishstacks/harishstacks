@@ -1,26 +1,39 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="460" height="195" viewBox="0 0 460 195">
-  <rect width="460" height="195" rx="11" fill="#0D1117" stroke="#30363D" stroke-width="1"/>
-  <text x="25" y="38" font-size="18" font-weight="bold" fill="#22D3EE" font-family="Segoe UI, Helvetica, Arial, sans-serif">💻 Top Languages</text>
-  <line x1="25" y1="50" x2="435" y2="50" stroke="#30363D" stroke-width="1"/>
-  <text x="30" y="70" font-size="13" fill="#F0F6FC" font-family="Segoe UI, Helvetica, Arial, sans-serif">Python</text>
-  <rect x="150" y="59" width="280" height="11" rx="3" fill="#30363D"/>
-  <rect x="150" y="59" width="120" height="11" rx="3" fill="#3776AB"/>
-  <text x="430" y="70" font-size="11" fill="#8B949E" text-anchor="end" font-family="Segoe UI, Helvetica, Arial, sans-serif">42.9%</text>
-  <text x="30" y="92" font-size="13" fill="#F0F6FC" font-family="Segoe UI, Helvetica, Arial, sans-serif">HTML</text>
-  <rect x="150" y="81" width="280" height="11" rx="3" fill="#30363D"/>
-  <rect x="150" y="81" width="60" height="11" rx="3" fill="#F7DF1E"/>
-  <text x="430" y="92" font-size="11" fill="#8B949E" text-anchor="end" font-family="Segoe UI, Helvetica, Arial, sans-serif">21.4%</text>
-  <text x="30" y="114" font-size="13" fill="#F0F6FC" font-family="Segoe UI, Helvetica, Arial, sans-serif">JavaScript</text>
-  <rect x="150" y="103" width="280" height="11" rx="3" fill="#30363D"/>
-  <rect x="150" y="103" width="39" height="11" rx="3" fill="#3178C6"/>
-  <text x="430" y="114" font-size="11" fill="#8B949E" text-anchor="end" font-family="Segoe UI, Helvetica, Arial, sans-serif">14.3%</text>
-  <text x="30" y="136" font-size="13" fill="#F0F6FC" font-family="Segoe UI, Helvetica, Arial, sans-serif">CSS</text>
-  <rect x="150" y="125" width="280" height="11" rx="3" fill="#30363D"/>
-  <rect x="150" y="125" width="39" height="11" rx="3" fill="#E34F26"/>
-  <text x="430" y="136" font-size="11" fill="#8B949E" text-anchor="end" font-family="Segoe UI, Helvetica, Arial, sans-serif">14.3%</text>
-  <text x="30" y="158" font-size="13" fill="#F0F6FC" font-family="Segoe UI, Helvetica, Arial, sans-serif">TypeScript</text>
-  <rect x="150" y="147" width="280" height="11" rx="3" fill="#30363D"/>
-  <rect x="150" y="147" width="19" height="11" rx="3" fill="#563D7C"/>
-  <text x="430" y="158" font-size="11" fill="#8B949E" text-anchor="end" font-family="Segoe UI, Helvetica, Arial, sans-serif">7.1%</text>
-  <text x="435" y="183" font-size="9" fill="#8B949E" text-anchor="end" font-family="Segoe UI, Helvetica, Arial, sans-serif">Updated Aug 2026</text>
+  <defs>
+    <linearGradient id="ledge" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00d2ff" stop-opacity="0.55"/>
+      <stop offset="50%" stop-color="#7000ff" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#00d2ff" stop-opacity="0.12"/>
+    </linearGradient>
+    <linearGradient id="lline" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00d2ff" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#7000ff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="460" height="195" rx="12" fill="#060812"/>
+  <rect x="0.6" y="0.6" width="458.8" height="193.8" rx="11.4" fill="#080c19" stroke="url(#ledge)" stroke-width="1.2"/>
+  <circle cx="28" cy="28" r="3.2" fill="#00d2ff"/>
+  <text x="40" y="33" font-size="13" font-weight="bold" fill="#00d2ff" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" letter-spacing="1.5">TOP LANGUAGES</text>
+  <line x1="25" y1="46" x2="435" y2="46" stroke="url(#lline)" stroke-width="1"/>
+  <text x="30" y="70" font-size="12" fill="#e2e8f0" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">Python</text>
+  <rect x="150" y="59" width="280" height="8" rx="4" fill="#12182b"/>
+  <rect x="150" y="59" width="120" height="8" rx="4" fill="#00d2ff"/>
+  <text x="430" y="70" font-size="11" fill="#64748b" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">42.9%</text>
+  <text x="30" y="92" font-size="12" fill="#e2e8f0" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">HTML</text>
+  <rect x="150" y="81" width="280" height="8" rx="4" fill="#12182b"/>
+  <rect x="150" y="81" width="60" height="8" rx="4" fill="#7000ff"/>
+  <text x="430" y="92" font-size="11" fill="#64748b" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">21.4%</text>
+  <text x="30" y="114" font-size="12" fill="#e2e8f0" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">JavaScript</text>
+  <rect x="150" y="103" width="280" height="8" rx="4" fill="#12182b"/>
+  <rect x="150" y="103" width="39" height="8" rx="4" fill="#00f0ff"/>
+  <text x="430" y="114" font-size="11" fill="#64748b" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">14.3%</text>
+  <text x="30" y="136" font-size="12" fill="#e2e8f0" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">CSS</text>
+  <rect x="150" y="125" width="280" height="8" rx="4" fill="#12182b"/>
+  <rect x="150" y="125" width="39" height="8" rx="4" fill="#9d4edd"/>
+  <text x="430" y="136" font-size="11" fill="#64748b" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">14.3%</text>
+  <text x="30" y="158" font-size="12" fill="#e2e8f0" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">TypeScript</text>
+  <rect x="150" y="147" width="280" height="8" rx="4" fill="#12182b"/>
+  <rect x="150" y="147" width="19" height="8" rx="4" fill="#22d3ee"/>
+  <text x="430" y="158" font-size="11" fill="#64748b" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">7.1%</text>
+  <text x="435" y="183" font-size="9" fill="#64748b" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">Updated Aug 2026</text>
 </svg>

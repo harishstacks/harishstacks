@@ -25,16 +25,19 @@ from datetime import datetime, timezone
 USER = os.environ.get("GITHUB_REPOSITORY_OWNER") or os.environ.get("STATS_USER") or "harishstacks"
 TOKEN = os.environ.get("GITHUB_TOKEN", "")
 
-# Theme palette (matches existing README dark theme)
-BG = "#0D1117"
-TITLE = "#22D3EE"
-TEXT = "#F0F6FC"
-SUBTEXT = "#8B949E"
-ACCENT = "#22D3EE"
-ICON = "#22D3EE"
-BORDER = "#30363D"
+# Theme palette (matches command-center README)
+BG = "#060812"
+PANEL = "#080c19"
+TITLE = "#00d2ff"
+TEXT = "#e2e8f0"
+SUBTEXT = "#64748b"
+ACCENT = "#00d2ff"
+ICON = "#00d2ff"
+BORDER = "#1a2740"
+MUTED_BAR = "#12182b"
 CARD_W = 460
 CARD_H = 195
+FONT = "ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
 
 
 def gh_get(url):
@@ -106,17 +109,30 @@ def stats_svg(user, repos):
     for i, (icon, label, value) in enumerate(rows):
         y = y0 + i * row_h
         rows_svg.append(
-            f'  <text x="{icon_x}" y="{y}" font-size="16" fill="{ICON}" font-family="Segoe UI Emoji, Apple Color Emoji, sans-serif">{esc(icon)}</text>\n'
-            f'  <text x="{label_x}" y="{y}" font-size="14" fill="{TEXT}" font-family="Segoe UI, Helvetica, Arial, sans-serif">{esc(label)}</text>\n'
-            f'  <text x="{value_x}" y="{y}" font-size="14" font-weight="bold" fill="{TEXT}" text-anchor="end" font-family="Segoe UI, Helvetica, Arial, sans-serif">{esc(value)}</text>'
+            f'  <text x="{icon_x}" y="{y}" font-size="13" fill="{ICON}" font-family="{FONT}">{esc(icon)}</text>\n'
+            f'  <text x="{label_x}" y="{y}" font-size="13" fill="{TEXT}" font-family="{FONT}">{esc(label)}</text>\n'
+            f'  <text x="{value_x}" y="{y}" font-size="13" font-weight="bold" fill="{TITLE}" text-anchor="end" font-family="{FONT}">{esc(value)}</text>'
         )
 
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{CARD_W}" height="{CARD_H}" viewBox="0 0 {CARD_W} {CARD_H}">
-  <rect width="{CARD_W}" height="{CARD_H}" rx="11" fill="{BG}" stroke="{BORDER}" stroke-width="1"/>
-  <text x="25" y="38" font-size="18" font-weight="bold" fill="{TITLE}" font-family="Segoe UI, Helvetica, Arial, sans-serif">📊 GitHub Stats</text>
-  <line x1="25" y1="50" x2="{CARD_W-25}" y2="50" stroke="{BORDER}" stroke-width="1"/>
+  <defs>
+    <linearGradient id="sedge" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00d2ff" stop-opacity="0.55"/>
+      <stop offset="50%" stop-color="#7000ff" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#00d2ff" stop-opacity="0.12"/>
+    </linearGradient>
+    <linearGradient id="sline" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00d2ff" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#7000ff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="{CARD_W}" height="{CARD_H}" rx="12" fill="{BG}"/>
+  <rect x="0.6" y="0.6" width="{CARD_W-1.2}" height="{CARD_H-1.2}" rx="11.4" fill="{PANEL}" stroke="url(#sedge)" stroke-width="1.2"/>
+  <circle cx="28" cy="28" r="3.2" fill="{TITLE}"/>
+  <text x="40" y="33" font-size="13" font-weight="bold" fill="{TITLE}" font-family="{FONT}" letter-spacing="1.5">GITHUB STATS</text>
+  <line x1="25" y1="46" x2="{CARD_W-25}" y2="46" stroke="url(#sline)" stroke-width="1"/>
 {chr(10).join(rows_svg)}
-  <text x="{CARD_W-25}" y="{CARD_H-12}" font-size="9" fill="{SUBTEXT}" text-anchor="end" font-family="Segoe UI, Helvetica, Arial, sans-serif">Updated {datetime.now(timezone.utc).strftime("%b %Y")}</text>
+  <text x="{CARD_W-25}" y="{CARD_H-12}" font-size="9" fill="{SUBTEXT}" text-anchor="end" font-family="{FONT}">Updated {datetime.now(timezone.utc).strftime("%b %Y")}</text>
 </svg>'''
 
 
@@ -140,7 +156,7 @@ def top_langs_svg(repos):
     top = sorted(langs.items(), key=lambda x: -x[1])[:6]
 
     # Color palette for language bars
-    palette = ["#3776AB", "#F7DF1E", "#3178C6", "#E34F26", "#563D7C", "#A855F7", "#F7931E", "#DC382D"]
+    palette = ["#00d2ff", "#7000ff", "#00f0ff", "#9d4edd", "#22d3ee", "#a855f7", "#67e8f9", "#c084fc"]
 
     y0 = 70
     row_h = 22
@@ -155,18 +171,31 @@ def top_langs_svg(repos):
         color = palette[i % len(palette)]
         w = max(int(bar_w * pct / 100), 2)
         rows_svg.append(
-            f'  <text x="{label_x}" y="{y}" font-size="13" fill="{TEXT}" font-family="Segoe UI, Helvetica, Arial, sans-serif">{esc(lang)}</text>\n'
-            f'  <rect x="{bar_x}" y="{y-11}" width="{bar_w}" height="11" rx="3" fill="{BORDER}"/>\n'
-            f'  <rect x="{bar_x}" y="{y-11}" width="{w}" height="11" rx="3" fill="{color}"/>\n'
-            f'  <text x="{CARD_W-30}" y="{y}" font-size="11" fill="{SUBTEXT}" text-anchor="end" font-family="Segoe UI, Helvetica, Arial, sans-serif">{pct:.1f}%</text>'
+            f'  <text x="{label_x}" y="{y}" font-size="12" fill="{TEXT}" font-family="{FONT}">{esc(lang)}</text>\n'
+            f'  <rect x="{bar_x}" y="{y-11}" width="{bar_w}" height="8" rx="4" fill="{MUTED_BAR}"/>\n'
+            f'  <rect x="{bar_x}" y="{y-11}" width="{w}" height="8" rx="4" fill="{color}"/>\n'
+            f'  <text x="{CARD_W-30}" y="{y}" font-size="11" fill="{SUBTEXT}" text-anchor="end" font-family="{FONT}">{pct:.1f}%</text>'
         )
 
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{CARD_W}" height="{CARD_H}" viewBox="0 0 {CARD_W} {CARD_H}">
-  <rect width="{CARD_W}" height="{CARD_H}" rx="11" fill="{BG}" stroke="{BORDER}" stroke-width="1"/>
-  <text x="25" y="38" font-size="18" font-weight="bold" fill="{TITLE}" font-family="Segoe UI, Helvetica, Arial, sans-serif">💻 Top Languages</text>
-  <line x1="25" y1="50" x2="{CARD_W-25}" y2="50" stroke="{BORDER}" stroke-width="1"/>
+  <defs>
+    <linearGradient id="ledge" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00d2ff" stop-opacity="0.55"/>
+      <stop offset="50%" stop-color="#7000ff" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#00d2ff" stop-opacity="0.12"/>
+    </linearGradient>
+    <linearGradient id="lline" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00d2ff" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#7000ff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="{CARD_W}" height="{CARD_H}" rx="12" fill="{BG}"/>
+  <rect x="0.6" y="0.6" width="{CARD_W-1.2}" height="{CARD_H-1.2}" rx="11.4" fill="{PANEL}" stroke="url(#ledge)" stroke-width="1.2"/>
+  <circle cx="28" cy="28" r="3.2" fill="{TITLE}"/>
+  <text x="40" y="33" font-size="13" font-weight="bold" fill="{TITLE}" font-family="{FONT}" letter-spacing="1.5">TOP LANGUAGES</text>
+  <line x1="25" y1="46" x2="{CARD_W-25}" y2="46" stroke="url(#lline)" stroke-width="1"/>
 {chr(10).join(rows_svg)}
-  <text x="{CARD_W-25}" y="{CARD_H-12}" font-size="9" fill="{SUBTEXT}" text-anchor="end" font-family="Segoe UI, Helvetica, Arial, sans-serif">Updated {datetime.now(timezone.utc).strftime("%b %Y")}</text>
+  <text x="{CARD_W-25}" y="{CARD_H-12}" font-size="9" fill="{SUBTEXT}" text-anchor="end" font-family="{FONT}">Updated {datetime.now(timezone.utc).strftime("%b %Y")}</text>
 </svg>'''
 
 

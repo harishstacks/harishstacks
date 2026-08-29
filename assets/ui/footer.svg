@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 72" width="900" height="72">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#060812"/>
+      <stop offset="100%" stop-color="#090d1a"/>
+    </linearGradient>
+    <linearGradient id="w" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00d2ff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#00d2ff" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#7000ff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="72" fill="url(#bg)"/>
+  <path d="M0,28 C150,8 300,48 450,28 C600,8 750,48 900,28" fill="none" stroke="url(#w)" stroke-width="1.4"/>
+  <path d="M0,40 C150,56 300,20 450,40 C600,56 750,20 900,40" fill="none" stroke="#7000ff" stroke-opacity="0.25" stroke-width="1"/>
+  <text x="450" y="62" text-anchor="middle" fill="#64748b" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" letter-spacing="2.5">WORKSTATION · STANDBY</text>
+</svg>

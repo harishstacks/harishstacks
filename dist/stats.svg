@@ -1,21 +1,34 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="460" height="195" viewBox="0 0 460 195">
-  <rect width="460" height="195" rx="11" fill="#0D1117" stroke="#30363D" stroke-width="1"/>
-  <text x="25" y="38" font-size="18" font-weight="bold" fill="#22D3EE" font-family="Segoe UI, Helvetica, Arial, sans-serif">📊 GitHub Stats</text>
-  <line x1="25" y1="50" x2="435" y2="50" stroke="#30363D" stroke-width="1"/>
-  <text x="30" y="70" font-size="16" fill="#22D3EE" font-family="Segoe UI Emoji, Apple Color Emoji, sans-serif">★</text>
-  <text x="60" y="70" font-size="14" fill="#F0F6FC" font-family="Segoe UI, Helvetica, Arial, sans-serif">Total Stars</text>
-  <text x="430" y="70" font-size="14" font-weight="bold" fill="#F0F6FC" text-anchor="end" font-family="Segoe UI, Helvetica, Arial, sans-serif">0</text>
-  <text x="30" y="94" font-size="16" fill="#22D3EE" font-family="Segoe UI Emoji, Apple Color Emoji, sans-serif">⑂</text>
-  <text x="60" y="94" font-size="14" fill="#F0F6FC" font-family="Segoe UI, Helvetica, Arial, sans-serif">Total Forks</text>
-  <text x="430" y="94" font-size="14" font-weight="bold" fill="#F0F6FC" text-anchor="end" font-family="Segoe UI, Helvetica, Arial, sans-serif">3</text>
-  <text x="30" y="118" font-size="16" fill="#22D3EE" font-family="Segoe UI Emoji, Apple Color Emoji, sans-serif">📦</text>
-  <text x="60" y="118" font-size="14" fill="#F0F6FC" font-family="Segoe UI, Helvetica, Arial, sans-serif">Repositories</text>
-  <text x="430" y="118" font-size="14" font-weight="bold" fill="#F0F6FC" text-anchor="end" font-family="Segoe UI, Helvetica, Arial, sans-serif">18</text>
-  <text x="30" y="142" font-size="16" fill="#22D3EE" font-family="Segoe UI Emoji, Apple Color Emoji, sans-serif">👥</text>
-  <text x="60" y="142" font-size="14" fill="#F0F6FC" font-family="Segoe UI, Helvetica, Arial, sans-serif">Followers</text>
-  <text x="430" y="142" font-size="14" font-weight="bold" fill="#F0F6FC" text-anchor="end" font-family="Segoe UI, Helvetica, Arial, sans-serif">6</text>
-  <text x="30" y="166" font-size="16" fill="#22D3EE" font-family="Segoe UI Emoji, Apple Color Emoji, sans-serif">👁</text>
-  <text x="60" y="166" font-size="14" fill="#F0F6FC" font-family="Segoe UI, Helvetica, Arial, sans-serif">Following</text>
-  <text x="430" y="166" font-size="14" font-weight="bold" fill="#F0F6FC" text-anchor="end" font-family="Segoe UI, Helvetica, Arial, sans-serif">11</text>
-  <text x="435" y="183" font-size="9" fill="#8B949E" text-anchor="end" font-family="Segoe UI, Helvetica, Arial, sans-serif">Updated Aug 2026</text>
+  <defs>
+    <linearGradient id="sedge" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00d2ff" stop-opacity="0.55"/>
+      <stop offset="50%" stop-color="#7000ff" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#00d2ff" stop-opacity="0.12"/>
+    </linearGradient>
+    <linearGradient id="sline" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00d2ff" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#7000ff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="460" height="195" rx="12" fill="#060812"/>
+  <rect x="0.6" y="0.6" width="458.8" height="193.8" rx="11.4" fill="#080c19" stroke="url(#sedge)" stroke-width="1.2"/>
+  <circle cx="28" cy="28" r="3.2" fill="#00d2ff"/>
+  <text x="40" y="33" font-size="13" font-weight="bold" fill="#00d2ff" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" letter-spacing="1.5">GITHUB STATS</text>
+  <line x1="25" y1="46" x2="435" y2="46" stroke="url(#sline)" stroke-width="1"/>
+  <text x="30" y="70" font-size="13" fill="#00d2ff" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">★</text>
+  <text x="60" y="70" font-size="13" fill="#e2e8f0" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">Total Stars</text>
+  <text x="430" y="70" font-size="13" font-weight="bold" fill="#00d2ff" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">0</text>
+  <text x="30" y="94" font-size="13" fill="#00d2ff" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">⑂</text>
+  <text x="60" y="94" font-size="13" fill="#e2e8f0" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">Total Forks</text>
+  <text x="430" y="94" font-size="13" font-weight="bold" fill="#00d2ff" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">3</text>
+  <text x="30" y="118" font-size="13" fill="#00d2ff" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">📦</text>
+  <text x="60" y="118" font-size="13" fill="#e2e8f0" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">Repositories</text>
+  <text x="430" y="118" font-size="13" font-weight="bold" fill="#00d2ff" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">18</text>
+  <text x="30" y="142" font-size="13" fill="#00d2ff" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">👥</text>
+  <text x="60" y="142" font-size="13" fill="#e2e8f0" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">Followers</text>
+  <text x="430" y="142" font-size="13" font-weight="bold" fill="#00d2ff" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">6</text>
+  <text x="30" y="166" font-size="13" fill="#00d2ff" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">👁</text>
+  <text x="60" y="166" font-size="13" fill="#e2e8f0" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">Following</text>
+  <text x="430" y="166" font-size="13" font-weight="bold" fill="#00d2ff" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">11</text>
+  <text x="435" y="183" font-size="9" fill="#64748b" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">Updated Aug 2026</text>
 </svg>
