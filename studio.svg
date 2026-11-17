@@ -9,7 +9,7 @@
       <stop offset="100%" stop-color="#04101c"/>
     </linearGradient>
     <filter id="chem" x="-10%" y="-10%" width="120%" height="120%">
-      <feTurbulence type="fractalNoise" baseFrequency="0.018" numOctaves="3" seed="6" result="n"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.018" numOctaves="3" seed="66" result="n"/>
       <feColorMatrix type="matrix" values="0 0 0 0 0.08  0 0 0 0 0.28  0 0 0 0 0.42  0 0 0 0.22 0" result="tint"/>
       <feBlend in="SourceGraphic" in2="tint" mode="multiply"/>
     </filter>
@@ -19,13 +19,13 @@
   </defs>
   <rect width="1200" height="720" fill="url(#bath)"/>
   <rect width="1200" height="720" fill="#0a3a68" filter="url(#chem)" opacity="0.55"/>
-  <ellipse cx="602.5" cy="218.8" rx="75.2" ry="54.5" fill="#d7f2ea" opacity="0.06731013867593791" transform="rotate(6.1 602.5 218.8)"/>
-<ellipse cx="1019.7" cy="127.7" rx="96.3" ry="48.4" fill="#d7f2ea" opacity="0.0640136949287734" transform="rotate(-5.2 1019.7 127.7)"/>
-<ellipse cx="489.8" cy="630.2" rx="119.7" ry="76.3" fill="#d7f2ea" opacity="0.04119587192319694" transform="rotate(17.0 489.8 630.2)"/>
-<ellipse cx="912.1" cy="129.7" rx="72.9" ry="76.5" fill="#d7f2ea" opacity="0.061917681625553785" transform="rotate(-1.5 912.1 129.7)"/>
-<ellipse cx="467.3" cy="164.8" rx="117.0" ry="30.1" fill="#d7f2ea" opacity="0.04314471884599997" transform="rotate(-1.1 467.3 164.8)"/>
-<ellipse cx="598.6" cy="119.9" rx="154.2" ry="26.4" fill="#d7f2ea" opacity="0.03711368199106317" transform="rotate(-7.4 598.6 119.9)"/>
-<ellipse cx="1059.5" cy="386.1" rx="154.6" ry="60.2" fill="#d7f2ea" opacity="0.05934952959619957" transform="rotate(-9.3 1059.5 386.1)"/>
+  <ellipse cx="158.2" cy="416.8" rx="55.5" ry="72.3" fill="#d7f2ea" opacity="0.06467351979281044" transform="rotate(-19.2 158.2 416.8)"/>
+<ellipse cx="658.5" cy="60.8" rx="101.3" ry="32.7" fill="#d7f2ea" opacity="0.05254296706863988" transform="rotate(17.5 658.5 60.8)"/>
+<ellipse cx="205.7" cy="610.9" rx="70.4" ry="89.8" fill="#d7f2ea" opacity="0.06623799223559135" transform="rotate(12.5 205.7 610.9)"/>
+<ellipse cx="591.6" cy="485.9" rx="136.2" ry="31.2" fill="#d7f2ea" opacity="0.03934694258466578" transform="rotate(-17.0 591.6 485.9)"/>
+<ellipse cx="357.7" cy="113.9" rx="72.9" ry="40.6" fill="#d7f2ea" opacity="0.045298594849054616" transform="rotate(-18.8 357.7 113.9)"/>
+<ellipse cx="445.1" cy="290.0" rx="49.8" ry="35.7" fill="#d7f2ea" opacity="0.05579809824401892" transform="rotate(16.1 445.1 290.0)"/>
+<ellipse cx="985.5" cy="449.9" rx="151.0" ry="62.3" fill="#d7f2ea" opacity="0.05496195784034032" transform="rotate(0.5 985.5 449.9)"/>
   <line x1="18" y1="18" x2="40" y2="18" stroke="#d7f2ea" stroke-width="0.8" opacity="0.45"/>
 <line x1="18" y1="18" x2="18" y2="40" stroke="#d7f2ea" stroke-width="0.8" opacity="0.45"/>
 <line x1="1182" y1="18" x2="1160" y2="18" stroke="#d7f2ea" stroke-width="0.8" opacity="0.45"/>
@@ -92,7 +92,7 @@
 <text x="1033.1" y="421.1" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="7" fill="#6aa0a8" opacity="0.55" text-anchor="middle">SUN</text>
 <circle cx="818" cy="332" r="6" fill="none" stroke="#ff5a32" stroke-width="1.4"/><circle cx="818" cy="332" r="2" fill="#ff5a32"/>
     
-    <line x1="812.3" y1="323.8" x2="954.8" y2="529.2" stroke="#ff5a32" stroke-width="1.6" stroke-linecap="round" opacity="0.85"/><circle cx="954.8" cy="529.2" r="3.2" fill="#04101c" stroke="#ff5a32" stroke-width="1.3"/>
+    <line x1="814.7" y1="322.6" x2="897.1" y2="558.6" stroke="#ff5a32" stroke-width="1.6" stroke-linecap="round" opacity="0.85"/><circle cx="897.1" cy="558.6" r="3.2" fill="#04101c" stroke="#ff5a32" stroke-width="1.3"/>
     <text x="818" y="350" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" fill="#6aa0a8" opacity="0.8">QUIET WEEK — NO PUNCHES</text>
   </g>
 
@@ -103,5 +103,5 @@
 <circle cx="354" cy="628" r="34" fill="#062033" stroke="#d7f2ea" stroke-width="1"/><circle cx="335.3" cy="619.9" r="1.6" fill="#d7f2ea" opacity="0.85"/><circle cx="337.8" cy="621.8" r="1.6" fill="#d7f2ea" opacity="0.85"/><circle cx="340.3" cy="623.1" r="1.6" fill="#d7f2ea" opacity="0.85"/><circle cx="342.8" cy="619.6" r="1.6" fill="#d7f2ea" opacity="0.85"/><circle cx="345.3" cy="623.3" r="1.6" fill="#d7f2ea" opacity="0.85"/><circle cx="347.8" cy="624.3" r="1.6" fill="#d7f2ea" opacity="0.85"/><circle cx="350.3" cy="626.0" r="1.6" fill="#d7f2ea" opacity="0.85"/><circle cx="352.8" cy="625.2" r="1.6" fill="#d7f2ea" opacity="0.85"/><circle cx="355.2" cy="627.8" r="1.6" fill="#d7f2ea" opacity="0.85"/><circle cx="357.7" cy="633.1" r="1.6" fill="#ff5a32" opacity="0.85"/><circle cx="360.2" cy="638.1" r="1.6" fill="#ff5a32" opacity="0.85"/><circle cx="362.7" cy="637.4" r="1.6" fill="#ff5a32" opacity="0.85"/><circle cx="365.2" cy="640.5" r="1.6" fill="#ff5a32" opacity="0.85"/><circle cx="367.7" cy="640.5" r="1.6" fill="#ff5a32" opacity="0.85"/><circle cx="370.2" cy="644.3" r="1.6" fill="#ff5a32" opacity="0.85"/><circle cx="372.7" cy="645.3" r="1.6" fill="#ff5a32" opacity="0.85"/>
 <text x="398.0" y="620.0" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="9" fill="#ff5a32" letter-spacing="0.14em">03</text><text x="398.0" y="636.0" font-family="ui-sans-serif, system-ui, 'Segoe UI', sans-serif" font-size="11" fill="#d7f2ea">CHURN</text><text x="398.0" y="650.0" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="8" fill="#6aa0a8">WHO LEAVES</text>
 
-  <text x="48" y="684" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="9" fill="#6aa0a8">PLATE  ·  2026-11-16T09:41:56Z  ·  SEED 079a125c  ·  0 PUNCHES THIS WEEK  ·  NOW CLOTHING</text>
+  <text x="48" y="684" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="9" fill="#6aa0a8">PLATE  ·  2026-11-17T10:43:31Z  ·  SEED 6ca00222  ·  0 PUNCHES THIS WEEK  ·  NOW CLOTHING</text>
 </svg>
